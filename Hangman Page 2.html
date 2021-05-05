@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+			<link href="Hangman Page 2.css" rel="stylesheet">
+			<link href='https://fonts.googleapis.com/css?family=Shadows Into Light' rel='stylesheet'>
+			<link href='<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">'>
+
+			
+</head>
+<body>
+
+	<div id="h1_Text">Hangman</div>
+				<div class="heart">
+					<img id="life_5" src="images/heart.png">
+					<img id="life_4" src="images/heart.png">
+					<img id="life_3" src="images/heart.png">
+					<img id="life_2" src="images/heart.png">
+					<img id="life_1" src="images/heart.png">
+				</div>
+				<br>
+
+	<div id="dash_space"></div>
+	<br>
+	<br>
+	
+	<div id="type">
+	<span id="type_text">Type Here</span>
+	<br>
+	<br>
+	<input type="text" name="text_input" id="text_box" />
+	<br> 
+	<br>
+	<button type="button" id="button_ok">OK</button>
+	<br>
+	<br>
+	<button type="button" id="hint">Hint💡</button>
+	<p id="Hint2"></p>
+	</div>
+
+ 
+
+	<script type="text/javascript">
+    
+		$(document).ready(function(){
+
+             var input_of_textbox;
+				var id=1;
+
+		var random_word=[["marshmellows","It is a sweet soft snack."],["rainbow","It comes where there is light and water."],["cow","It is a animal."],["pizza","It is an Italian dish."],["dog"," It helps people to herd sheep."],["microscope","It is a more powerfull eye."],["pen","It comes under stationary"],["clock","It makes a TICKING sound."],["elephant","It ia very large and heavy animal."],["hangman","It is the name of a game."],["phone","You use it for speaking to others."],["apple","It is a fruit."],["book","It gives us knowledge."],["whale","It is a gigantic mamal which lives in the ocean."],["turtle","This animal may be slow but is always steady"],["kite","It has a tail which helps it fly."]];
+		var decimal_value=Math.random();
+		var random=Math.floor(decimal_value*random_word.length);
+		var ready_word=random_word[random][0];
+		var length_of_word= ready_word.length;
+
+		var dash=[];
+
+		for (var i = 0; i < length_of_word; i++) {
+			dash[i]=" __ ";
+		}
+
+		$("#dash_space").html(dash);
+
+		 var a=length_of_word;
+
+
+        var timer=0;
+      
+        var pressed=1;
+
+      $("#hint").click(function(){
+							if(pressed===1)
+							{
+								if (length_of_word===3)
+								    {
+								    	var one=Math.random();
+										var number=Math.floor(one*length_of_word);
+								    	if(dash[number]===" __ ")
+								    	{
+								    	dash[number]=ready_word[number];
+								    	string_dash=dash.join("  ");
+			       						$("#dash_space").html(dash);
+			       						a=a-1;
+								    	}
+								    	else
+								    	{
+								    		
+								    		while(dash[number]!=" __ ")
+								    		{
+								    			var one= Math.random();
+								    			var number=Math.floor(one*length_of_word);
+								    			
+								    		}
+								    		dash[number]=ready_word[number];
+								    		string_dash=dash.join("  ");
+			       							$("#dash_space").html(dash);
+			       							a=a-1;
+								    	}
+
+								    	if(a===0)
+			       						{
+			       							$("#dash_space").html(string_dash);
+			       							location.replace("file:///C:/Users/build/Documents/Harshini's%20Work/Hangman/Hangman_good.html")
+			       						}
+									}
+								else
+									{
+										var one=Math.random();
+										var number=Math.floor(one*length_of_word);
+			       						dash[number]=ready_word[number];
+			       						var decimal=Math.random();
+										var b=Math.floor(decimal*length_of_word);
+			       						dash[b]=ready_word[b];
+			       						$("#dash_space").html(dash);
+			       						a=a-2;
+			       						if(a===0)
+			       						{
+			       							$("#dash_space").html(string_dash);
+			       							location.replace("file:///C:/Users/build/Documents/Harshini's%20Work/Hangman/Hangman_good.html")
+			       						}
+			       					}
+			       			pressed++;
+
+			       			}
+			       			else if (pressed===2) 
+			       			{
+			       				var clue_two=random_word[random][1];
+			       				var print_cluetwo="Hint: "+clue_two;
+			       				$("#Hint2").html(print_cluetwo);
+			       				pressed++;
+			       			}
+
+						
+					});
+  
+	$("#button_ok").click(function(){
+  		input_of_textbox=$("#text_box").val();
+		
+					test:
+					if(a>0)
+					{  
+
+					       
+			       	   	    if(input_of_textbox.length>1)
+			       	   	    {
+			             		alert("INVALID INPUT! Please enter a single letter input.😵");
+			                }
+
+			       	   
+			       	  
+			       	   	  var input=input_of_textbox.toLowerCase();
+			       	   	  
+			       	   
+
+			       	   var compare=a;
+
+			       wrong:
+			       for (var x = 0; x < length_of_word; x++) {
+			       	if(ready_word[x]===input)
+			       		{
+			       			dash[x]=input;
+			       			a=a-1;
+			       		}	
+			       	
+					}
+
+					
+
+			        if(a===compare){
+			       		timer=timer+1;
+			       		$("#life_"+id).fadeOut(500);
+			       		id++;
+			       	}
+
+			       	if(timer===5){
+			      			location.replace("file:///C:/Users/build/Documents/Harshini's%20Work/Hangman/Hangman_wrong.html?answer="+ready_word)
+			      			break test;
+			      				 }	
+
+
+			        string_dash=dash.join("  ");
+			       	console.log(string_dash);
+			       
+			       	
+			      $("#dash_space").html(string_dash);	
+
+			       if (a===0) {
+      	           location.replace("file:///C:/Users/build/Documents/Harshini's%20Work/Hangman/Hangman_good.html");
+      	          }      	         
+     
+     		  }  	
+
+  });
+
+});   	
+
+
+	</script>
+	
+</body>
+</html>
