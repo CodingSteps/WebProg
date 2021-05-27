@@ -1,4 +1,7 @@
- .thumbnail {background-color: #eee;}
- body {margin-top: 33px;}
-.thumbnail .caption {background-color: #ddd;}
+ .container1 {background-color: #FAEBD7; text-align: center;padding:50px;}
 .try-circle{border-radius:50%;}
+.about{font-size:18px;text-align: justify;padding:20px;}
+#highlight{background-color:#B22222;margin-left:280px;margin-right:280px;margin-top:20px;padding:5px;color:white;font-size:16px;}
+.container3 {background-color: #DEB887;padding:50px;}
+.timeline{margin-left:20%;margin-right:20%;font-size: 18px;}
+footer{background-color:#8B0000;color:white;text-align:center;}
