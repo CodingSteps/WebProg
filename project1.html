@@ -1,6 +1,16 @@
 <html>
 <head>
 	<title>My Website</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>		
 </head>
 <body>	
 <h1> Welcome to Coding Steps </h1>
@@ -23,16 +33,106 @@
 </a>
 
 <ol type="a">
-	<li>HTML</li>
-	<li>CSS</li>
-	<li>JQuery</li>
+	<li>HTML
+		<ul>
+			<li>chapter1
+				<ol>
+					<li>inside chapter1</li>
+				</ol>
+			</li>
+			<li>chapter2</li>
+		</ul>	
+	</li>
+	<li>CSS
+		<ol>
+			<li>CSS1</li>
+			<li>CSS2</li>
+		</ol>
+	</li>	
+	<li>JQuery
+		<ol>
+			<li>JQuery1</li>
+			<li>JQuery2</li>
+		</ol>
+	</li>
 </ol>	
 
 <ul>
 	<li>HTML</li>
 	<li>CSS</li>
 	<li>JQuery</li>
-</ul>	
+</ul>
 
+
+<table>
+<tr>
+	<th><mark>FirstName</mark></th>
+	<th>LastName</th>
+	<th>Age</th>
+</tr>	
+<tr>
+	<td>Antony</td>
+	<td>Hansel</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>Meenakshi</td>
+	<td>Kumar</td>
+	<td>12</td>
+</tr>	
+</table>
+<br>
+<table>
+	<tr>
+	<th>Name</th>
+	<th colspan="2">Telephone</th>
+    </tr>
+    <tr>
+    	<td>Coding Steps</td>
+    	<td>234324234</td>
+    	<td>24243432</td>
+    </tr>	  
+</table>
+
+<br>
+<table>
+	<tr>
+		<th>Name</th>
+		<td>Coding Steps</td>
+	</tr>	
+	<tr>
+		<th rowspan="2">Telephone</th>
+		<td>4333455353</td>
+	</tr>	
+	<tr>
+		<td>23432432</td>
+	</tr>	
+</table>	
+<br>
+<table>
+	<tr>
+		<th colspan="2">Subject</th>
+		<th>John Doe</th>
+		<th>Michael</th>
+	</tr>	
+    <tr>
+    	<th rowspan="2" colspan="2">Biology</th>
+    	<td>A</td>
+    	<td>A</td>
+    </tr>
+    <tr>
+    	<th rowspan="2">Chemistry</th>
+    	<td>Practical</td>
+    	<td>A+</td>
+    	<td>A</td>
+    </tr>	
+    <tr>
+    	<td>Theory</td>
+    	<td>A+</td>
+    	<td>A</td>
+    </tr>	
+
+</table>
+<!--This is HTML Program -->
 </body>	
 </html>
