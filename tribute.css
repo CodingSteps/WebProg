@@ -1,4 +1,4 @@
- .container1 {background-color: #FAEBD7; text-align: center;padding:50px;}
+ .container1 {background-color: #FAEBD7; text-align: center;padding:20px 50px 50px 50px;}
  .container2{background-color: #F5DEB3;}
 .try-circle{border-radius:50%;}
 .about{font-size:20px;text-align: justify;padding:20px;}
@@ -6,3 +6,5 @@
 .container3 {background-color: #DEB887;padding:50px;}
 .timeline{margin-left:20%;margin-right:20%;font-size: 18px;}
 footer{background-color:#8B0000;color:white;text-align:center;}
+body{margin: 0px;}
+#heading{font-size: 50px;font-weight: 800;}
