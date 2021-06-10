@@ -1,3 +1,11 @@
-h3{
+.newclass{
 	color: red;
+	text-align: center;
+}
+
+
+#p1{
+	background-color: lightseagreen;
+	font-weight: bold;
+	font-size: 25px;
 }
