@@ -5,3 +5,14 @@
 #p1{color:blue;border-left:10px solid red;}
 #p2{background-color:#5F9EA0;border-right:10px solid #FFB6C1;color: white;}
 #p3{color:#FF0000;border:2px solid blue;}
+
+.div1{
+	border: 2px solid red;
+	background-color: yellow;
+}
+
+.div2{
+	border: 2px solid blue;
+	background-color: lightblue;
+	margin: 20px;
+}
