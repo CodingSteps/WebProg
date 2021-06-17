@@ -1,11 +1,6 @@
-.newclass{
-	color: red;
-	text-align: center;
-}
-
-
-#p1{
-	background-color: lightseagreen;
-	font-weight: bold;
-	font-size: 25px;
-}
+.heading{text-align:center;color:red;}
+#unique{color:green;background-color:#FFD700;}
+#heading2{border-top:2px solid green; border-bottom:2px solid green;}
+.para1{background-color:#FAEBD7;}
+#p1{color:blue;border-left:10px solid red;}
+#p3{color:#FF0000;border:2px solid blue;}
