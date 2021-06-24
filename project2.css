@@ -12,7 +12,11 @@
 }
 
 .div2{
-	border: 2px solid blue;
+	border: 5px solid blue;
 	background-color: lightblue;
-	margin: 20px;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 500px;
+	padding: 20px;
 }

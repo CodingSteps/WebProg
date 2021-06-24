@@ -1,0 +1,8 @@
+body{text-align: center;background-color: #FAEBD7;}
+.container1{background-color: #F5DEB3;margin-top: 20px;margin-left: 40px;margin-right: 40px;padding: 10px;}
+#personName{font-size: 50px;font-weight: 800;padding-top: 20px;}
+#about{font-size: 20px;text-align: justify;}
+#imgPerson{border-radius: 50%;}
+#quote{width: 600px;font-style: italic;background-color: #B22222;margin: auto;margin-top: 20px;color: white;font-size: 20px;padding: 10px;}
+.container2{background-color: #DEB887;}
+.timeline{background-color: yellow;width: 600px;margin: auto;text-align: left;}
