@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Forms</title>
+	<link href="form.css" rel="stylesheet">
+</head>
+<body>
+   <div id="container">
+   	   <h1 style="text-align:center;color:white;">Survey Form</h1>
+	   <form>
+	   <label for="uname" class='lbl'>Name</label><br><br>
+	   <input type="text" id="uname" name="username" placeholder="Enter your Name">
+	   <br><br><br>
+	   <label for="uemail" class='lbl'>Email</label><br><br>
+	   <input type="email" id="uemail" name="useremail" placeholder="Enter your Email">
+       <br><br><br>
+	   <label for="uage" class='lbl'>Age</label><br><br>
+	   <input type="number" id="uage" name="userage" placeholder="Enter your Age" min='20' max='50'>
+	   <br><br><br>
+	   <label for="urole" class='lbl'>Which option best describes your current role?</label><br><br>
+	   <select id="urole" name="userrole">
+	   		<option selected>Select current role</option>
+            <option>Student</option>
+            <option>Part-time Worker</option>
+            <option>Full-time Worker</option>
+            <option>Other</option>
+	   </select>
+       <br><br><br>
+	   <p class="lbl">Would you recommend freeCodeCamp to a friend?</p>
+	   <input type="radio" id="uradio1" name="choice" value="Definitely">
+	   <label for="uradio1" class="lbl">Definitely</label><br>
+	   <input type="radio" id="uradio2" name="choice" value="May be">
+	   <label for="uradio2" class="lbl">May be</label><br>
+	   <input type="radio" id="uradio3" name="choice" value="Definitely">
+	   <label for="uradio3" class="lbl">Not Sure</label><br>
+        <br><br><br>
+	   <label for="ufeature" class='lbl'>What is your favourite feature of this course ?</label><br><br>
+	   <select id="ufeature" name="userfeature">
+	   		<option selected>Select an option</option>
+            <option>Challenges</option>
+            <option>Projects</option>
+            <option>Learning</option>
+	   </select>
+       <br><br><br>
+       <p class='lbl'>What would you like to see improved ? (Check all that apply)</p>
+       <input type="checkbox" id="ucheck1" name="choice1">
+	   <label for="ucheck1" class="lbl">Front-end Projects</label><br>
+	   <input type="checkbox" id="ucheck2" name="choice2">
+	   <label for="ucheck2" class="lbl">Back-end Projects</label><br>
+	   <input type="checkbox" id="ucheck3" name="choice3">
+	   <label for="ucheck3" class="lbl">Challenges</label><br>
+	   <input type="checkbox" id="ucheck4" name="choice4">
+	   <label for="ucheck4" class="lbl">Learning Pace</label><br>
+	   <input type="checkbox" id="ucheck5" name="choice5">
+	   <label for="ucheck5" class="lbl">Assignments</label><br>
+	   <input type="checkbox" id="ucheck6" name="choice6">
+	   <label for="ucheck6" class="lbl">Additional Courses</label><br>
+       <br><br><br>
+       
+       <label for="ucomment" class="lbl">Any comments or suggestions?</label><br><br>
+       <textarea id="ucomment" rows="10" cols="100" placeholder="Enter your comment here..."> </textarea>	
+       <br><br><br>
+      <input type="submit" value="Submit Form" id="submitbtn">
+
+       </form>
+   </div>
+
+</body>	

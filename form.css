@@ -1,0 +1,7 @@
+body{background-image: url('images/pattern-background.jpg');font-family: Arial; background-size: cover;}
+#container{width: 800px; margin-left:auto;margin-right: auto; background-color: #2A2A49;margin-top: 50px;margin-bottom:50px;
+padding: 50px;border-radius: 20px;}
+.lbl{color:white; font-size: 20px;}
+#uname,#uemail,#uage,#urole,#ufeature{width:100%;height:40px;border-radius:10px;padding-left:10px;}
+#ucomment{border-radius:10px;padding-left:10px;}
+#submitbtn{width:100%;height:60px;border-radius:10px;padding-left:10px;background-color:#67ced8;font-size: 20px;}
