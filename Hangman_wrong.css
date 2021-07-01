@@ -1,0 +1,39 @@
+
+
+#banner{
+	color: #FFDA00;
+	font-family: 'Architects Daughter', cursive, sans-serif; 
+	margin-top: 30px;
+	font-weight: 500px;
+	font-size: 100px;
+}
+
+#parent_div{
+	position: relative;
+}
+
+#ans{
+	position:absolute;
+    left: 350px;
+    top: 50px;
+    bottom: 400px;
+    color: #FFDA00;
+	font-family: 'Architects Daughter', cursive, sans-serif; 
+	margin-top: 100px;
+	font-weight: 500px;
+	font-size: 50px;
+} 
+
+ body{
+	background-color:#C9F6FF;
+}
+
+#back{
+    position: absolute;
+    left: 1090px;
+    top: 170px;
+    background-color:#ff3535;
+    font-family: 'Architects Daughter', cursive, sans-serif;
+    color:#FFDA00;
+
+} 

@@ -10,7 +10,7 @@
 }
 
 body{
-	background-color:#FFB6C1;
+	background-color:#c9f6ff;
 }
 
 #h1_Text{
@@ -30,7 +30,7 @@ body{
 
  #type_text{
  	font-family: 'Shadows Into Light', sans-serif; 
- 	color:#FF1493;
+ 	color:black;
  	font-size:30px;
  	margin-right: 15px;
  }
@@ -45,7 +45,7 @@ body{
 
  #text_box{
  	width:165px;
- 	background-color:#ffff60;
+ 	background-color:#fff6d0;
  	border-color:black;
  	border-radius:4px;
  }

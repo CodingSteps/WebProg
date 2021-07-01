@@ -1,0 +1,35 @@
+
+#parent_div{
+	position: relative;
+}
+
+#gif{
+	position:absolute;
+    left: 455px;
+    top: 180px;
+    bottom: 400px;
+} 
+
+ body{
+	background-color: #ffff91;
+}
+
+#banner{
+	color: #48a9ea;
+	font-family: 'Architects Daughter', cursive, sans-serif; 
+	margin-top: 30px;
+	font-weight: 500px;
+	font-size: 100px
+}
+
+#bottom{
+	color: #48a9ea;
+	font-family: 'Architects Daughter', cursive, sans-serif; 
+	margin-top: 380px;
+	font-weight: 500px;
+	font-size: 100px
+}
+
+#back_id{
+	display: inline-block;
+} 

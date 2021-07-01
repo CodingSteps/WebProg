@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<link href="HangmanFinalProj.css" rel="stylesheet">
+			<link href='https://fonts.googleapis.com/css?family=Shadows Into Light' rel='stylesheet'>
+			<link href='<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">'>
+</head>
+
+<body>
+
+	<div id="h1_Text">Hangman</div>
+	<div class="heart">
+			<img id="life_5" src="images/heart.png">
+			<img id="life_4" src="images/heart.png">
+			<img id="life_3" src="images/heart.png">
+			<img id="life_2" src="images/heart.png">
+			<img id="life_1" src="images/heart.png">
+	</div>
+				
+				
+	<div id="dash_space"></div>
+	<br>
+	<br>
+
+	<div id="type">
+	<span id="type_text">Type Here</span>
+	<br>
+	<br>
+	<input type="text" name="text_input" id="text_box" />
+	<br> 
+	<br>
+	<button type="button" id="button_ok">OK</button>
+	<br>
+	</div>
+
+
+	<script type="text/javascript">
+    
+	$(document).ready(function(){
+
+        var input_of_textbox;
+		var id=1;
+
+		var random_word=["marshmellows","rainbow","cow","pizza","dog","microscope","pen","clock","elephant","hangman","phone","apple","book","whale","turtle","kite"];
+		var decimal_value=Math.random();
+		var random=Math.floor(decimal_value*random_word.length);
+		var ready_word=random_word[random];
+		var length_of_word= ready_word.length;
+		//console.log(length_of_word);
+
+		var dash=[];
+
+		for (var i = 0; i < length_of_word; i++) {
+			dash[i]=" __ ";
+		}
+
+		$("#dash_space").html(dash);
+
+		var a=length_of_word;
+
+        var timer=0;
+
+ 
+  $("#button_ok").click(function()
+  {
+  		input_of_textbox=$("#text_box").val();
+		
+					test:
+					if(a>0)
+					{   
+			       	   	    if(input_of_textbox.length>1)
+			       	   	    {
+			             		alert("INVALID INPUT! Please enter a single letter input.😵");
+			                }
+			       	  
+				       	   var input=input_of_textbox.toLowerCase();
+				       	   var compare=a;
+
+					       wrong:
+					       for (var x = 0; x < length_of_word; x++) 
+					       {
+					       		if(ready_word[x]===input)
+					       			{
+					       				dash[x]=input;
+					       				a=a-1;
+					       			}	
+							}
+
+					        if(a===compare)
+					        {
+					       		timer=timer+1;
+					       		$("#life_"+id).fadeOut(500);
+					       		id++;
+					       	}
+
+			       			if(timer===5)
+			       			{
+			      				location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_wrong.html?answer="+ready_word)
+			      				break test;
+			      			}	
+
+
+			       		 	string_dash=dash.join("  ");
+			       			console.log(string_dash);
+			       
+			       	
+			    			  $("#dash_space").html(string_dash);	
+
+						     if (a===0) 
+						     {
+			      	           location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_good.html");
+			      	          }      	         
+     
+     		 		 }  	
+ 
+  });
+        
+
+ });   
+
+ </script>
+</body>
+</html>

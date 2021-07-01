@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+			<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+			<link href="Hangman.css" rel="stylesheet">
+			<link href='https://fonts.googleapis.com/css?family=Shadows Into Light' rel='stylesheet'>
+	
+
+</head>
+<body>
+
+	
+	<script type="text/javascript">
+		
+
+
+		var random_word=["marshmellows","rainbow","cow","pizza","dog","microscope","pen","clock","elephant","hangman","phone","apple","book","whale","turtle","kite"];
+		var decimal_value=Math.random();
+		var random=Math.floor(decimal_value*random_word.length);
+		var ready_word=random_word[random];
+		var length_of_word= ready_word.length;
+		//console.log(length_of_word);
+
+		var dash=[];
+
+		for (var i = 0; i < length_of_word; i++) {
+			dash[i]=" __ ";
+		}
+        var string_dash=dash.join("  ");
+        alert(string_dash);
+        console.log(string_dash);
+        var a=length_of_word;
+        var timer=0;
+        test:
+        while(a>0){
+       	
+           var input1= prompt("Type a letter here! 😀. Cick on cancel to EXIT.");
+
+
+            if (input1===null) 
+            {
+       		  var con=confirm("Do you want to QUIT?");
+       		  if (con) {
+       			break test;
+       		  }
+       		  else
+       		  {
+       		  	continue;
+       		  }
+       	   }
+       	   else
+       	   {
+       	   	    while(input1.length>1)
+       	   	    {
+             	input1= prompt("INVALID INPUT! Please enter a single letter input.😵");
+                }
+
+       	   }
+       	  
+       	   	  var input=input1.toLowerCase();
+       	   
+
+       	   var compare=a;
+
+       for (var x = 0; x < length_of_word; x++) {
+       	if(ready_word[x]===input)
+       	{
+       		dash[x]=input;
+       		a=a-1;
+       	}
+
+       	
+       }
+        if(a===compare){
+       		timer=timer+1
+       	}
+
+       	if(timer===5){
+      			alert("Sorry, your 5 chances are over. The answer was "+ready_word+". Try again next time. 😔");
+      			break test;
+      				 }	
+
+
+        string_dash=dash.join("  ");
+       	console.log(string_dash);
+       
+       	alert(string_dash);
+
+      		
+       }
+
+       $("#dash").html(string_dash);	
+
+      if (a===0) {
+      	  alert("Well Done! 😀😉😄😃🙂🤩");
+      	}
+
+
+       
+
+	</script>
+
+</body>
+</html>

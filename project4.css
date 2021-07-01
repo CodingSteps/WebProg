@@ -1,4 +1,4 @@
-body{text-align: center;background-color: #FAEBD7;}
+body{text-align: center;background-color: #FAEBD7;margin: 0px;}
 .container1{background-color: #F5DEB3;margin-top: 20px;margin-left: 40px;margin-right: 40px;padding: 10px;}
 #personName{font-size: 50px;font-weight: 800;padding-top: 20px;}
 #about{font-size: 20px;text-align: justify;}

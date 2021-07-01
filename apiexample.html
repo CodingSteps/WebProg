@@ -1,0 +1,31 @@
+<html>
+<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+		<h1>Load external JSON pen</h1>
+		<p>View in console...</p>
+
+		<h2> Current Temperature in Coimbatore :  </h2>
+		<div id="cbe"></div>
+
+		<script type="text/javascript">
+				$.getJSON(
+				  "https://api.openweathermap.org/data/2.5/weather?q=Coimbatore&appid=887b28d6cd1b24b03b92cd1dc05bf245",
+				  function(data) {
+
+				    // Success! Do stuff with data.
+				    console.log(data.main.temp);
+
+				    $("#cbe").html(data.main.temp);
+
+				  }
+				);
+
+		</script>
+
+</body>
+
+
