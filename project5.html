@@ -2,6 +2,7 @@
 <head>
 	<title>Forms</title>
 	<link href="project5.css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -16,14 +17,14 @@
        <input type="password" id="myPassword" placeholder="Enter your Password">
 
        <input type="submit" value="Submit My Form" id="submitBtn">
-       <input type="reset" value="Reset Form">
+       <input type="reset" value="Reset Form"><br><br>
 
        <input type="radio" id="myRadio1" name="radiobtn">
        <label for="myRadio1">Apple</label>
        <input type="radio" id="myRadio2" name="radiobtn">
        <label for="myRadio1">Mango</label>
        <input type="radio" id="myRadio3" name="radiobtn">
-       <label for="myRadio3">Banana</label>
+       <label for="myRadio3">Banana</label><br><br>
 
        <input type="checkbox" id="myCheckbox1">
        <label for="myCheckbox1">Dog</label>
@@ -32,10 +33,10 @@
        <input type="checkbox" id="myCheckbox3">
        <label for="myCheckbox3">Horse</label>
        <br>
-       <input type="color" value="#ff0000">
+       <input type="color" value="#ff0000" id="colorPicker">
        <input type="number" min="10" max="20">
 
-       <input type="date" min="2001/12/01" max="2021/12/31">
+       <input type="date" min="2001-12-01" id="datePicker"><br><br>
 
        <label for="myDropdown">Choose Your Favourite drink</label>
        <select id="myDropdown">
@@ -49,10 +50,37 @@
 
     </form>	
 
-
+     <div id="myDiv" style="width:500;height: 500;border:2px solid grey;"></div>
 	</div>	
 
+<script type="text/javascript">
 
+  function GetTodayDate() 
+  {
+   var tdate = new Date();
+   var dd = tdate.getDate(); //yields day
+   if(dd<10){dd="0"+dd}
+   var MM = tdate.getMonth(); //yields month
+   MM=MM+1;
+   if(MM<10){MM="0"+ MM}
+   var yyyy = tdate.getFullYear(); //yields year
+   var currentDate= yyyy + "-" +MM+ "-" + dd;
+
+   return currentDate;
+}
+    
+    $(document).ready(function()
+    {
+            date = GetTodayDate();
+            $('#datePicker').attr("min",date)
+         
+             $("#colorPicker").change(function()
+             { 
+                  var color = $("#colorPicker").val();
+                  $('#myDiv').css('background-color',color);
+             });     
+    });  
+</script>  
 
 
 

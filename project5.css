@@ -1,5 +1,5 @@
-#MyForm{width:800px;margin: auto;background-color: lightblue;height: 1000px;padding: 100px;opacity:0.5;}
+#MyForm{width:800px;margin: auto;background-color: lightblue;height: 1000px;padding: 100px;opacity:1;}
 #myTextbox{width: 80%; padding-left: 20px;}
-body{font-family: Arial;background-image: linear-gradient( 
-90deg,rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url('images/business.jpg');
+/*body{font-family: Arial;background-image: linear-gradient( 
+90deg,rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url('images/business.jpg');*/
 background-size: cover;}}

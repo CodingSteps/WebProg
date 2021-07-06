@@ -1,0 +1,54 @@
+body{margin: 0px;font-family: "Lato",sans-serif;}
+
+.imgSection{
+	opacity: 0.7;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	width: 100%;	
+    position: relative;
+}
+
+.image1{background-image: url('images/image1.jpg');height: 800px;}
+.image2{background-image: url('images/image2.jpg');height: 400px;}
+.image3{background-image: url('images/image3.jpg');height: 400px;}
+
+
+.parallaxText{
+	position: absolute;
+	width: 100%;
+	top: 40%;
+	text-align: center;
+}
+
+.darktxt{
+	background-color: black;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 27px;
+	text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.imgText{
+	text-align: center;
+	font-size: 27px;
+	text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: 700px;
+    color: white;
+}
+
+.txtSection{
+	text-align: center;
+	padding: 20px;
+	background-color: #F4F4F4;
+	color: grey;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.dark{background-color: #282E34;color: white;}
+
+#grey{font-weight: 700;color: #666666;}

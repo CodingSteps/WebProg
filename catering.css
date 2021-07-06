@@ -1,0 +1,59 @@
+*{box-sizing: border-box;}
+
+body{margin: 0px;font-family: "Abel", sans-serif;}
+
+#logo{float: left; padding-left: 20px;padding-top: 15px;font-size: 30px;}
+
+#menu{float: right;list-style-type: none;}
+
+#menu li{
+	display: inline-block;
+	width: 70px;	
+	font-size: 18px;
+	margin-right: 10px;
+}
+
+li a{text-decoration: none;color: grey;}
+
+#mainImg{
+	clear: both;
+    background-image: url("images/burger.jpg");
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    width: 100%;
+}
+
+
+#imgTxt{
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+	font-size: 20px;
+}
+
+.section{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 1000px;
+	margin: auto;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.sectionImg{height: 500px;width:400px;margin: 20px;}
+.sectionTxt{flex: 40%;margin: 20px;}
+.title{text-align: center;}
+.menuItems{text-align: left;}
+
+h1,h3,h4{letter-spacing: 3px;}
+hr{width: 80%;text-align: center;border: 0;border-top: 1px solid #eee;}
+
+.contact{width: 1000px;margin: auto; margin-top: 80px;margin-bottom: 80px;}
+
+input{width: 80%;border:0;border-bottom: 1px solid #eee;margin:10px; padding: 10px;}
+#submit{border-radius: 10px;}
+
+footer{height: 100px;width: 100%;background-color: #F1F1F1; text-align: center;padding-top: 50px;}
