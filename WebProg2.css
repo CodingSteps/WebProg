@@ -1,28 +1,15 @@
-h2{
-	color: green;
-	background-color: bisque;
+
+
+.div1{
+    background-color: yellow;
+    border: 2px solid blue;
+
 }
 
 
-p{
-    	color: blue;
-    	background-color: red;
+.div2{
+    background-color: lightblue;
+    border: 2px solid red;
+
+    margin: 40px;
 }
-
-
-h1{
-    	text-align: center;
-    	width: 500px;
-    	background-color:#ff99ff;
- }
-
-
- #myH1{
- 	color: red;
- }
-
-
- .myClass{
- 	font-size: 20px;
- 	color: blueviolet;
- }

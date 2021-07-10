@@ -1,22 +1,18 @@
-.heading{text-align:center;color:red;}
-#unique{color:green;background-color:#FFD700;}
-#heading2{border-top:2px solid lightgreen; border-bottom:4px solid lightblue;}
-.para1{background-color:#FAEBD7;}
-#p1{color:blue;border-left:10px solid red;}
-#p2{background-color:#5F9EA0;border-right:10px solid #FFB6C1;color: white;}
-#p3{color:#FF0000;border:2px solid blue;}
+
+
 
 .div1{
 	border: 2px solid red;
 	background-color: yellow;
+	
 }
 
 .div2{
 	border: 5px solid blue;
 	background-color: lightblue;
-	margin: auto;
-	margin-top: 40px;
-	margin-bottom: 40px;
-	width: 500px;
-	padding: 20px;
+
+    width: 1000px;
+    margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
