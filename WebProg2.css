@@ -1,0 +1,28 @@
+h2{
+	color: green;
+	background-color: bisque;
+}
+
+
+p{
+    	color: blue;
+    	background-color: red;
+}
+
+
+h1{
+    	text-align: center;
+    	width: 500px;
+    	background-color:#ff99ff;
+ }
+
+
+ #myH1{
+ 	color: red;
+ }
+
+
+ .myClass{
+ 	font-size: 50px;
+ 	color: blueviolet;
+ }

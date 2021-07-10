@@ -3,6 +3,7 @@
 	<title>Forms</title>
 	<link href="project5.css" rel="stylesheet">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://kit.fontawesome.com/ae3f6753f4.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -51,6 +52,12 @@
     </form>	
 
      <div id="myDiv" style="width:500;height: 500;border:2px solid grey;"></div>
+
+  <!--   <i class="far fa-address-card cardIcon"></i>
+
+     <a href="#" class="myBtn">CLICK ME</a>   -->
+
+
 	</div>	
 
 <script type="text/javascript">
@@ -72,7 +79,7 @@
     $(document).ready(function()
     {
             date = GetTodayDate();
-            $('#datePicker').attr("min",date)
+            $('#datePicker').attr("max",date)
          
              $("#colorPicker").change(function()
              { 

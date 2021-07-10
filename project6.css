@@ -1,0 +1,32 @@
+.gradientDiv{
+	background-image: linear-gradient(to right,rgba(255, 0, 0, 0.1),rgba(255, 0, 0, 0.5)),url('images/business.jpg'); 
+	width: 1000px;
+	height: 600px;
+
+}
+
+.myFonts{
+	font-family: Abel,sans-serif;
+}
+
+#myIcon{
+	color: green;
+	font-size: 70px;
+}
+
+
+.myBtn{
+	padding: 20px;
+	background-color: blueviolet;
+	border-radius: 20px;
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+	box-shadow: 2px 2px grey;
+}
+
+
+.myBtn:hover{
+	background-color: red;
+	text-decoration: underline;
+}
