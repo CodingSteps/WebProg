@@ -1,15 +1,23 @@
 
 
-.div1{
-    background-color: yellow;
-    border: 2px solid blue;
+/*  comment */
 
+body{
+    font-family: Abel;
+    font-size: 20px;
 }
 
+#myBtn{
+    padding: 20px;
+    background-color: blueviolet;
+    font-weight: 700;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 5px 5px lightgrey;
+}
 
-.div2{
-    background-color: lightblue;
-    border: 2px solid red;
+#myBtn:hover{
 
-    margin: 40px;
+    background-color: red;
 }

@@ -1,0 +1,22 @@
+body{margin: 0px;}
+
+.container1{text-align: center;padding: 20px 40px 40px 40px;background-color: #FAEBD7;}
+
+.heading{font-size: 50px;font-weight: 800;}
+
+.container2{background-color: #F5DEB3; padding: 8px 20px 0px 20px;}
+
+#about{font-size: 18px; text-align: justify;}
+
+.myImg{border-radius: 50%;margin: 10px;}
+
+#highlight{
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #B22222;
+	color: white;
+	padding: 10px;
+}
+
+.myFooter{background-color: #B22222;color: white;padding: 5px;text-align: center;}

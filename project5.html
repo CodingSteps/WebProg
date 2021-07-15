@@ -34,20 +34,32 @@
        <input type="checkbox" id="myCheckbox3">
        <label for="myCheckbox3">Horse</label>
        <br>
-       <input type="color" value="#ff0000" id="colorPicker">
-       <input type="number" min="10" max="20">
+       <input type="color" id="colorPicker">
+       <input type="number" min="10" max="20" placeholder="Age">
 
        <input type="date" min="2001-12-01" id="datePicker"><br><br>
 
        <label for="myDropdown">Choose Your Favourite drink</label>
        <select id="myDropdown">
-       	<option> Coffee </option>
-       	<option selected> Tea </option>
-       	<option> Hot Chocoloate </option>
+       	<option value="coffee"> Coffee </option>
+       	<option value="tea" selected> Tea </option>
+       	<option value="chocolate"> Hot Chocoloate </option>
        </select>
 
        <textarea rows="10" cols="30" placeholder="Enter some text....." >
        </textarea>
+
+       <fieldset>
+           <legend>Personal Info</legend>
+        
+            <label for="myName">Name</label><br><br>   
+            <input type="text" id="myName" placeholder="Enter your Name" required><br><br>
+
+            <label for="myAge">Age</label><br><br>   
+            <input type="number" id="myAge" placeholder="Enter your Age" required><br><br>
+
+       </fieldset>
+
 
     </form>	
 
