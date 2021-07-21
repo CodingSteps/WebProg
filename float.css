@@ -4,7 +4,7 @@
 
 p{font-size: 20px; line-height: 30px;text-align: justify;}
 
-.floatClass{overflow: auto;border: 5px solid lightblue; padding: 20px;}
+.floatClass{overflow: auto;border: 10px solid lightblue; padding: 20px;}
 
 header{padding: 10px; background-color: lightblue;overflow: auto;}
 
