@@ -1,6 +1,6 @@
 .floatheader{border-radius: 100%; float: left; margin-right: 20px;}
 
-.floatRight{float: right; border-radius: 30%; margin-left: 20px;}
+.floatRight{float: right; border-radius: 30px; margin-left: 20px;}
 
 p{font-size: 20px; line-height: 30px;text-align: justify;}
 
