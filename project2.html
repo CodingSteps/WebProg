@@ -36,13 +36,24 @@ li:hover {
      min-width:130px;
      background-color:black;
  }
+
+ .dcontent1{
+     display: none;
+     position:absolute;
+     top:56px;
+     left:130px;
+     min-width:130px;
+     background-color:black;
+ }
  
  .dlink{display:block; padding:10px; color:white;}
  
 .dlink:hover{background-color:red;}
  
 .dropdown:hover .dcontent{display:block;}
- 
+#dlink2:hover .dcontent1{display:block;}
+
+.dlinkhr{color:gray;background-color:black;}
 
 </style>
 </head>
@@ -56,9 +67,21 @@ li:hover {
   <li class="dropdown"><a href="#dropdown">Dropdown</a>
        <div class="dcontent">
          <a href='#' class="dlink">Link1</a>
-         <a href='#' class="dlink">Link2</a>
+          <hr class="dlinkhr">
+         <div id="dlink2"><a href='#' class="dlink" >Link2</a>
+              <div class="dcontent1">
+                 <a href='#' class="dlink">Link3</a>
+                 <hr class="dlinkhr">
+                 <a href='#' class="dlink">Link4</a>
+                  <hr class="dlinkhr">
+                 <a href='#' class="dlink">Link5</a>
+              </div>
+         </div>
+          <hr class="dlinkhr">
          <a href='#' class="dlink">Link3</a>
        </div>
+
+       
   
   </li>
 </ul>

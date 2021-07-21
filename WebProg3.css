@@ -1,13 +1,6 @@
 body{margin: 0px;}
 
-.myClass{
-	display: inline-block;
-	background-color: lightblue;
-	color: red;
-	width: 300px;
-	height:100px;
-	border: 2px solid blue;
-}
+
 
 
 li{
@@ -39,6 +32,16 @@ a{text-decoration: none; color: white; font-size: 20px;}
   margin-top: 50px;
 
 }
+
+.myClass{
+  display: inline-block;
+  background-color: lightblue;
+  color: red;
+  width: 300px;
+  height:100px;
+  border: 2px solid blue;
+}
+
  
 .Txt{
     font-size: 30px;
