@@ -19,6 +19,7 @@ body{margin: 0px;font-family: "Lato",sans-serif;}
 	width: 100%;
 	top: 40%;
 	text-align: center;
+	
 }
 
 .darktxt{
@@ -52,3 +53,20 @@ body{margin: 0px;font-family: "Lato",sans-serif;}
 .dark{background-color: #282E34;color: white;}
 
 #grey{font-weight: 700;color: #666666;}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 500px){
+
+	.darktxt
+	{
+	
+	padding: 10px;
+
+	font-size: 20px;
+	
+    letter-spacing: 5px;
+	}
+
+}

@@ -1,22 +1,112 @@
 body{margin: 0px;}
 
-.container1{text-align: center;padding: 20px 40px 40px 40px;background-color: #FAEBD7;}
-
-.heading{font-size: 50px;font-weight: 800;}
-
-.container2{background-color: #F5DEB3; padding: 8px 20px 0px 20px;}
-
-#about{font-size: 18px; text-align: justify;}
-
-.myImg{border-radius: 50%;margin: 10px;}
-
-#highlight{
-	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #B22222;
-	color: white;
-	padding: 10px;
+.myClass{
+	display: inline-block;
+	background-color: lightblue;
+	color: red;
+	width: 300px;
+	height:100px;
+	border: 2px solid blue;
 }
 
-.myFooter{background-color: #B22222;color: white;padding: 5px;text-align: center;}
+
+li{
+	display: inline-block;
+	color: white;
+	list-style-type: none;
+	padding: 30px;
+}
+
+uL{
+	background-color: grey;
+	text-align: left;
+	margin: 0px;
+}
+
+li:hover{background-color: red;text-decoration: underline;}
+
+a{text-decoration: none; color: white; font-size: 20px;}
+
+
+.container {
+  position: relative;
+  background-image:url("https://www.touropia.com/gfx/d/tourist-attractions-in-the-usa/mount_rushmore.jpg?v=1");
+  height:500px;
+  width:60%;
+  margin:auto;
+  background-size:cover;
+  background-position:center;
+  margin-top: 50px;
+
+}
+ 
+.Txt{
+    font-size: 30px;
+    background-color: black;
+    opacity: 0.7;
+    padding: 5px 20px 5px 20px;
+    color: white;
+} 
+
+.topleft {
+  position: absolute;
+  top:5px;
+  left:0px;
+ }
+
+ .topright {
+  position: absolute;
+  top:5px;
+  right:0px;
+ }
+
+ .bottomleft {
+  position: absolute;
+  bottom:5px;
+  left:0px;
+ }
+
+ .bottomright {
+  position: absolute;
+  bottom:5px;
+  right:0px;
+ }
+
+ .centered{
+    position: absolute;
+  	top: 50%;
+    width: 100%;
+    text-align: center;
+ }
+
+ .sticky{
+ 	position: sticky;
+ 	top: 40px;
+ 	background-color: lightblue;
+ 	padding: 5px;
+ 	border: 2px solid red;
+ 	margin: 10px;
+ 	z-index: 1;
+ }
+
+
+ .fixed{position: fixed; width: 200px; top:300px;right: 0px; background-color: yellow;}
+
+
+.div1 {
+  width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.div2 {
+  width: 300px;
+  height: 100px;  
+  padding: 50px;
+  border: 1px solid red;
+  margin-top: 50px;
+  margin-left: 50px;
+}

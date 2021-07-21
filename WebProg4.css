@@ -1,0 +1,32 @@
+.OverflowExample{
+	background-color: lightblue;
+	width: 200px;
+	height: 100px;
+	overflow: auto;
+}
+
+
+img{
+	float: right;
+}
+
+
+.floatExample{
+	background-color: bisque;
+	border: 2px solid red;
+	overflow: auto;
+}
+
+
+.div1{background-color: red;}
+
+.div2{background-color: yellow;width: 30%}
+
+.div3{background-color: green;width: 30%;}
+
+
+
+.divClass{float: right;}
+
+
+.para{clear: both; font-size: 20px;}
