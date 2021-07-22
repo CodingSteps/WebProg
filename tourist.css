@@ -31,24 +31,24 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  height: 60px;
   background-color: #80ced6;
   
 }
 
 .topmenu li {
   float: left;
+  padding:20px;
 }
 
 .menu {
-  display: inline-block;
   color: white;
   text-align: center;
-  padding: 16px;
   text-decoration: none;
+  padding: 10px;
 }
 
-.menu:hover {
+li:hover {
   background-color: #222;
 }
 
@@ -100,11 +100,14 @@ body {
   color: white;
 }
 
+.dropdown{position: relative;}
+
 .dropdown-content{
   	min-width:160px;
     display:none;
     position:absolute;
-    top:178px;
+    top:60px;
+    left: -10px;
     background-color:#80ced6;
 }
 

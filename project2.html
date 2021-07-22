@@ -6,18 +6,16 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  height:60px;
-  overflow:hidden;
+  height:60px; 
   background-color:black;
 }
 
 li {
   float:left;
-  padding:20px 20px 30px 20px;
+  padding:20px;
 }
 
 a {
- 
   color: white;
   text-align: center;
   text-decoration: none;
@@ -27,20 +25,24 @@ li:hover {
   background-color: red;
 }
 
+.dropdown, #dlink2{position: relative;}
+.dropdown:hover .dcontent{display:block;}
 
 .dcontent{
      display:none;
      position:absolute;
-     top:68px;
-     left:320px;
+     top: 60px;
+     left: -10px;
      min-width:130px;
      background-color:black;
  }
 
+ #dlink2:hover .dcontent1{display:block;}
+
  .dcontent1{
      display: none;
      position:absolute;
-     top:56px;
+     top:0px;
      left:130px;
      min-width:130px;
      background-color:black;
@@ -50,9 +52,6 @@ li:hover {
  
 .dlink:hover{background-color:red;}
  
-.dropdown:hover .dcontent{display:block;}
-#dlink2:hover .dcontent1{display:block;}
-
 .dlinkhr{color:gray;background-color:black;}
 
 </style>
@@ -85,6 +84,7 @@ li:hover {
   
   </li>
 </ul>
+
 
 </body>
 </html>

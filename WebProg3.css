@@ -1,24 +1,27 @@
-body{margin: 0px;}
+body{margin: 0px; font-family: Abel,sans-serif;}
+
+.logo{float: left;list-style-type: none;
+  padding: 10px;}
 
 
-
-
-li{
-	display: inline-block;
-	color: white;
-	list-style-type: none;
-	padding: 30px;
+.menu{
+	    float: right;
+    color: white;
+    list-style-type: none;
+    padding: 50px 10px 10px 10px;
 }
 
 uL{
-	background-color: grey;
-	text-align: left;
+	height: 120px;
 	margin: 0px;
+  overflow: hidden;
+  padding-right: 30px;
+  background-color: aliceblue;
 }
 
-li:hover{background-color: red;text-decoration: underline;}
+a:hover{background-color:#E7E6E6;text-decoration: underline; border-radius: 10px;}
 
-a{text-decoration: none; color: white; font-size: 20px;}
+a{text-decoration: none; color: black; font-size: 20px;padding: 20px; color: #FCAC0C; font-weight: 600;}
 
 
 .container {
