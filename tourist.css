@@ -57,6 +57,35 @@ li:hover {
   background-color: #618685;
 }
 
+.dropdown{position: relative;}
+
+.dropdown-content{
+    min-width:160px;
+    display:none;
+    position:absolute;
+    top:60px;
+    left: -10px;
+    background-color:#80ced6;
+}
+
+.dlink {
+  color: black;
+  padding: 8px 8px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color:#80ced6;
+}
+
+.dlinkhr{color: lightgrey;
+  background-color:#80ced6;}
+
+.dlink:hover{background-color:black;color:white}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
 
 .container{clear:both;}
 
@@ -100,34 +129,7 @@ li:hover {
   color: white;
 }
 
-.dropdown{position: relative;}
 
-.dropdown-content{
-  	min-width:160px;
-    display:none;
-    position:absolute;
-    top:60px;
-    left: -10px;
-    background-color:#80ced6;
-}
-
-.dlink {
-  color: black;
-  padding: 8px 8px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  background-color:#80ced6;
-}
-
-.dlinkhr{color: lightgrey;
-  background-color:#80ced6;}
-
-.dlink:hover{background-color:black;color:white}
-
-.dropdown:hover .dropdown-content{
-display:block;
-}
 
 p{text-align: justify; font-size: 20px; line-height: 30px;}
 
