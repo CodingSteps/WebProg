@@ -1,93 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height:60px; 
-  background-color:black;
-}
-
-li {
-  float:left;
-  padding:20px;
-}
-
-a {
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
-
-li:hover {
-  background-color: red;
-}
-
-.dropdown, #dlink2{position: relative;}
-.dropdown:hover .dcontent{display:block;}
-
-.dcontent{
-     display:none;
-     position:absolute;
-     top: 60px;
-     left: -10px;
-     min-width:130px;
-     background-color:black;
- }
-
- #dlink2:hover .dcontent1{display:block;}
-
- .dcontent1{
-     display: none;
-     position:absolute;
-     top:0px;
-     left:130px;
-     min-width:130px;
-     background-color:black;
- }
- 
- .dlink{display:block; padding:10px; color:white;}
- 
-.dlink:hover{background-color:red;}
- 
-.dlinkhr{color:gray;background-color:black;}
-
-</style>
+   <link href="project2.css" rel="stylesheet"> 
 </head>
 <body>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-  <li class="dropdown"><a href="#dropdown">Dropdown</a>
-       <div class="dcontent">
-         <a href='#' class="dlink">Link1</a>
-          <hr class="dlinkhr">
-         <div id="dlink2"><a href='#' class="dlink" >Link2</a>
-              <div class="dcontent1">
-                 <a href='#' class="dlink">Link3</a>
-                 <hr class="dlinkhr">
-                 <a href='#' class="dlink">Link4</a>
-                  <hr class="dlinkhr">
-                 <a href='#' class="dlink">Link5</a>
-              </div>
-         </div>
-          <hr class="dlinkhr">
-         <a href='#' class="dlink">Link3</a>
-       </div>
-
-       
-  
+  <li><a href="#">Home</a></li>
+  <li><a href="#">News</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">About</a>
   </li>
+  <li class="dropdown"><a href="#">Dropdown</a>
+           <div class="dcontent">
+               <a href='#' class="dlink">Link1</a>
+               <hr class="dlinkhr">
+               <div id="dlink2"><a href='#' class="dlink" >Link2</a>
+                    <div class="dcontent1">
+                       <a href='#' class="dlink">Link3</a>
+                       <hr class="dlinkhr">
+                       <a href='#' class="dlink">Link4</a>
+                        <hr class="dlinkhr">
+                       <a href='#' class="dlink">Link5</a>
+                    </div>
+              </div> 
+
+               <hr class="dlinkhr">
+               <a href='#' class="dlink">Link3</a>
+           </div> 
+  </li>
+
 </ul>
+
+            
 
 
 </body>
 </html>
+
+
 
 
 
