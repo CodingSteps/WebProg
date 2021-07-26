@@ -20,3 +20,79 @@ a {
 li:hover {
   background-color: red;
 }
+
+
+.dropdown{position: relative;}
+
+.dropdown:hover .dropdownContent{display: block;}
+
+.dropdownContent{
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    min-width: 120px;
+    background-color: black;
+}
+
+
+.dropdownContent a{display: block; padding: 10px;text-decoration: none;}
+
+.dropdownContent a:hover{background-color: red;}
+
+.dlinkhr{background-color: black;color: white;}
+
+h1{
+background-color:lightblue;
+width:400px;
+padding: 20px;
+text-align: center;
+
+animation-name:new;
+animation-duration:20s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+animation-timing-function: linear;
+animation-delay: 0s;
+/*animation: example 5s linear 2s infinite alternate;*/
+}
+
+h2{background-color:orange;
+width:600px;
+padding:10px;}
+
+@keyframes new{
+0%{background-color:lightblue;transform:translate(0px,0px);}   
+25%{background-color:pink;transform:translate(300px,0px);} 
+50%{background-color:yellow;transform:translate(600px,0px);}
+75%{background-color:purple;transform:translate(900px,0px);color:white}
+100%{background-color:green;transform:translate(1200px,0px);color:white;}
+}
+
+
+h2:hover{
+padding:40px;
+width:800px;
+transition:padding 10s, width 10s;
+}
+
+
+.animate{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;  
+  
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:300px; top:0px;}
+  50%  {background-color:blue; left:300px; top:250px;}
+  75%  {background-color:green; left:0px; top:250px;}
+  100% {background-color:red; left:0px; top:0px;}
+}

@@ -46,9 +46,9 @@ li:hover {
      background-color:black;
  }
  
- .dlink{display:block; padding:10px; color:white;}
+ .dcontent a{display:block; padding:10px; color:white;}
  
-.dlink:hover{background-color:red;}
+.dcontent a:hover{background-color:red;}
  
 .dlinkhr{color:gray;background-color:black;}
 
