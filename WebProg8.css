@@ -40,3 +40,25 @@ ease, linear, ease-in, ease-out */
   75%{background-color: orange; width: 1100px;}
   100%{background-color: purple; width: 1300px;}
 }
+
+
+p::selection{background-color: blueviolet;color: white;}
+
+li::marker{color: red;}
+
+h1::after{
+
+	content: "After Content";
+	color: orange;
+	font-size: 12px;
+}
+
+
+
+p{
+	column-count: 4;
+	column-gap: 40px;
+	column-rule: 1px solid blue;
+	text-align: justify;
+}	
+
