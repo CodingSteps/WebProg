@@ -31,9 +31,9 @@
 	margin-top: -5px; 
 	font-size:22px;
     font-weight: 700;
-    }
+ }
 
- 
+
  @media (max-width: 800px) {
   .flexContainer {
     flex-direction: column;
@@ -41,6 +41,6 @@
 
 @media (max-width: 576px) {
   .card>img{width: 100%;}
-}
+} 
 
 }   

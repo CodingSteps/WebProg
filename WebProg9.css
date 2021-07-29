@@ -1,0 +1,20 @@
+.fcontainer{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     background-color: lightblue;
+     height: 400px;
+}
+
+
+.fcontainer > div{
+    padding: 20px;
+    margin: 10px; 
+    border: 1px solid red;
+    background-color: white;
+    border-radius: 10px;
+
+    
+}
