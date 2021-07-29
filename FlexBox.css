@@ -17,7 +17,7 @@
 }
 
 .card{
-	flex: 0 0 30%;
+	flex: 0 1 30%;
 	margin: 10px;
 	border: 20px solid #f7f7f7;
 	border-radius: 	10px;
