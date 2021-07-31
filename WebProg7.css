@@ -2,19 +2,20 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  height:60px; 
+  height:65px; 
   background-color:black;
 }
 
 li {
-  float:left;
-  padding:20px;
+  float:right;
+  padding:21px;
 }
 
 a {
   color: white;
   text-align: center;
   text-decoration: none;
+  font-size: 20px;
 }
 
 li:hover {
@@ -29,9 +30,9 @@ li:hover {
 .dropdownContent{
     display: none;
     position: absolute;
-    top: 60px;
+    top: 62px;
     left: 0px;
-    min-width: 120px;
+    min-width: 150px;
     background-color: black;
 }
 
@@ -42,7 +43,26 @@ li:hover {
 
 .dlinkhr{background-color: black;color: white;}
 
-h1{
+
+ul > .icon{display: none;}
+
+@media screen and (max-width: 600px) {
+
+     ul > .icon
+     {
+      display: block;
+      float: right;
+      padding: 20px 20px 10px 10px;
+      font-size: 23px;
+    }
+
+    ul > li{display: none;}
+
+}
+
+
+
+/*h1{
 background-color:lightblue;
 width:400px;
 padding: 20px;
@@ -54,7 +74,7 @@ animation-iteration-count:infinite;
 animation-direction:alternate;
 animation-timing-function: linear;
 animation-delay: 0s;
-/*animation: example 5s linear 2s infinite alternate;*/
+//animation: example 5s linear 2s infinite alternate;
 }
 
 h2{background-color:orange;
@@ -95,4 +115,4 @@ transition:padding 10s, width 10s;
   50%  {background-color:blue; left:300px; top:250px;}
   75%  {background-color:green; left:0px; top:250px;}
   100% {background-color:red; left:0px; top:0px;}
-}
+}*/
