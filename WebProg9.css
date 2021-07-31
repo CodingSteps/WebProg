@@ -1,0 +1,45 @@
+*{box-sizing: border-box;}
+
+.section1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    background-image: url('images/beachshowcase.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+body{margin: 0px;}
+
+.sectionTxt{text-align: center;}
+
+.heading{font-size: 40px;font-weight: 800;}
+.subtitle{margin: 10px;font-size: 18px;}
+.moreBtn{text-decoration: none; border: 2px solid brown;padding: 10px;border-radius: 20px;}
+
+.section2,.section3{padding: 10px;text-align: justify; background-color: bisque;}
+
+.section4{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.part1,.part2,.part3{flex: 0 1 33%;}
+
+.part1,.part3{background-color: brown; padding: 20px}
+.part2{background-color: bisque;padding: 10px}
+
+.section4{background-color: bisque;}
+
+@media screen and (max-width: 768px) 
+{
+  .section4 
+  {
+    flex-direction: column;
+  }
+} 
