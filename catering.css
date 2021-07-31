@@ -37,14 +37,13 @@ li a{text-decoration: none;color: grey;}
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	width: 1000px;
-	margin: auto;
+	
 	margin-top: 80px;
 	margin-bottom: 80px;
 }
 
-.sectionImg{height: 500px;width:400px;margin: 20px;}
-.sectionTxt{flex: 40%;margin: 20px;}
+.sectionImg{flex: 0 1 30%; height: 500px;margin: 20px;}
+.sectionTxt{flex:0 1 30%;margin: 20px;}
 .title{text-align: center;}
 .menuItems{text-align: left;}
 
