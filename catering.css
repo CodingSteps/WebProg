@@ -2,16 +2,18 @@
 
 body{margin: 0px;font-family: "Abel", sans-serif;}
 
-#logo{float: left; padding-left: 20px;padding-top: 6px;font-size: 30px;font-weight: 700;}
+#logo{float: left; padding-left: 20px;padding-top: 20px;font-size: 30px;font-weight: 700;}
 
 #menu{float: right;list-style-type: none;}
 
 #menu li{
 	display: inline-block;
-	width: 70px;	
-	font-size: 18px;
-	margin-right: 10px;
+	padding: 10px;	
+	font-size: 20px;
+	margin-right: 20px;
 }
+
+#menu li:hover{background-color: lightgrey; border-radius: 10px;}
 
 li a{text-decoration: none;color: grey;}
 
@@ -19,6 +21,7 @@ li a{text-decoration: none;color: grey;}
 	clear: both;
     background-image: url("images/Grilled-Vegetable-Wrap.jpg");
     background-size: cover;
+    background-position: center;
     height: 600px;
     position: relative;
     width: 100%;
@@ -56,3 +59,11 @@ input{width: 80%;border:0;border-bottom: 1px solid #eee;margin:10px; padding: 10
 #submit{border-radius: 10px;}
 
 footer{height: 100px;width: 100%;background-color: #F1F1F1; text-align: center;padding-top: 50px;}
+
+
+@media screen and (max-width: 768px)
+{
+	.sectionTxt{flex: 0 1 80%;}
+    .section{margin: 20px;}
+	.contact {width: 80%;text-align: justify; margin: 40px;}
+}
