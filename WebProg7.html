@@ -1,6 +1,7 @@
 <!Doctype html>
 <html>
 <head>
+    <title>Responsive Custom Menu</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="WebProg7.css" rel="stylesheet"> 
@@ -24,6 +25,7 @@
     <li class="menu"><a href="#">About</a></li> 
     <li class="menu"><a href="#">News</a></li>   
     <li class="menu"><a href="#">Contact</a></li>
+
     <a href="#" class="icon" onclick="myFunction()">&#9776;</a>
 </ul>
 </header>
@@ -53,9 +55,12 @@
     function myFunction() {
 
       var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
+      if (x.className === "topnav") 
+      {
+        x.className += " responsive"; //x.classname = x.classname +"responsive"   topnav responsive
+      }
+       else 
+      {
         x.className = "topnav";
       }
       
