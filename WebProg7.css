@@ -1,24 +1,25 @@
-ul {
+header{background-color:black;height:65px; }
+
+.topnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  height:65px; 
-  background-color:black;
+  float:right;
 }
 
-li {
-  float:right;
+.topnav li {
+  display: inline-block;
   padding:21px;
 }
 
-a {
+.topnav a {
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
 }
 
-li:hover {
+.topnav li:hover {
   background-color: red;
 }
 
@@ -44,21 +45,61 @@ li:hover {
 .dlinkhr{background-color: black;color: white;}
 
 
-ul > .icon{display: none;}
+.topnav .icon{display: none;}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) 
+{
 
-     ul > .icon
-     {
-      display: block;
+    .topnav .menu{
+      display: none;
+    }
+   
+    .topnav .icon{
       float: right;
-      padding: 20px 20px 10px 10px;
-      font-size: 23px;
+      display: block;
+      padding: 20px;
+      font-size: 20px;
     }
 
-    ul > li{display: none;}
-
 }
+
+@media screen and (max-width: 576px) {
+
+  .topnav.responsive{float: none;}
+  
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .topnav.responsive li {
+    display: block;
+    background-color: black;
+  }
+
+  .topnav.responsive li:hover{background-color:lightgrey;}
+
+  .topnav.responsive a{color: white;text-align: left;}
+
+   .topnav.responsive li:first-child{background-color: red;}
+
+  .topnav.responsive .dropdown{
+    text-align: left;
+  }
+
+  .topnav.responsive .dropdownContent{
+    position: relative; 
+    top: 20px;
+    left: 0px;
+    background-color: #f7f7f7;
+  }
+
+  .topnav.responsive .dropdownContent a{color: black;}
+  
+}
+
 
 
 

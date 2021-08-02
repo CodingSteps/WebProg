@@ -1,3 +1,4 @@
+/*
 *{box-sizing: border-box;}
 
 body{margin: 0px;font-family: "Abel", sans-serif;}
@@ -12,6 +13,7 @@ body{margin: 0px;font-family: "Abel", sans-serif;}
 	font-size: 20px;
 	margin-right: 20px;
 }
+
 
 #menu li:hover{background-color: lightgrey; border-radius: 10px;}
 
@@ -35,12 +37,12 @@ li a{text-decoration: none;color: grey;}
 	font-size: 20px;
 }
 
+
 .section{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	
 	margin-top: 80px;
 	margin-bottom: 80px;
 }
@@ -66,4 +68,4 @@ footer{height: 100px;width: 100%;background-color: #F1F1F1; text-align: center;p
 	.sectionTxt{flex: 0 1 80%;}
     .section{margin: 20px;}
 	.contact {width: 80%;text-align: justify; margin: 40px;}
-}
+} */
