@@ -38,7 +38,7 @@ header{background-color:black;height:65px; }
 }
 
 
-.dropdownContent a{display: block; padding: 10px;text-decoration: none;}
+.dropdownContent a{display: block;padding: 10px;text-decoration: none;}
 
 .dropdownContent a:hover{background-color: red;}
 
@@ -104,7 +104,7 @@ header{background-color:black;height:65px; }
 
 
 
-/*h1{
+h1{
 background-color:lightblue;
 width:400px;
 padding: 20px;
@@ -157,4 +157,4 @@ transition:padding 10s, width 10s;
   50%  {background-color:blue; left:300px; top:250px;}
   75%  {background-color:green; left:0px; top:250px;}
   100% {background-color:red; left:0px; top:0px;}
-}*/
+}
