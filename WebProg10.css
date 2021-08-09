@@ -2,5 +2,6 @@
 
 .class1{background-color: lightblue;}
 
-.mynav{background-color: darkblue;}
+.mynav{background-color: aliceblue;}
 
+.carousel-control-next-icon, .carousel-control-prev-icon{width: 60px; height: 60px;}

@@ -1,10 +1,5 @@
 *{box-sizing: border-box;}
 
-
-.active {
-  display: block;
-}
-
 .carousel-inner img{
   width: 100%;
   height: 700px;
@@ -44,31 +39,33 @@
 
 .dropdown-menu{background-color:#b3f820;}
 
-.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle
-{background-color: orange;margin-top: 2px; border:none;}
+.dropdown
+{background-color: orange;padding: 10px;border-radius: 10px;}
+
+#dropdownMenuLink{color: white; text-decoration: none;font-size: 16px;font-weight: 700; }
+
 
 .dropdown:hover .dropdown-menu {
     display: block;
-    margin-top: 0; // remove the gap so it doesn't close
+    margin-top: 0; 
  }
 
 
 #belowSlider{background-color:#b3f820; opacity: 0.8; font-size: 20px;color: black;padding: 20px;}
-
-.someText{font-size: 20px;color: black; padding: 25px;}
 
 .divBtn{float: right; margin-right: 30px; text-decoration: none; border:2px solid grey;padding: 5px 25px 8px 25px;
    border-radius: 10px; font-size: 20px; color: grey; margin-top: 6px; margin-left: 20px}
 
 .divBtn:hover{background-color: #F6A113; color: white;}   
 
-.myBlock{clear: both;}
-
-.blkHeading{font-size: 60px; padding: 20px; border-bottom: 1px solid black;}
+.myBlock{clear: both; margin: 20px; padding: 50px 50px 20px 50px;}
 
 .blk{width: 1000px;margin: auto; text-align: center;}
 
-.myBlock{margin: 20px; padding: 50px 50px 20px 50px;}
+.blkHeading{font-size: 60px; padding: 20px; border-bottom: 1px solid black;}
+
+.someText{font-size: 20px;color: black; padding: 25px;}
+
 
 .blkIcons, .flexBlk, .emojiBlock, .footerBlk
 {
@@ -87,7 +84,9 @@
 
 .myIconBlk{padding: 50px 50px 20px 50px; text-align: center;}
 
-.leftBlock, .rightBlock{flex:50%;padding: 40px;}
+.leftBlock, .rightBlock{flex:0 1 50%;padding: 40px;}
+
+.fun{width: 100%;background-color:#b3f820 ;}
 
 .imageBlk{padding-top: 80px; padding-bottom: 40px; text-align: center;}
 
@@ -102,7 +101,7 @@ hr{width: 90%;}
 
 .BlockBtn{background-color: #F6A113; color: white;padding:10px;margin-top: 20px;border-radius: 10px;}
 
-.fun{width: 100%;background-color:#b3f820 ;}
+
 
 .fb{color: darkblue; font-size: 50px;}
 .tweet{color: #1DA1F2; font-size: 50px;}
@@ -120,6 +119,7 @@ hr{width: 90%;}
     .carousel-inner img {
            width: auto;
            height: 750px;
+           background-position: center;
      }
  
      .carousel-caption{top: 30%;}
@@ -131,6 +131,7 @@ hr{width: 90%;}
      .blk {width: auto;}
      .blkHeading {font-size: 40px;}
      .leftBlock, .rightBlock {padding: 5px;margin-top: 20px;}
+
        h3 {font-size: 100%;}
 
        .divBtn{ 
@@ -141,7 +142,14 @@ hr{width: 90%;}
         text-align: center;
       }
 
-      #belowSlider {height: 250px;}
-
-
  }          
+
+@media screen and (max-width: 576px){ 
+  #belowSlider {height: 340px;}
+
+  .footerBlk, .flexBlk{flex-direction: column;}
+
+  .imageBlk img{width: 100%;}
+
+  .rightImg{width: 100%;}
+}  

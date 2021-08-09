@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Manual Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="Slider.css" rel="stylesheet"> 
+</head>
+<body>
+
+<div class="slideshow-container">
+
+      <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(45).jpg" style="width:100%; height:550px;">
+          <div class="text">Caption One</div>
+      </div>
+
+      <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(44).jpg" style="width:100%;height:550px;">
+          <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(42).jpg" style="width:100%;height:550px;">
+          <div class="text">Caption Three</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+
+</div>
+
+
+
+<script>
+
+var slideIndex = 0;
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  slideIndex = slideIndex + n;
+  showSlides(slideIndex);
+}
+
+
+function currentSlide(n) {
+  slideIndex = n;
+  showSlides(slideIndex);
+}
+
+function showSlides(n) {
+ 
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+ 
+  //Click prev arrow on first slide
+  if(slideIndex < 0)
+  {
+    slideIndex = slides.length - 1 //show last slide
+  }
+
+   //Click next arrow on last slide
+  if(slideIndex >= slides.length)
+  {
+    slideIndex = 0 //show first slide
+  }
+
+
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex].style.display = "block";  
+  dots[slideIndex].className += " active";
+  
+ 
+  setTimeout(showSlides, 10000, slideIndex++); // Change image every 10 seconds
+   
+}
+
+ 
+</script>
+
+</body>
+</html> 

@@ -15,8 +15,9 @@
 
 
 	<!-- Navigation -->
+
 <nav class="navbar navbar-expand-md navbar-light myNav sticky-top">
-	<div class="container-fluid">
+	
 		<a class="navbar-brand" href="#">
 			<img src="images/SmoothyLogo.png">
 		</a>
@@ -38,12 +39,13 @@
 					<a class="nav-link" href="#">Connect</a>
 			    </li>
 			    <li>
-			    	<div class="dropdown show">
-						  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    	<div class="dropdown">
+						  <a href="#" id="dropdownMenuLink" data-toggle="dropdown">
 						    Dropdown Menu
+						    <i class="fas fa-caret-down"></i>
 						  </a>
 
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						  <div class="dropdown-menu">
 						    <a class="dropdown-item" href="#">Action</a>
 						    <hr class="dropdown-divider">
 						    <a class="dropdown-item" href="#">Another action</a>
@@ -53,11 +55,12 @@
 			    </li>	
 			</ul>
 		</div>	
-    </div>
+
 </nav>
 
+
 <!--- Image Slider -->
-<div id="slides" class="carousel slide" data-ride="carousel">
+<div id="slides" class="carousel slide" data-ride="carousel" data-interval="10000">
 	<ul class="carousel-indicators">
 		<li data-target="#slides" data-slide-to="0" class="active"></li>
 		<li data-target="#slides" data-slide-to="1"></li>
@@ -149,6 +152,7 @@
 
 <!--- Emoji Section -->
 <button class="fun" data-toggle="collapse" data-target="#emoji">Click for Fun</button>
+
 <div id="emoji" class="collapse">
 	
 		<div class="emojiBlock">
@@ -214,7 +218,7 @@
 
 <!-- Block 6 -->
 <!--- Connect -->
-<div class = "myBlock flexBlk">
+<div class = "myBlock">
 	<div class = "blkHeading blk"> Connect With US</div>
 		
 	<div class = "blkIcons">
@@ -266,7 +270,7 @@
 				<p>City, State,00000</p>
 				<p>City, State,00000</p>
 			</div>	
-			<div class="">
+			<div>
 				<hr class="light">
 				<h5>&copy; www.CodingSteps.in</h5>
 			</div>	
