@@ -20,13 +20,12 @@ img{
 
 .div1{background-color: red;}
 
-.div2{background-color: yellow;width: 30%}
+.div2{background-color: yellow;width: 20%}
 
-.div3{background-color: green;width: 30%;}
+.div3{background-color: green;width: 20%;}
 
 
 
 .divClass{float: right;}
 
 
-.para{clear: both; font-size: 20px;}

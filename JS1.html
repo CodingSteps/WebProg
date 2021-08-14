@@ -2,27 +2,77 @@
 <head>
 	<title> Javascript 1</title>	
 	<script src="js1.js"></script>
+
+<style>
+   .ticket{
+    width: 80%;
+    margin: 100px auto 200px auto;
+    padding: 50px;
+    background-color: #d2fcd7;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+   }
+
+   h1{margin-bottom: 100px; border-bottom: 5px solid #f8df9c;}
+
+   button{background-color: #f8df9c; padding: 10px; border-radius: 10px; font-size: 20px;
+    font-weight: 700;}
+
+    #inputAge{height: 40px; width: 150px; border-radius: 10px;border:1px solid lightgrey; padding: 4px;}
+</style>    
 </head>	
 
-<body style="text-align: center;">
+<body style="text-align: center; background-color:azure;font-family: Arial;">
 
-	<h1> Calculate your Age in Seconds </h1>
+<!--	<h1> Calculate your Age in Seconds </h1>
     
     <label for="ageText">Enter Your Age:</label>
     <input type="text" id="ageText" placeholder="Enter Age"> 
 
     <button onclick="myFunction()">Calculate</button>
      <br>
-    <h2 id="ageResult"></h2>
+    <h2 id="ageResult"></h2> -->
 
 
-<!--
+<!-- Counter Example 
     <h1> Counter Example </h1>
-    <h2 class="counter">0</h2>
+    <h2 id="counter">100</h2>
   
     <button class="Increment" onclick="incrementCnt()">Increment</button>
     <button class="Reset" onclick="resetCnt()">Reset</button>
-    <button class="Decrement" onclick="decrementCnt()">Decrement</button> -->
+    <button class="Decrement" onclick="decrementCnt()">Decrement</button> 
+    <br><br> -->
+    
+<!-- Convert String Case 
+
+    <label for="inputStr">Enter any Text: </label>
+    <input type="text" id="inputStr" placeholder="Enter Text"> 
+
+    <button onclick="convertCapitalCase()">Convert To Capital-Case</button>
+    <button onclick="convertLowerCase()">Convert To Lower-Case</button>
+    <button onclick="convertUpperCase()">Convert To Upper-Case</button>
+     <br>
+    <h2 id="txtResult"></h2> -->
+
+
+<!-- Ticket Checker -->
+<div class="ticket">
+
+      <h1> Automated Ticket Checker </h1>
+      <label for="inputAge">Enter your Age: </label>
+      <input type="text" id="inputAge" placeholder="Enter Age"> 
+
+      <p>Are you accompanied by an adult (age < 13 yrs): </p>  
+      <input type="radio" name="accAdult" value="yes" id="radio1">
+      <label for="radio1">Yes</label>
+      <input type="radio" name="accAdult" value="no" id="radio2">
+      <label for="radio2">No</label>
+      <br><br>
+      <button onclick="checkEntry()">Check Entry</button><br>
+      <h2 id = "entry" style="color:red;"></h2>
+</div>
+
 
 </body>	
 

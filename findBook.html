@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The Array.find() method returns the value of the first element in an array that passes a test (provided by a function).</p>
+
+<p id="demo"></p>
+
+<script>
+let ib = "house";
+let inputBook = ib.toUpperCase();
+let available;
+let p =[];
+const books = ["Harry Potter","Just Add Magic","The Magic Treehouse", "Mystery House"];
+
+for(let i=0; i<books.length;i++) {
+  books[i] = books[i].toUpperCase();
+}
+
+let search = books.find(checkBook);
+
+
+function checkBook(book) {
+
+     if(inputBook === book)
+     {
+       return book
+     }
+     else
+     {
+       let t = book.split(" ");
+   
+     let s = t.find(word);
+    
+     if(s !== undefined)
+     {
+        p.push(book);
+     }
+     else
+     {
+         return s;
+     }
+       
+     
+     }
+}  
+
+function word(w){
+
+      return (inputBook === w)
+
+}
+
+for (const element of p) {
+  alert(element);
+}
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+<!--https://www.w3schools.com/code/tryit.asp?filename=GTFA182IGKWZ 
+https://www.w3schools.com/code/tryit.asp?filename=GTFAGXUN6NAJ-->

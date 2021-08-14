@@ -1,0 +1,24 @@
+.overflowExample{
+
+	background-color: lightblue;
+	width: 200px;
+	height: 100px;
+	overflow: auto;  /* overflow - visible, hidden, scroll, auto */
+}
+
+
+img{float: right; margin:20px;}  /* float left right */
+
+h1{clear: both;}
+
+.div1{background-color: red; float: right; width: 20%;}
+
+.div2{background-color: yellow; width: 20%;float: right;}
+.div3{background-color: green; width: 20%;float: right;}
+
+
+.box1{background-color: lightblue; width: 200px;}
+
+.box2{background-color: lightblue; width: 200px; padding: 10px; border: 2px solid red; box-sizing: border-box;}
+
+

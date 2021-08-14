@@ -15,29 +15,115 @@
 
 
 		function incrementCnt(){
-			 let cnt = document.getElementsByClassName('counter');
+			/* let cnt = document.getElementsByClassName('counter');
 			 let incVal = cnt[0].innerHTML;
-			 incVal++;
-			 cnt[0].innerHTML = incVal; 
+			 incVal++; //incVal=incVal+1;
+			 cnt[0].innerHTML = incVal; */
 
-			 /* let cnt = document.getElementById('counter');
-			 let incVal = cnt.innerHTML;
-			 incVal++;
-			 cnt.innerHTML = incVal;*/
+			 let cnt;
+			 cnt = document.getElementById('counter');
+			 cnt.style.backgroundColor = "blue";
+			 let incVal = cnt.innerHTML;  //incVal =100
+			 incVal++; //incVal =incVal +5  incVal =105
+			 cnt.innerHTML = incVal;
 		}
 
 		function resetCnt(){
-			 let cnt = document.querySelectorAll('h2.counter');
-			 let incVal = cnt[0].innerHTML;
-			 incVal=0;
-			 cnt[0].innerHTML = incVal; 
-
+			 let a;
+			 a = document.getElementById('counter');
+			 a.style.backgroundColor = "green";
+			
+			 a.innerHTML = 0; 
 		}
 
 
 		function decrementCnt(){
-			 let cnt = document.getElementsByClassName('counter');
-			 let incVal = cnt[0].innerHTML;
-			 incVal--;
-			 cnt[0].innerHTML = incVal; 
+			 let a;
+			 a = document.getElementById('counter');
+			 a.style.backgroundColor = "pink";
+			 let u = a.innerHTML;  //incVal =100
+			 u--; //incVal =incVal +5  incVal =105
+			 a.innerHTML = u; 
 		}
+
+
+// Functions to convert String Case
+		function convertCapitalCase()
+		{
+			let inputTxt = document.getElementById("inputStr").value;
+
+	        let capitalCase = inputTxt[0].toUpperCase() + inputTxt.slice(1).toLowerCase();
+
+            document.getElementById("txtResult").innerHTML = `${capitalCase}`;
+            
+		}
+
+		function convertUpperCase()
+		{
+			let inputTxt = document.getElementById("inputStr").value;
+
+	        let upperCase = inputTxt.toUpperCase();
+
+            document.getElementById("txtResult").innerHTML = `${upperCase}`;
+            
+		}
+
+		function convertLowerCase()
+		{
+			let inputTxt = document.getElementById("inputStr").value;
+
+	        let lowerCase = inputTxt.toLowerCase();
+
+            document.getElementById("txtResult").innerHTML = `${lowerCase}`;
+            
+		}
+
+
+// Check Ticket Entry
+
+      function checkEntry()
+      {
+		      	let age = document.getElementById("inputAge").value;
+		      	let accompanied;
+		      	document.getElementById("entry").innerHTML=" ";
+
+
+		      	if(document.getElementById("radio1").checked)
+		      	{
+		              accompanied = document.getElementById("radio1").value;
+		      	}
+		      	else if(document.getElementById("radio2").checked) 
+		      	{
+		      		  accompanied = document.getElementById("radio2").value;
+		      	}
+		      	else
+		        {
+		        	  accompanied = "Are you accompained by an Adult. Please select an option";
+		        }	
+
+		      
+		        if(isNaN(age) || age === '')
+		        {
+		        	alert("Please enter valid input for age");
+		        }
+		        else if(age >= 13 || (age < 13 && accompanied === 'yes'))
+		        {
+		        	document.getElementById("entry").style.color = "#db9c3e";
+		        	document.getElementById("entry").innerHTML="You are allowed. Enjoy the Movie";
+		        }	
+		        else if(age < 13 && accompanied === 'no')
+		        {
+		        	document.getElementById("entry").style.color = "red";
+		        	document.getElementById("entry").innerHTML="Sorry, you are not allowed";
+		        }	
+		       
+		        else if(accompanied !== 'yes' && accompanied !== 'no')
+		        {
+		        	alert(accompanied);
+		        }	
+
+      }
+
+
+     
+      	
