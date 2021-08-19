@@ -1,0 +1,81 @@
+const bookRepo = ["Harry Potter","Just Add Magic","The Magic Treehouse", "Mystery House"];
+let inputBook = "just add magic";
+const bookResult = [];
+
+let searchBook = (b) => {
+    if(inputBook.toUpperCase() === b.toUpperCase())
+    {
+         bookResult.push(b);
+    }
+    else
+    {
+        let splitStr = b.split(" "); // splitStr array ['Harry','Potter']
+        let findMatch = splitStr.find((s)=>{return inputBook.toUpperCase()===s.toUpperCase()})
+        if(findMatch !== undefined)
+        {
+            bookResult.push(b);
+        }
+    }
+}
+
+bookRepo.find(searchBook);
+
+if(bookResult.length > 0)
+    console.log(`Search Results matching given keyword: ${bookResult}`);
+else
+    console.log(`There is no book with keyword ${inputBook} available in the repository`);
+
+
+
+
+ 
+ // reduce with strings
+ 
+ const shoppingList = ['apples', 'mangoes', 'onions', 'cereal', 'carrots', 'eggplants'];
+const foodsIDontLike = ['onions', 'eggplants'];
+
+const newShoppingList = shoppingList.reduce((arr, curr) => {
+  if (!foodsIDontLike.includes(curr)) {
+    arr.push(curr);
+  }
+  return arr;
+},[]);
+
+console.log(newShoppingList); // ["apples", "mangoes", "cereal", "carrots"]
+
+
+const numbers = [175, 50, 25];
+let a = numbers.reduce((total,num)=>{return total+num},[]);
+console.log(a);
+
+
+// filter method
+
+const books = ["Harry Potter","Just Add Magic","The Magic Treehouse", "Mystery House"];
+let input = "pot";
+
+let checkBook=function(book) {
+  
+  book = book.toUpperCase();
+  input = input.toUpperCase();
+  if(input === book)
+  {
+      return book;
+  }
+  else if(book.includes(input))
+  {
+     return book;
+  }
+  
+}  
+
+let match = books.filter(checkBook);
+
+if(match.length === 0)
+{
+    console.log("Not Found");
+}
+else
+{
+    console.log(match);
+}

@@ -4,7 +4,7 @@
 	<script src="js1.js"></script>
 
 <style>
-   .ticket{
+ /*  .ticket{
     width: 80%;
     margin: 100px auto 200px auto;
     padding: 50px;
@@ -16,24 +16,56 @@
 
    h1{margin-bottom: 100px; border-bottom: 5px solid #f8df9c;}
 
-   button{background-color: #f8df9c; padding: 10px; border-radius: 10px; font-size: 20px;
-    font-weight: 700;}
+    body{text-align: center; background-color:azure;font-family: Arial;}
 
-    #inputAge{height: 40px; width: 150px; border-radius: 10px;border:1px solid lightgrey; padding: 4px;}
+    #inputAge{height: 40px; width: 150px; border-radius: 10px;border:1px solid lightgrey; padding: 4px;}*/
+
+     button{background-color: #f8df9c; padding: 10px; border-radius: 10px; font-size: 20px;
+    font-weight: 700;cursor: pointer;}
+
+    #inputBook, #inputBookSearch{height: 40px; width: 300px; border-radius: 10px;border:1px solid lightgrey; padding: 4px;}
+  
+    .generate{border-radius: 10px; font-size: 20px;font-weight: 700;padding: 10px;display: block;margin: auto;margin-top: 50px;background-color: #4a727d;color: white;cursor: pointer;}
+  
+    .div1{
+    border: 15px solid #ff6f69;
+    background-color: #96ceb4;
+    width: 1000px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+}
+
+.div2{
+    border: 10px solid #588c7e;
+    background-color: #ffeead;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 40px;
+    border-radius: 10px;
+}
+body{background-color:  #ffcc5c;margin: 0px;}
+h1{border-bottom: 4px solid #588c7e;}
+#quote{font-size: 40px;font-weight: 700; padding: 20px;}
+
 </style>    
 </head>	
 
-<body style="text-align: center; background-color:azure;font-family: Arial;">
+<body>
 
-<!--	<h1> Calculate your Age in Seconds </h1>
-    
+<!--	<h1> Calculate your Age in Seconds </h1> 
+    <div style="text-align: center;">
     <label for="ageText">Enter Your Age:</label>
     <input type="text" id="ageText" placeholder="Enter Age"> 
 
     <button onclick="myFunction()">Calculate</button>
      <br>
-    <h2 id="ageResult"></h2> -->
-
+    <h2 id="ageResult"></h2> 
+    </div> -->
 
 <!-- Counter Example 
     <h1> Counter Example </h1>
@@ -56,7 +88,7 @@
     <h2 id="txtResult"></h2> -->
 
 
-<!-- Ticket Checker -->
+<!-- Ticket Checker 
 <div class="ticket">
 
       <h1> Automated Ticket Checker </h1>
@@ -71,8 +103,37 @@
       <br><br>
       <button onclick="checkEntry()">Check Entry</button><br>
       <h2 id = "entry" style="color:red;"></h2>
-</div>
+</div>-->
 
+<!-- Random Quote Generator 
+    <div class = "div1">
+             <button class = "generate" onclick="generateQuote()">Generate Random Quote</button>
+            <div class = "div2"> 
+                <h1 class="quote">Quote of the Day - Quote 1 </h1>
+                <div id="quote">
+                 <em>Don't wait for the perfect moment, take the moment and make it perfect.</em>
+                </div>
+            </div>  
+
+    </div> -->
+
+
+<!-- Add and search books -->
+    <div style = "width:60%;margin:auto;font-size:25px;font-weight: 700;margin-top:50px;text-align: right;font-family: Arial;">
+         <h1 style="text-align: center;"> Library Management</h1>   
+        <label for="inputBook">Enter Book Title: </label>
+        <input type="text" id="inputBook" placeholder="Enter Book Title"> 
+        <button onclick="AddBook()">Add To Book Repository</button>
+        <p style="text-align: center; color:red;" class = 'addStatus'></p>
+        
+        <br><br>
+
+        <label for="inputBookSearch">Enter Book Title / Keyword to Search: </label>
+        <input type="text" id="inputBookSearch" placeholder="Enter Search Keyword"> 
+        <button onclick="SearchBook()">Search Book</button>
+        <p  style="text-align: center; color:green;" class = 'addStatus'></p>
+
+     </div>  
 
 </body>	
 
