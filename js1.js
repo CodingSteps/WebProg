@@ -123,22 +123,40 @@
 		        	alert(accompanied);
 		        }	
 
-      } */
+      }*/  
 
 
    function generateQuote(){
-   	const quoteList = ["Don't wait for the perfect moment, take the moment and make it perfect.","Stop being afraid of what could go wrong and think of what could go right.","It's not the load that breaks you down, it's the way you carry it.","Life is about accepting the challenges along the way, choosing to keep moving forward, and savoring the journey","Believe in your infinite potential. Your only limitations are those you set upon yourself."]
+   
+   /*	const quoteList = ["Don't wait for the perfect moment, take the moment and make it perfect.","Stop being afraid of what could go wrong and think of what could go right.","It's not the load that breaks you down, it's the way you carry it.","Life is about accepting the challenges along the way, choosing to keep moving forward, and savoring the journey","Believe in your infinite potential. Your only limitations are those you set upon yourself."]
    	let randomQuote = Math.floor(Math.random()*quoteList.length);
-   	let quoteCnt = document.querySelectorAll('h1.quote');
+   	let quoteCnt = document.querySelectorAll('h1.quote');  //getElementByID , getElementsByClassName, querySelector
    	quoteCnt[0].innerHTML = `Quote of the Day - Quote ${randomQuote+1}`;
    	let displayQuote = document.getElementsByTagName("em");
-   	displayQuote[0].innerHTML = `${quoteList[randomQuote]}`;
-   }   
+   	displayQuote[0].innerHTML = `${quoteList[randomQuote]}`; */
+
+    let a =10;
+    debugger;
+    let b=20;
+    let c;
+    c=a+b;
+    alert(c);
 
 
+
+   }  //getElementByID , getElementsByClassName, querySelectorAll, getElementsByTagName */
+
+
+
+
+
+
+
+
+/*
    const bookRepo = [];
    function AddBook(){
-   	 
+   	 debugger;
    	 let newBook = document.getElementById("inputBook").value;
    	 let status = document.getElementsByClassName("addStatus");
 
@@ -187,5 +205,5 @@
    	 {
    	 	status[1].innerHTML = "Sorry, No matches found.";
    	 }
-   }
+   }*/
  	
