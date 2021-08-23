@@ -7,46 +7,79 @@
  
 <script>
    
-   let hangmanArray = ["car","book","pen"];
+   let hangmanArray = ["car","marshmellows","rainbow","cow","pizza","dog","microscope","pen","clock","elephant","hangman","phone","apple","book","whale","turtle","kite"];
    let randomWord;
    let wordLength;
    let dash = [];
+   let timer = 0;
+   let totalChances = 5;
 
    randomWord = hangmanArray[Math.floor(Math.random() * hangmanArray.length)];
    wordLength = randomWord.length;
    
    for(i=0; i<wordLength; i++)
    {
-   	   dash.push('_')
+   	   dash.push('__')
    }
 
    alert(dash.join(' '));
 
-
+   gameLoop:
    while(wordLength>0)
    {
 
          let inputLetter = prompt("Enter a letter");
 
+         if(inputLetter === null)
+         {
+            let quitGame=confirm("Do you want to QUIT?");
+              if (quitGame) 
+              {
+               break gameLoop;
+              }
+              else
+              {
+               continue;
+              }
+         }
+
+
          if(inputLetter.length > 1)
          {
          	let inputLetter = prompt("Please enter single letter as input.");
          }
-
+    
+        let initialLength = wordLength; 
          
         for(let i=0; i<randomWord.length; i++)        // _ _ _    car 
         {
            if(randomWord[i].toLowerCase() === inputLetter.toLowerCase())
            {
                     dash[i] = inputLetter;
-                    alert(dash.join(' '));
                     wordLength = wordLength - 1;
            }
 
         }
 
- 
 
+         if(initialLength===wordLength){
+            timer=timer+1;
+         }
+
+         if(timer>=5){
+               alert("Sorry, your 5 chances are over. The answer was "+randomWord+". Try again next time. 😔");
+               break gameLoop;
+         }
+
+         let chancesLeft = (totalChances-timer);
+         alert(dash.join(' ') + "\n" + "You have " + chancesLeft + " chances left to solve the puzzle." );
+
+   }
+
+   if(wordLength===0)
+   {
+       
+        alert("Well Done! 😀😉😄😃🙂🤩");
    }
 
 
