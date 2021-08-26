@@ -14,7 +14,6 @@ body{margin: 0px; font-family: Abel,sans-serif;}
 uL{
 	height: 120px;
 	margin: 0px;
-  overflow: hidden;
   padding-right: 30px;
   background-color: aliceblue;
 }
@@ -23,7 +22,7 @@ a:hover{background-color:#E7E6E6;text-decoration: underline; border-radius: 10px
 
 a{text-decoration: none; color: black; font-size: 20px;padding: 20px; color: #FCAC0C; font-weight: 600;}
 
-
+/*
 .container {
   position: relative;
   background-image:url("https://www.touropia.com/gfx/d/tourist-attractions-in-the-usa/mount_rushmore.jpg?v=1");
@@ -116,3 +115,5 @@ a{text-decoration: none; color: black; font-size: 20px;padding: 20px; color: #FC
   margin-top: 50px;
   margin-left: 50px;
 }
+
+*/

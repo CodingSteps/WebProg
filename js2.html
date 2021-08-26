@@ -1,18 +1,30 @@
 <html>
 <head>
 	<title> Javascript 2</title>	
+  <script src="js2.js"></script>
 </head>
 
 <body>
 
-  <p id = "para"></p>
-
-  <script>
-   
-      
-
-  </script>	
-
+  <label for="firstname">Enter FirstName</label>
+  <input type="text" id="firstname">
+  <br><br>
+  <label for="lastname">Enter LastName</label>
+  <input type="text" id="lastname">
+  <br><br>
+  <label for="email">Enter Email ID</label>
+  <input type="text" id="email">
+  <br><br>
+  <p>Choose your 3 favorite colors</p>
+  <label for ='color1'>Color Choice - 1</label>
+  <input type="color" id='color1' value="#ff0000">
+  <label for ='color2'>Color Choice - 2</label>
+  <input type="color" id='color2' value="#ff0000">
+  <label for ='color3'>Color Choice - 3</label>
+  <input type="color" id='color3' value="#ff0000"><br><br>
+  <button onclick = "submitDetails()">Register User</button>
+  
+  
 	
 </body>	
 </html>
