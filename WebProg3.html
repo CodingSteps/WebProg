@@ -3,6 +3,22 @@
 <head>
     <link href="WebProg3.css" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+<style>
+   
+   .dropdownContent{display: none;position: absolute; top: 85px; left: 0px; min-width: 150px;background-color: #F0F8FF;
+    color: #FBAE13;border-radius: 10px;}
+
+   .dropdown{position: relative;}
+
+   .dropdown:hover .dropdownContent{display: block;}
+
+   .dropdownContent a:hover{background-color: black;border-radius: 0px;}
+
+   .dropdownContent a{padding: 10px; display: block;text-align: center;border-bottom: 1px solid lightgrey;}
+
+
+</style>
+
 </head>
 <body>
       
@@ -11,7 +27,14 @@
             <li class="logo"><img src="images/sfi_logo.png" width=400px height=100px></li>
             <li class="menu"><a href="#">Contact</a></li>
             <li class="menu"><a href="#">About</a></li>
-            <li class="menu"><a href="#">Shop</a></li>
+            <li class="menu dropdown"><a href="#">Dropdown</a>
+                <div class = "dropdownContent">
+                    <a href='#'>Link 1</a>   
+                    <a href='#'>Link 2</a>
+                    <a href='#'>Link 3</a>
+                
+                </div>    
+            </li>
             <li class="menu"><a href="#">Home</a></li>
         </ul>   
 

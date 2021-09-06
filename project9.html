@@ -11,45 +11,62 @@
    let randomWord;
    let wordLength;
    let dash = [];
-   let timer = 0;
    let totalChances = 5;
+   let missedChance = 0, initialLength;
+   let quit = false;
+
+  if(!quit)
+  {
 
    randomWord = hangmanArray[Math.floor(Math.random() * hangmanArray.length)];
    wordLength = randomWord.length;
    
-   for(i=0; i<wordLength; i++)
+   for(let i=0; i<wordLength; i++)
    {
    	   dash.push('__')
    }
 
-   alert(dash.join(' '));     
+   alert(dash.join(' '));    
 
-   gameLoop:
+  
    while(wordLength>0)
    {
 
-         let inputLetter = prompt("Enter a letter");
+         let inputLetter;
 
-         if(inputLetter === null)
+         inputLetter = prompt("Enter a letter");
+   
+
+         if(inputLetter === '' || inputLetter === null)
          {
-            let quitGame=confirm("Do you want to QUIT?");
-              if (quitGame) 
-              {
-               break gameLoop;
-              }
-              else
-              {
-               continue;
-              }
-         }
+             
+             quit = confirm("Do you want to quit the game ?");
+             alert(quit);
 
+             if(quit)
+             {
+               break;
+             }
+             else
+             {
+               continue;
+             }
+
+         }
+ 
 
          if(inputLetter.length > 1)
          {
-         	let inputLetter = prompt("Please enter single letter as input.");
+         	inputLetter = prompt("Please enter single letter as input.");
          }
-    
-        let initialLength = wordLength; 
+         else if(!isNaN(inputLetter))
+         {
+            inputLetter = prompt("Please enter single letter as input. Numbers are not allowed");
+         }
+
+
+         initialLength = wordLength;
+      
          
         for(let i=0; i<randomWord.length; i++)        // _ _ _    car 
         {
@@ -57,30 +74,37 @@
            {
                     dash[i] = inputLetter;
                     wordLength = wordLength - 1;
+
            }
 
         }
 
 
-         if(initialLength===wordLength){
-            timer=timer+1;
+        if(initialLength === wordLength)
+        {
+             missedChance++;
+        }
+
+        if(missedChance >= 5)
+        {
+           alert("Sorry you lost the game. Actual word is " + randomWord);
+           break;
+        }
+
+         
+         alert(dash.join(' ') + '\n' + `You have ${totalChances-missedChance} chances left`);
+
+         if(wordLength === 0)
+         {
+
+               alert("Congrats. You found the word")
          }
 
-         if(timer>=5){
-               alert("Sorry, your 5 chances are over. The answer was "+randomWord+". Try again next time. 😔");
-               break gameLoop;
-         }
+   }   
 
-         let chancesLeft = (totalChances-timer);
-         alert(dash.join(' ') + "\n" + "You have " + chancesLeft + " chances left to solve the puzzle." );
+ }    
 
-   }
 
-   if(wordLength===0)
-   {
-       
-        alert("Well Done! 😀😉😄😃🙂🤩");
-   }
 
 
 

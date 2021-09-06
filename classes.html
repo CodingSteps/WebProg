@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="myPara"></p>
+
+<script>
+
+class User{
+    constructor(fname,lname,email)
+    {
+        this.FirstName = fname;
+        this.LastName = lname;
+        this.Email = email;
+    }
+    
+    set firstName(newName){
+        this.FirstName = newName;
+    }
+
+    userName(){
+        return this.FirstName +' '+ this.LastName;
+    }
+}
+
+class CarDetails extends User{
+    
+    constructor(fname,lname,email,carMake, carModel, carColor,carYear)
+    {
+        super(fname,lname,email);
+        this.CarMake = carMake;
+        this.CarModel = carModel;
+        this.CarColor = carColor;
+        this.CarYear = carYear;
+    }
+    
+     carAge(){
+        let d = new Date();
+        let currentYear = d.getFullYear();
+        
+         return currentYear - this.CarYear;
+     }
+
+    userName(){
+        return (this.FirstName +' '+ this.LastName).toUpperCase();
+    }
+    
+    carDetails()
+    {
+      let userName = this.userName();
+      return (`Customer ${userName} has sold the car ${this.CarMake +' '+ this.CarModel} which is ${this.carAge()} years old`)
+    }
+
+
+}
+
+userArray = [];
+let user1 = new CarDetails("David","Mueller","davidm@gmail.com","Ford","Focus","green",2004);
+let user2 = new CarDetails("Deborah","Harrington","deborah@gmail.com","Toyota","Corolla","black",2008);
+user1.firstName = "Joe";
+
+userArray.push(user1);
+userArray.push(user2);
+
+for(let x of userArray)
+{
+  document.getElementById("myPara").innerHTML += x.carDetails() + "<br>" ;
+} 
+
+/*
+const displayResult = (sum) => {document.getElementById("myPara").innerHTML = sum;}
+
+const myCalculator = (a,b,myCallback) => {
+  let c = a+b;
+  myCallback(c)
+}
+
+setTimeout(myCalculator,5000,3242,5433,displayResult); 
+
+let displayTime = function(){
+  let d = new Date();
+  document.getElementById("myPara").innerHTML = d.getHours() + ':' + d.getMinutes() + ":" + d.getSeconds(); 
+}
+
+setInterval(displayTime,1000);*/
+
+
+
+</script>
+
+</body>
+</html>

@@ -16,7 +16,7 @@ body{
 #h1_Text{
 	font-family: 'Shadows Into Light', sans-serif; 
 	color:#778899;
-	margin-top:60px;
+	margin-top:40px;
 
 	text-align: center;
 	font-size:100px;
@@ -51,8 +51,10 @@ body{
  }
 
  .heart{
- 	margin-right:30px;
- 	float: right;
+ 	width: 800px;
+   margin: auto;
+   margin-top: 50px;
+   text-align: center;
  }
 
  #hint{

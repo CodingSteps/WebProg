@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title> Javascript</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+   <p id = "myPara"> This is <b>First Paragraph</b> </p>
+   <p class = "para"> Second Paragraph </p>
+   <p class = "para"> Third Paragraph </p>
+   <p class = "output"> This is my Output.</p>
+
+<script>
+
+    let a = $('#myPara').html();  //Get Text from HTML element
+    $('.output').append(a)  //Set Text in to HTML element
+
+    // Dynamically create HTML element
+
+    let b = $('<div>',{id:'myDiv'});
+    let c = $('<h1>',{class:'myHeading'}).html("This is <b> Dynamically Created Heading </b>");
+    let d = b.append(c);
+
+    $('body').append(d);
+    
+    $('#myDiv').css({'background-color':'lightblue','height':'200px'})
+    $('.myHeading').css({'text-align':'center','padding-top':'50px'})
+
+    // .remove()
+
+    $('.output').remove()
+
+    // Dynamically creating using normal javascript
+
+
+    let p = document.createElement('h1');
+    p.innerHTML = "Dynamically creating using normal javascript";
+    let att = document.createAttribute('class');
+    att.value = 'myHeadingJS';
+    p.setAttributeNode(att);
+    document.getElementById("myDiv").appendChild(p);
+
+
+   
+
+    
+
+</script>	
+
+
+
+</body>
+</html>

@@ -10,19 +10,28 @@
 
 		<h2> Current Temperature in Coimbatore :  </h2>
 		<div id="cbe"></div>
+		<p id="demo"></p>
 
 		<script type="text/javascript">
-				$.getJSON(
-				  "https://api.openweathermap.org/data/2.5/weather?q=Coimbatore&appid=887b28d6cd1b24b03b92cd1dc05bf245",
+		
+		$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Coimbatore&appid=887b28d6cd1b24b03b92cd1dc05bf245",
 				  function(data) {
+                  
+				    $("#cbe").html("Temperature: " + data.main.temp);
+                    $("#cbe").append("<br> Weather Condition: " + data.weather[0].description);
+                    $("#cbe").append("<br> Humidity: " + data.main.humidity);
 
-				    // Success! Do stuff with data.
-				    console.log(data.main.temp);
+                    /*let a = JSON.stringify(data)
+                    console.log(a);
 
-				    $("#cbe").html(data.main.temp);
-
+                    let b = JSON.parse(a);
+                    console.log(b);
+                    console.log(b.main.humidity);*/
+                  
 				  }
-				);
+				); 
+
+	
 
 		</script>
 

@@ -35,7 +35,7 @@ let userChoice3 = document.getElementById('color3').value;
 
 const userDetails = new user(userFname,userLname,userEmail,[userChoice1,userChoice2,userChoice3]);
 
-let reponse;
+let response;
 
 
 response = userDetails.checkColors(outOfStock);

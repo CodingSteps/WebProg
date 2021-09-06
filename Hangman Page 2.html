@@ -16,11 +16,11 @@
 
 	<div id="h1_Text">Hangman</div>
 				<div class="heart">
-					<img id="life_5" src="images/heart.png">
-					<img id="life_4" src="images/heart.png">
-					<img id="life_3" src="images/heart.png">
-					<img id="life_2" src="images/heart.png">
 					<img id="life_1" src="images/heart.png">
+					<img id="life_2" src="images/heart.png">
+					<img id="life_3" src="images/heart.png">
+					<img id="life_4" src="images/heart.png">
+					<img id="life_5" src="images/heart.png">
 				</div>
 				<br>
 
@@ -68,23 +68,22 @@
 		 var a=length_of_word;
 
 
-        var timer=0;
+        var wrongAns=0;
       
         var pressed=1;
 
       $("#hint").click(function(){
 							if(pressed===1)
 							{
-								if (length_of_word===3)
+								if (length_of_word<5)  // if word length < 5, then show just 1 char as hint
 								    {
 								    	var one=Math.random();
 										var number=Math.floor(one*length_of_word);
-								    	if(dash[number]===" __ ")
+								    	if(dash[number]===" __ ")  // see if there is dash in the random char space
 								    	{
-								    	dash[number]=ready_word[number];
-								    	string_dash=dash.join("  ");
-			       						$("#dash_space").html(dash);
-			       						a=a-1;
+										    	dash[number]=ready_word[number];
+					       						$("#dash_space").html(dash.join("  "));
+					       						a=a-1;
 								    	}
 								    	else
 								    	{
@@ -96,14 +95,13 @@
 								    			
 								    		}
 								    		dash[number]=ready_word[number];
-								    		string_dash=dash.join("  ");
-			       							$("#dash_space").html(dash);
+			       							$("#dash_space").html(dash.join("  "));
 			       							a=a-1;
 								    	}
 
 								    	if(a===0)
 			       						{
-			       							$("#dash_space").html(string_dash);
+			       							$("#dash_space").html(dash.join("  "));
 			       							location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_good.html")
 			       						}
 									}
@@ -112,11 +110,19 @@
 										var one=Math.random();
 										var number=Math.floor(one*length_of_word);
 			       						dash[number]=ready_word[number];
-			       						var decimal=Math.random();
-										var b=Math.floor(decimal*length_of_word);
+			       						var two=Math.random();
+			       						var b=Math.floor(two*length_of_word);
 			       						dash[b]=ready_word[b];
-			       						$("#dash_space").html(dash);
-			       						a=a-2;
+			       						$("#dash_space").html(dash.join("  "));
+			       						if(number !== b)
+			       						{
+			       							a=a-2;  //if 2 random chars are given as hint
+			       						}
+			       						else
+			       						{
+			       							a=a-1;  // if 1 random char is given as hint
+			       						}
+										
 			       						if(a===0)
 			       						{
 			       							$("#dash_space").html(string_dash);
@@ -134,63 +140,65 @@
 			       				pressed++;
 			       			}
 
+			       			else if (pressed > 2)
+			       			{
+			       				$("#Hint2").html('Sorry. Already 2 hints given.');
+			       			}		       			
 						
 					});
+
+
   
 	$("#button_ok").click(function(){
-  		input_of_textbox=$("#text_box").val();
+  		    input_of_textbox=$("#text_box").val();
 		
-					test:
 					if(a>0)
-					{  
-
-					       
+					{  		
+					alert('a:'+a)       
 			       	   	    if(input_of_textbox.length>1)
 			       	   	    {
 			             		alert("INVALID INPUT! Please enter a single letter input.😵");
 			                }
+			                else if(!(isNaN(input_of_textbox)))
+			                {
+			                	alert("INVALID INPUT! Numbers not allowed. Please enter a single letter input.😵");
+			                }
 
-			       	   
-			       	  
-			       	   	  var input=input_of_textbox.toLowerCase();
+			       	   	       var input=input_of_textbox.toLowerCase();
 			       	   	  
-			       	   
+					       	   var compare=a;  
 
-			       	   var compare=a;
+					      
+					       for (var x = 0; x < length_of_word; x++) 
+					       {
+						       	if(ready_word[x]===input)
+						       		{
+						       			dash[x]=input;
+						       			a=a-1;
 
-			       wrong:
-			       for (var x = 0; x < length_of_word; x++) {
-			       	if(ready_word[x]===input)
-			       		{
-			       			dash[x]=input;
-			       			a=a-1;
-			       		}	
-			       	
-					}
+						       		}	
+					       	
+							}		
 
-					
+					        if(a===compare){
+					       		wrongAns=wrongAns+1;
+					       		$("#life_"+id).fadeOut(1000);
+					       		id++;
+					       	}
 
-			        if(a===compare){
-			       		timer=timer+1;
-			       		$("#life_"+id).fadeOut(500);
-			       		id++;
-			       	}
+					       	if(wrongAns===5){
+					      			location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_wrong.html?answer="+ready_word)
+					      			
+					      				 }	
 
-			       	if(timer===5){
-			      			location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_wrong.html?answer="+ready_word)
-			      			break test;
-			      				 }	
+					      	
+					      $("#dash_space").html(dash.join("  "));	
+					      $("#text_box").val('');
 
-
-			        string_dash=dash.join("  ");
-			       	console.log(string_dash);
-			       
-			       	
-			      $("#dash_space").html(string_dash);	
-
-			       if (a===0) {
-      	           location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_good.html");
-      	          }      	         
+					       if (a===0) 
+					       {
+		      	           location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_good.html");
+		      	          }      	         
      
      		  }  	
 

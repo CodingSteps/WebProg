@@ -11,7 +11,7 @@ h1 {
 }
 
 #quiz {
-    text-indent: 10px;
+    padding-left: 10px;
     display:none;
 }
 
@@ -33,15 +33,13 @@ h1 {
     color: #525252;
 }
 
-button {
-    position: relative;
-    float:right;
-}
 
 .button a {
     text-decoration: none;
     color: black;
 }
+
+.active{border: 4px solid #4ccf11;}
 
 #container {
     width:50%;
