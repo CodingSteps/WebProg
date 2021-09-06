@@ -51,7 +51,7 @@
              var input_of_textbox;
 				var id=1;
 
-		var random_word=[["marshmellows","It is a sweet soft snack."],["rainbow","It comes where there is light and water."],["cow","It is a animal."],["pizza","It is an Italian dish."],["dog"," It helps people to herd sheep."],["microscope","It is a more powerfull eye."],["pen","It comes under stationary"],["clock","It makes a TICKING sound."],["elephant","It ia very large and heavy animal."],["hangman","It is the name of a game."],["phone","You use it for speaking to others."],["apple","It is a fruit."],["book","It gives us knowledge."],["whale","It is a gigantic mamal which lives in the ocean."],["turtle","This animal may be slow but is always steady"],["kite","It has a tail which helps it fly."]];
+		var random_word=[["marshmellows","It is a sweet soft snack."],["rainbow","It comes where there is light and water."],["cow","It is a animal."],["pizza","It is an Italian dish."],["dog"," It helps people to herd sheep."],["microscope","It is a more powerful eye."],["pen","It comes under stationary"],["clock","It makes a TICKING sound."],["elephant","It ia very large and heavy animal."],["hangman","It is the name of a game."],["phone","You use it for speaking to others."],["apple","It is a fruit."],["book","It gives us knowledge."],["whale","It is a gigantic mamal which lives in the ocean."],["turtle","This animal may be slow but is always steady"],["kite","It has a tail which helps it fly."]];
 		var decimal_value=Math.random();
 		var random=Math.floor(decimal_value*random_word.length);
 		var ready_word=random_word[random][0];
@@ -71,6 +71,7 @@
         var wrongAns=0;
       
         var pressed=1;
+        debugger;
 
       $("#hint").click(function(){
 							if(pressed===1)
@@ -102,31 +103,33 @@
 								    	if(a===0)
 			       						{
 			       							$("#dash_space").html(dash.join("  "));
-			       							location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_good.html")
+			       							setTimeout(function(){ window.location.href= "file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_good.html";}, 1000)
 			       						}
 									}
 								else
 									{
 										var one=Math.random();
 										var number=Math.floor(one*length_of_word);
-			       						dash[number]=ready_word[number];
+										if(dash[number] === ' __ ')
+										{
+											dash[number]=ready_word[number];
+											a = a - 1;
+										}
+			       						
 			       						var two=Math.random();
 			       						var b=Math.floor(two*length_of_word);
-			       						dash[b]=ready_word[b];
-			       						$("#dash_space").html(dash.join("  "));
-			       						if(number !== b)
-			       						{
-			       							a=a-2;  //if 2 random chars are given as hint
-			       						}
-			       						else
-			       						{
-			       							a=a-1;  // if 1 random char is given as hint
-			       						}
+			       						if(dash[b] === ' __ ')
+										{
+											dash[b]=ready_word[b];
+											a = a - 1;
+										}
+
+										$("#dash_space").html(dash.join("  "));
 										
 			       						if(a===0)
 			       						{
 			       							$("#dash_space").html(string_dash);
-			       							location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_good.html")
+			       							setTimeout(function(){ window.location.href= "file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_good.html";}, 1000)
 			       						}
 			       					}
 			       			pressed++;
@@ -151,10 +154,10 @@
   
 	$("#button_ok").click(function(){
   		    input_of_textbox=$("#text_box").val();
-		
+		          
 					if(a>0)
 					{  		
-					alert('a:'+a)       
+					  
 			       	   	    if(input_of_textbox.length>1)
 			       	   	    {
 			             		alert("INVALID INPUT! Please enter a single letter input.😵");
@@ -173,12 +176,19 @@
 					       {
 						       	if(ready_word[x]===input)
 						       		{
-						       			dash[x]=input;
-						       			a=a-1;
+						       			if(dash[x] === ' __ ')
+						       			{
+						       				dash[x]=input;
+						       			    a=a-1;
+						       			}
+						       			
 
 						       		}	
 					       	
-							}		
+							}	
+
+							$("#dash_space").html(dash.join("  "));	
+					        $("#text_box").val('');	
 
 					        if(a===compare){
 					       		wrongAns=wrongAns+1;
@@ -186,18 +196,17 @@
 					       		id++;
 					       	}
 
-					       	if(wrongAns===5){
-					      			location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_wrong.html?answer="+ready_word)
+					       	if(wrongAns===5)
+					       	{
+					      			//location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_wrong.html?answer="+ready_word)
+					      			setTimeout(function(){ window.location.href= "file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_wrong.html?answer="+ready_word;}, 500)
 					      			
-					      				 }	
+					      	}	
 
-					      	
-					      $("#dash_space").html(dash.join("  "));	
-					      $("#text_box").val('');
 
 					       if (a===0) 
 					       {
-		      	           location.replace("file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_good.html");
+		      	                      setTimeout(function(){ window.location.href= "file:///C:/Users/saran/Documents/GitHub/WebProg/Hangman_good.html";}, 1000)
 		      	          }      	         
      
      		  }  	
