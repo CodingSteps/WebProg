@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+#sidenav {
+  width:  0px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: width 0.5s;
+  padding-top: 60px;
+}
+
+#sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: color 0.3s;
+}
+
+#sidenav a:hover {
+  color: #f1f1f1;
+}
+
+#sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  #sidenav {padding-top: 15px;}
+  #sidenav a {font-size: 18px;}
+}
+
+
+
+.container {
+  position: relative;
+  width: 30%;
+  margin: auto;
+}
+
+
+ .middle {
+    transition: display .5s ease;
+    display:none;
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.7);
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.container:hover .image {
+  display: block;
+}
+
+.container:hover .text {
+   display: block;
+
+}
+
+.container:hover .middle {
+  display:block;
+}
+
+.text {
+  background-color: #A458A2;
+  color: white;
+  font-size: 16px;
+  padding: 30px 0px;
+  position: absolute;
+  top: 82%;
+  left: 0;
+  font-size: 20px;
+  cursor:pointer;
+  width:100%;
+  display: none;
+  text-align: center;
+} 
+</style>
+</head>
+<body style="background-color:#f7f7f7;">
+<!--
+<div id="sidenav" class="sidenav">
+  <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <h1>Sidenav Push Example</h1>
+  <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+-->
+
+     <h2 style="text-align:center;">Image Hover - Opacity Effect</h2>
+
+    <div class="container">
+      <img src="images/img_avatar.png" alt="Avatar" class="image" style="width:100%">
+      <div class="middle">
+          <div class="text">Click Me</div>
+       </div>
+    </div> 
+   
+
+<script>
+ 
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";  
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "0px";
+  document.getElementById("main").style.marginLeft= "0px";
+}  
+</script>
+   
+</body>
+</html> 

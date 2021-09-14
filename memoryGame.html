@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Memory Game</title>
+    
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'>
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans"/>
+    <link href="memoryGame.css" rel="stylesheet"> 
+  
+    
+  </head>
+
+<body>
+<div class="wrapper">
+  <h1>JavaScript pairs Game</h1>
+  <h3>Click any card to begin</h3>
+  <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+  <p id ="text"></p>
+  <div id="container">
+     <div class = "cardFront cardf0">
+       <div class = "cardBack cardb0"></div>
+     </div>
+     <div class = "cardFront cardf1">
+        <div class = "cardBack cardb1"></div>
+     </div>
+     <div class = "cardFront cardf2">
+       <div class = "cardBack cardb2"></div>
+     </div>
+     <div class = "cardFront cardf3">
+       <div class = "cardBack cardb3"></div>
+     </div>
+     <div class = "cardFront cardf4">
+       <div class = "cardBack cardb4"></div>
+     </div>
+     <div class = "cardFront cardf5">
+       <div class = "cardBack cardb5"></div>
+     </div>
+     <div class = "cardFront cardf6">
+       <div class = "cardBack cardb6"></div>
+     </div>
+     <div class = "cardFront cardf7">
+       <div class = "cardBack cardb7"></div>
+     </div>
+  
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+
+  let cardElementArray = [];
+  let pairs = 0;
+
+  let images = [
+   "https://freepngimg.com/thumb/frozen/3-2-frozen-png-picture-thumb.png",
+   "https://i.pinimg.com/222x/83/87/b2/8387b2d8c42fa665ad12db80ec294f07.jpg",
+   "https://img.utdstc.com/icon/579/a45/579a4513506581f23aa94af3799186fabc3f4357e049a0cba4ce4678273a152f:200",
+   "https://i.pinimg.com/originals/fb/d8/a6/fbd8a69cdee83b1d147b15606a0e7ff2.jpg"
+];
+
+let clone = images.slice(0); // duplicate array
+let cards = images.concat(clone); // merge to arrays 
+
+// Shuffle function
+function shuffle(a){
+   let j, x, i;
+    for (i = a.length - 1; i > 0; i--) 
+    {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+     }
+    return a;   
+}
+shuffle(cards);
+
+
+//Assign shuffled images to card div
+for(let i=0;i<cards.length;i++)
+{
+      $(".cardb"+i).css({'background-image':`url(${cards[i]})`})
+}
+
+
+$('.cardFront').click(function(){
+   
+     //display the back image with rotating effect
+    let cardFrontSide = $(this);
+    cardFrontSide.css({'transform':'rotateY(180deg)'});
+    let cardBackImg =  $(this).children(".cardBack") 
+    cardBackImg.css({"display": "block"});
+
+
+    // Store the card class & img details in object  and push that object in to cardElementArray
+    let cardObj = {};
+    let img = $(this).children(".cardBack").css("background-image");   
+    cardObj.class = $(this).children(".cardBack").attr('class').split(' ')[1]
+    cardObj.image = img;
+
+    cardElementArray.push(cardObj);
+
+    if(cardElementArray.length === 2)
+    {
+        if(cardElementArray[0].image===cardElementArray[1].image)
+        {
+          pairs++;
+          cardElementArray.pop();
+          cardElementArray.pop();
+        }
+        else
+        {
+          
+           setTimeout(function(){
+                
+                for(let i in cardElementArray)
+                {
+                  let temp = cardElementArray[i].class;
+                  $("."+temp).css({"display": "none"});  
+                  cardFrontSide.css({'transform':'rotateY(0deg)'}) ;
+                }
+
+                cardElementArray.pop();
+                cardElementArray.pop();
+                 
+           },1200);
+
+            
+           
+        }
+    }
+   
+})
+
+
+
+})  
+
+
+
+
+
+
+
+</script>  
+</body>

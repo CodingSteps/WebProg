@@ -21,7 +21,7 @@ function showHint(str) {
             document.getElementById("txtHint").innerHTML = "";
             return;
          }
-  const x = new XMLHttpRequest();
+  const x = new XMLHttpRequest();  
   x.onload = function() {
     document.getElementById("txtHint").innerHTML = this.responseText;
   }

@@ -5,14 +5,17 @@
 
 <body>
 
-		<h1>Load external JSON pen</h1>
-		<p>View in console...</p>
+		<h1>JSON & WebAPI Example</h1>
+		
 
 		<h2> Current Temperature in Coimbatore :  </h2>
+		
 		<div id="cbe"></div>
 		<p id="demo"></p>
 
 		<script type="text/javascript">
+        
+        // getJSON(url,callback function)
 		
 		$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Coimbatore&appid=887b28d6cd1b24b03b92cd1dc05bf245",
 				  function(data) {
@@ -21,15 +24,21 @@
                     $("#cbe").append("<br> Weather Condition: " + data.weather[0].description);
                     $("#cbe").append("<br> Humidity: " + data.main.humidity);
 
-                    /*let a = JSON.stringify(data)
+                    let a = JSON.stringify(data)   //  JSON.stringify  - convert Javascript Object to JSON String format
                     console.log(a);
 
-                    let b = JSON.parse(a);
+                 
+                    let b = JSON.parse(a);   // JSON.parse - convert JSON String to Javascript object
                     console.log(b);
-                    console.log(b.main.humidity);*/
+                    console.log(b.main.humidity);
                   
 				  }
 				); 
+
+		/*  
+             AJAX
+
+		*/
 
 	
 

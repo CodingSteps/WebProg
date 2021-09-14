@@ -96,7 +96,7 @@ $( document ).ready(function() {
     var input = '';
     for (var i = 0; i < questions[index].choices.length; i++) {
       item = $('<li>');
-      input = `<input type="radio" name="answer" value=${i} />`;
+      input = `<input type="radio" name="answer" value=${i} />`; // "string1" + 500  = string1500
       input += questions[index].choices[i];
       item.append(input);
       radioList.append(item);
@@ -156,7 +156,7 @@ $( document ).ready(function() {
     
     var numCorrect = 0;
     for (var i = 0; i < selections.length; i++) {
-    
+         
       if (selections[i] == questions[i].correctAnswer) {
         numCorrect++;
       }
