@@ -9,7 +9,7 @@
 
             let secsInAge = inputAge * secsInAYear;
 
-            document.getElementById("ageResult").innerHTML = `You age in seconds ${secsInAge} seconds`;
+            document.getElementById("ageResult").innerHTML = `Your age in seconds ${secsInAge} seconds`;
             document.getElementById("ageResult").style.backgroundColor ="aliceblue";
 		}
 
