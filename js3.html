@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title> Javascript 3</title>	
+<style>
+ table,tr,td{
+ 	border: 1px solid black;
+ }
+</style>	
+</head>
+
+<body>
+
+	<p id = 'output'></p>
+
+   <script>
+
+/*      let num, sum=0;
+
+      num = prompt("Enter an integer greater than 0: ");
+
+      if(num <= 0 || isNaN(num))
+      {
+      	document.getElementById('output').innerHTML = 'Invalid input';
+      }
+      else
+      {
+	      	for(let i=num;i>=0;i--)
+	      	{
+                sum = sum - Number(i) ;  
+    
+                document.getElementById('output').innerHTML += `${i}` ;
+                if(i !== 0)
+                {
+                	document.getElementById('output').innerHTML += `-` ;
+                }
+	      		
+	      	}
+
+	      	document.getElementById('output').innerHTML += ` = ${sum}`
+         
+      }  */
+ 
+ 
+         // Script 2 
+
+		  let operator, operand1, operand2;
+		  let outputVal;
+
+		  operator = prompt("Enter an operator: ");
+
+		  while(!(operator==='+' || operator==='-' || operator==='*' || operator==='/' ))     
+		  {
+		  	operator = prompt("Enter an operator: ");
+		  }
+
+		  operand1 = prompt("Enter the first operand: ");
+		  operand2 = prompt("Enter the second operand: ");
+
+		  if(isNaN(operand1)||isNaN(operand2))
+		  {
+		  	alert('Error - Atleast one operand is NaN')
+		  }
+		  else if(Number(operand2)===0 && operator === '/')
+		  {
+		  	 alert('Cannot divide by zero');
+		  }
+		  	   	     
+		  else
+		  {
+		  	   switch(operator)
+		  	   {
+		  	   	case '+':
+		  	   	     outputVal = Number(operand1) + parseInt(operand2);
+		  	   	     break;
+		  	   	case '-':
+		  	   	     outputVal = Number(operand1) - parseInt(operand2);
+		  	   	     break;
+		  	   	case '*':
+		  	   	     outputVal = Number(operand1) * parseInt(operand2);
+		  	   	     break;
+		  	   	case '/':
+		  	   	     outputVal = Number(operand1) / parseInt(operand2); 
+		  	   	     break;                              
+		  	   }
+
+            document.getElementById('output').innerHTML = `${operand1} ${operator} ${operand2} = ${outputVal}`
+               
+      }
+
+
+/*
+
+          // Script 3 
+
+
+          let num = Math.floor(Math.random() * 10 + 1);
+          let guessNumber;
+          let count = 1;
+          
+          guessNumber = prompt("I am thinking of a number from 1 to 10, guess the number?")
+
+          while(parseInt(guessNumber) !== num)
+          {
+          	 alert("Wrong, guess again:");	
+          	 guessNumber = prompt("I am thinking of a number from 1 to 10, guess the number?")
+          	 count++;
+          }
+
+
+          if(parseInt(guessNumber) === num)
+          {
+           alert("You got it with " + count + " guesses. The number was " +num);
+          }
+
+             
+
+
+
+       // Quiz Problems - Quiz 1
+
+       let studentCategory;
+       studentCategory = prompt("Enter the Student Category (Freshman/Sophomore/Junior/Senior)");
+
+      while(!(isNaN(studentCategory)))
+      {
+      	alert("Invalid input! Enter Student Category")
+      	studentCategory = prompt("Enter the Student Category (Freshman/Sophomore/Junior/Senior)");
+      }
+
+      if(studentCategory.toLowerCase() === 'freshman')
+      {
+      	alert("You should use Red parking permit");
+      }
+      else if(studentCategory.toLowerCase() === 'sophomore')
+      {
+      	alert("You should use Blue parking permit");
+      }
+      else if(studentCategory.toLowerCase() === 'junior')
+      {
+      	alert("You should use Green parking permit");
+      }
+      else if(studentCategory.toLowerCase() === 'senior')
+      {
+      	alert("You should use Violet parking permit");
+      }
+      else
+      {
+      	alert("You should use Yellow parking permit");
+      }
+
+
+
+
+        // Quiz Question-2
+
+        let num1,num2,num3;
+        num1 = prompt("Enter the 1st number");
+        num2 = prompt("Enter the 2nd number");
+        num3 = prompt("Enter the 3rd number");
+
+
+        if(num2>num1 && num3>num2)
+        {
+        		alert('YES');
+        }
+        else
+        {
+        		alert('NO');
+        }
+
+
+
+        // Quiz Question-3
+
+
+        let numLimit = prompt("Enter a Number");
+
+        while(isNaN(numLimit))
+        {
+        	 numLimit = prompt("Enter a valid Number");
+        }
+
+
+        for(let i=1;i<numLimit;i+=2)
+        {
+        	 document.getElementById('output').innerHTML += `${i} `;
+        }
+
+
+
+
+			//Quiz Question-4
+
+
+         let numLimit = prompt("Enter a Number");
+
+	        while(isNaN(numLimit))
+	        {
+	        	 numLimit = prompt("Enter a valid Number");
+	        }
+
+           let table = document.createElement('table');
+           document.body.appendChild(table);
+
+	         for(let i=1;i<numLimit;i+=2)
+        		{
+        	 		
+        	 		let row = document.createElement('TR');
+        	 		let data = document.createElement('TD');
+        	 		table.appendChild(row);
+        	 		data.innerHTML = i;
+        	 		row.appendChild(data);
+        		}
+
+*/
+
+
+
+   </script>	
+
+
+
+
+</body>
+
+</html>	

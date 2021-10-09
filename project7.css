@@ -23,7 +23,9 @@ a{color:white;
   }
 
 
-  li:hover{background-color: red;}
+  li:hover{background-color: #f7f7f7;}
+
+  .active{background-color: red;}
 
 
 /*  .div1{position: relative;

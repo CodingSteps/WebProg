@@ -138,6 +138,7 @@ width:800px;
 transition:padding 10s, width 10s;
 }
 
+.outer{border: 10px solid #c4f5e7;width: 400px;height: 350px;}
 
 .animate{
   width: 100px;
@@ -152,9 +153,9 @@ transition:padding 10s, width 10s;
 }
 
 @keyframes example {
-  0%   {background-color:red; left:0px; top:0px;}
+  0%   {background-color:red; left:-1px; top:0px;}
   25%  {background-color:yellow; left:300px; top:0px;}
   50%  {background-color:blue; left:300px; top:250px;}
-  75%  {background-color:green; left:0px; top:250px;}
-  100% {background-color:red; left:0px; top:0px;}
+  75%  {background-color:green; left:-1px; top:250px;}
+  100% {background-color:red; left:-1px; top:0px;}
 }

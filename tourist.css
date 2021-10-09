@@ -103,18 +103,17 @@ display:block;
   padding: 8px;
   background-color: #d5f4e6;
   text-decoration: none;
-  color: #666;
+ 
 }
 
 
-
 .sidemenu li a:hover {
-  background-color: #555;
+  background-color: lightblue;
   color: white;
 }
 
 .sidemenu li .active {
-  background-color: #80ced6;
+  background-color: #36486B;
   color: white;
 }
 
@@ -132,7 +131,10 @@ display:block;
 
 .content {
   width: 75%;
+  display: none;
 }
+
+div.flight{display: block;}
 
 
 p{text-align: justify; font-size: 20px; line-height: 30px;}

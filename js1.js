@@ -1,7 +1,7 @@
 	function myFunction()
 		{
 			let inputAge = document.getElementById("ageText").value;
-
+           
 			const secsInMin = 60;
 			const secsInHr  = secsInMin * 60;
 			const secsInADay = secsInHr * 24;
@@ -15,35 +15,35 @@
 
 
 		function incrementCnt(){
-			/* let cnt = document.getElementsByClassName('counter');
+			 let cnt = document.getElementsByClassName('counter');
 			 let incVal = cnt[0].innerHTML;
 			 incVal++; //incVal=incVal+1;
-			 cnt[0].innerHTML = incVal; */
+			 cnt[0].innerHTML = incVal; 
 
-			 let cnt;
+			 /*let cnt;
 			 cnt = document.getElementById('counter');
 			 cnt.style.backgroundColor = "blue";
 			 let incVal = cnt.innerHTML;  //incVal =100
 			 incVal++; //incVal =incVal +5  incVal =105
-			 cnt.innerHTML = incVal;
+			 cnt.innerHTML = incVal;*/
 		}
 
 		function resetCnt(){
 			 let a;
-			 a = document.getElementById('counter');
-			 a.style.backgroundColor = "green";
+			 a = document.getElementsByClassName('counter');
+			 a[0].style.backgroundColor = "green";
 			
-			 a.innerHTML = 0; 
+			 a[0].innerHTML = 0; 
 		}
 
 
 		function decrementCnt(){
 			 let a;
-			 a = document.getElementById('counter');
-			 a.style.backgroundColor = "pink";
-			 let u = a.innerHTML;  //incVal =100
+			 a = document.getElementsByClassName('counter');
+			 a[0].style.backgroundColor = "pink";
+			 let u = a[0].innerHTML;  //incVal =100
 			 u--; //incVal =incVal +5  incVal =105
-			 a.innerHTML = u; 
+			 a[0].innerHTML = u; 
 		}
 
 
@@ -81,7 +81,7 @@
 
 // Check Ticket Entry
 
-/*      function checkEntry()
+      function checkEntry()
       {                 
       	            
 		      	let age = document.getElementById("inputAge").value;
@@ -123,7 +123,7 @@
 		        	alert(accompanied);
 		        }	
 
-      }*/  
+      } 
 
 
    function generateQuote(){

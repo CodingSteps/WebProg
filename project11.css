@@ -1,0 +1,36 @@
+/* transform property - translate, rotate, skew and scale */
+/* transition property */
+
+.a{
+	
+	width: 400px;
+	padding: 40px;
+	background-color: pink;
+	animation-name: example;
+	animation-duration: 10s;
+	animation-direction: alternate;	
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	
+}
+
+
+@keyframes example{
+   
+   0%{background-color: yellow;transform: translate(0px,0px);}
+   25%{background-color: purple;transform: translate(200px,0px);}
+   50%{background-color: red;transform: translate(400px,0px);}
+   75%{background-color: blue;transform: translate(600px,0px);}
+   100%{background-color: pink;transform: translate(800px,0px);}
+
+}
+
+
+/*
+.a:hover{
+	transform: rotate(45deg);
+    width: 600px; 
+	transition: width 3s, height 5s,transform 10s;
+	transition-delay: 5s;
+}
+*/
