@@ -1,0 +1,27 @@
+.container1{
+	background-color: #FAEBD7;
+
+}
+
+#heading{
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+}
+
+h2,h3{text-align: center;}
+
+body{
+	margin: 0px;
+}
+
+.insideContainer{
+	background-color: #F5DEB3;
+	width: 90%;
+	margin: auto;
+	margin-top: 10px;
+}
+
+.insideContent{
+	font-size: 18px;
+}

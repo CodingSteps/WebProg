@@ -17,29 +17,31 @@
 
 /*      let num, sum=0;
 
+      // Get the input number from the user
       num = prompt("Enter an integer greater than 0: ");
 
+      //Check if the input is valid
       if(num <= 0 || isNaN(num))
       {
-      	document.getElementById('output').innerHTML = 'Invalid input';
+      	document.getElementById('output').innerHTML = 'Invalid input'; //display the error in <p> element
       }
       else
       {
 	      	for(let i=num;i>=0;i--)
 	      	{
-                sum = sum - Number(i) ;  
+                sum = sum + Number(i);   // Add the result with the next decremented value
     
-                document.getElementById('output').innerHTML += `${i}` ;
-                if(i !== 0)
+                document.getElementById('output').innerHTML += `${i}` ; // append the output sequence in web page
+                if(i !== 0)  
                 {
-                	document.getElementById('output').innerHTML += `-` ;
+                	document.getElementById('output').innerHTML += `+` ;  // append the output sequence in web page
                 }
 	      		
 	      	}
 
-	      	document.getElementById('output').innerHTML += ` = ${sum}`
+	      	document.getElementById('output').innerHTML += ` = ${sum}`; //append the result to the output sequence
          
-      }  */
+      } 
  
  
          // Script 2 
@@ -47,28 +49,29 @@
 		  let operator, operand1, operand2;
 		  let outputVal;
 
-		  operator = prompt("Enter an operator: ");
+		  operator = prompt("Enter an operator: "); // Get the operator as input
 
+        // Keep on asking until valid operator is entered by the user
 		  while(!(operator==='+' || operator==='-' || operator==='*' || operator==='/' ))     
 		  {
 		  	operator = prompt("Enter an operator: ");
 		  }
 
-		  operand1 = prompt("Enter the first operand: ");
-		  operand2 = prompt("Enter the second operand: ");
+		  operand1 = prompt("Enter the first operand: "); //Get operand1 from the user
+		  operand2 = prompt("Enter the second operand: ");//Get operand2 from the user
 
-		  if(isNaN(operand1)||isNaN(operand2))
+		  if(isNaN(operand1)||isNaN(operand2)) // Check if the operands are valid
 		  {
 		  	alert('Error - Atleast one operand is NaN')
 		  }
-		  else if(Number(operand2)===0 && operator === '/')
+		  else if(Number(operand2)===0 && operator === '/') //Handle 'Divide by Zero' condition
 		  {
 		  	 alert('Cannot divide by zero');
 		  }
 		  	   	     
 		  else
 		  {
-		  	   switch(operator)
+		  	   switch(operator)  //Choose the appropriate operation based on the input operator
 		  	   {
 		  	   	case '+':
 		  	   	     outputVal = Number(operand1) + parseInt(operand2);
@@ -83,43 +86,45 @@
 		  	   	     outputVal = Number(operand1) / parseInt(operand2); 
 		  	   	     break;                              
 		  	   }
-
+             
+            //Display the output in web page  
             document.getElementById('output').innerHTML = `${operand1} ${operator} ${operand2} = ${outputVal}`
                
       }
+ 
 
-
-/*
 
           // Script 3 
 
-
+          // Generate a random number from 1 to 10
           let num = Math.floor(Math.random() * 10 + 1);
           let guessNumber;
           let count = 1;
           
+          // Ask the user to guess that number
           guessNumber = prompt("I am thinking of a number from 1 to 10, guess the number?")
 
-          while(parseInt(guessNumber) !== num)
+          while(parseInt(guessNumber) !== num) // For wrong guess, count the number of guesses & get input again
           {
           	 alert("Wrong, guess again:");	
           	 guessNumber = prompt("I am thinking of a number from 1 to 10, guess the number?")
           	 count++;
           }
 
-
-          if(parseInt(guessNumber) === num)
+          // If the user guesses correctly then display, guess count and the number  
+          if(parseInt(guessNumber) === num) 
           {
            alert("You got it with " + count + " guesses. The number was " +num);
           }
 
-             
+  */           
 
-
+/*
 
        // Quiz Problems - Quiz 1
 
        let studentCategory;
+       let parkingPermit='Yellow';
        studentCategory = prompt("Enter the Student Category (Freshman/Sophomore/Junior/Senior)");
 
       while(!(isNaN(studentCategory)))
@@ -130,24 +135,29 @@
 
       if(studentCategory.toLowerCase() === 'freshman')
       {
-      	alert("You should use Red parking permit");
+      	parkingPermit = "Red";
+         alert("Generate parking permit: " + parkingPermit);
       }
       else if(studentCategory.toLowerCase() === 'sophomore')
       {
-      	alert("You should use Blue parking permit");
+      	parkingPermit = "Blue";
+         alert("Generate parking permit: " + parkingPermit);
       }
       else if(studentCategory.toLowerCase() === 'junior')
       {
-      	alert("You should use Green parking permit");
+      	parkingPermit = "Green";
+         alert("Generate parking permit: " + parkingPermit);
       }
       else if(studentCategory.toLowerCase() === 'senior')
       {
-      	alert("You should use Violet parking permit");
+      	parkingPermit = "Violet";
+         alert("Generate parking permit: " + parkingPermit);
       }
       else
       {
-      	alert("You should use Yellow parking permit");
+         alert("Generate parking permit: " + parkingPermit);
       }
+      
 
 
 
@@ -159,6 +169,7 @@
         num2 = prompt("Enter the 2nd number");
         num3 = prompt("Enter the 3rd number");
 
+      
 
         if(num2>num1 && num3>num2)
         {
@@ -174,7 +185,7 @@
         // Quiz Question-3
 
 
-        let numLimit = prompt("Enter a Number");
+        let numLimit = prompt("Enter a Number Limit");
 
         while(isNaN(numLimit))
         {
@@ -186,7 +197,7 @@
         {
         	 document.getElementById('output').innerHTML += `${i} `;
         }
-
+*/
 
 
 
@@ -213,7 +224,7 @@
         	 		row.appendChild(data);
         		}
 
-*/
+
 
 
 
