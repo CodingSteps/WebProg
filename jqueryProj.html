@@ -13,7 +13,7 @@
      <button class='myBtn'> Hide / Show</button>
    
      <div>
-          <p id = "outputID"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <p class = "outputID"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           
           <h3 class = 'output'> This is Heading3 </h3>
@@ -29,7 +29,7 @@
            
              if(show===true)
              {
-               $('p').hide(4000,function(){
+               $('p').hide(1000,function(){
 
                     $('.myBtn').css('color','red');
                });
@@ -37,18 +37,20 @@
              }
              else
              {
-               $('p').show(4000,function(){
+               $('p').show(1000,function(){
 
-                    $(this).css('color','red');
+                    $('.myBtn').css('color','blue');
                });
                show = true;
              }
 
+             $('.myBtn').animate({width:'250px',fontSize:'25px'},1000)
+
      })
       
      
-       
-
+      let x = $('.outputID').html();
+      $('.output').append(x);
 
      })
      
