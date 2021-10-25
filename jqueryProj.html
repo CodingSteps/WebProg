@@ -3,14 +3,58 @@
 <head>
      <title> Javascript</title>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <style>
+ 
+ </style>    
 </head>
 
 <body>
-     <p> </p>
-     <p id = "outputID"></p>
-     <p class= 'output'> </p>
-     <p class = 'output'> </p>
+    
+     <button class='myBtn'> Hide / Show</button>
+   
+     <div>
+          <p id = "outputID"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          
+          <h3 class = 'output'> This is Heading3 </h3>
+     </div>
+
  <script>   
+
+     $(document).ready(function(){
+
+        let show = true;
+         
+         $('.myBtn').click(()=>{
+           
+             if(show===true)
+             {
+               $('p').hide(4000,function(){
+
+                    $('.myBtn').css('color','red');
+               });
+               show=false;
+             }
+             else
+             {
+               $('p').show(4000,function(){
+
+                    $(this).css('color','red');
+               });
+               show = true;
+             }
+
+     })
+      
+     
+       
+
+
+     })
+     
+
+
+
 
 /*
  let a=10;
@@ -21,17 +65,25 @@
  }
 
 
- const sum = (num1,num2) => {
+ const sum = (num2,num1) => {
 
      return num1 + num2(20);
  }
 
- c = sum(a,b)
+ c = sum(function(n){return n*10},a)
 console.log(c); */
 
 
 
+// call back functions
+/*
+const myFunc = (s,t)=>{
+     alert(s+t);
+}
 
+
+
+setInterval(myFunc,3000,"Hello","world"); */
 
 
 </script>
