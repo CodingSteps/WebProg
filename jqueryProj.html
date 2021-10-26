@@ -4,7 +4,7 @@
      <title> Javascript</title>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <style>
- 
+
  </style>    
 </head>
 
@@ -21,6 +21,8 @@
 
  <script>   
 
+
+
      $(document).ready(function(){
 
         let show = true;
@@ -31,9 +33,10 @@
              {
                $('p').hide(1000,function(){
 
-                    $('.myBtn').css('color','red');
+                    $('.myBtn').css({'color':'red','background-color':'yellow'});
                });
                show=false;
+               $('.myBtn').html('Show');
              }
              else
              {
@@ -42,44 +45,24 @@
                     $('.myBtn').css('color','blue');
                });
                show = true;
+               $('.myBtn').html('Hide');
              }
 
              $('.myBtn').animate({width:'250px',fontSize:'25px'},1000)
 
-     })
-      
-     
-      let x = $('.outputID').html();
-      $('.output').append(x);
-
+        }) 
+       
 
      })
      
 
 
-/*
-function draw(a,b){
-    
-    let x,y;
-    
-    for(x=1;x<=b;x++)
-    {
-        for(y=1;y<b;y++)
-        {
-            a = a + '?';
-        }
-        
-        document.write(a + '<br>');
-        a='?';
-    }
-    
-}
 
-draw('?',5)
-*/
+
 
 
 /*
+
  let a=10;
  let c;
 
@@ -88,14 +71,14 @@ draw('?',5)
  }
 
 
- const sum = (num2,num1) => {
+ const sum = (num1,num2) => {
 
      return num1 + num2(20);
  }
 
- c = sum(function(n){return n*10},a)
-console.log(c); */
-
+ c = sum(a,b)
+console.log(c); 
+*/
 
 
 // call back functions

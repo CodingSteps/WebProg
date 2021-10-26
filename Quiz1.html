@@ -6,16 +6,74 @@
 
 <body>
 
+	<h1> Calculate your Age in Seconds </h1> 
+    <div>
+    <label for="ageText">Enter Your Age:</label>
+    <input type="text" id="ageText" placeholder="Enter Age"> 
+	
+    <button onclick="myFunction()">Calculate</button>
+     <br>
+    <h2 id="ageResult"></h2> 
+    </div> 
+
   <script>
     
+  // Calculate seconds in an hour
+ function myFunction(){
+
+	var secsInAMin = 60;
+  	var minsInAnHour = 60;
+  	var secsInAnHour;
+   
+	secsInAnHour = secsInAMin*minsInAnHour;
+ 
+  	var hoursInADay = 24;
+  	var secondsInADay;
+  
+  	secsInADay = hoursInADay*secsInAnHour;
+  	secsInAYear = secsInADay*365;
+ 
+	var enteredAge = document.getElementById('ageText').value;  
+
+	var ageInSeconds = enteredAge*secsInAYear;
+    	   
+  	document.getElementById('ageResult').innerHTML = ageInSeconds;
+
+ }
+ 
+/*
+function draw(a,b){
+    
+    let x,y;
+    
+    for(x=1;x<=b;x++)
+    {
+        for(y=1;y<b;y++)
+        {
+            a = a + '?';
+        }
+        
+        document.write(a + '<br>');
+        a='?';
+    }
+    
+}
+
+draw('?',5)
+*/
+    
+
+ /*
     function add(num1, num2)
 	{
 	 var result = num1 + num2;
+	 return result;
 	}
 
 	alert(add(5,7)); //answer to #1
 	var answer = add(5,7);
 	alert(answer); //answer to #2
+*/	
 
   </script>	
 
