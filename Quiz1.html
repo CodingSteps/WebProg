@@ -48,9 +48,9 @@ function draw(a,b){
     
     for(x=1;x<=b;x++)
     {
-        for(y=1;y<b;y++)
+        for(y=1;y<10;y++)
         {
-            a = a + '?';
+            a = a + ' ?';
         }
         
         document.write(a + '<br>');
@@ -59,9 +59,31 @@ function draw(a,b){
     
 }
 
-draw('?',5)
-*/
+draw('?',5)*/
+
+   
+
+function draw(myChar,rowSize,colSize){
     
+    let x,y;
+    
+    for(x=1;x<=rowSize;x++)
+    {
+        document.writeln('<p>');
+        for(y=1;y<colSize;y++)
+        {
+           document.write(myChar);
+        }
+        
+        document.writeln('</p>');
+        
+    }
+    
+}
+
+draw('?',5,50)
+
+
 
  /*
     function add(num1, num2)
