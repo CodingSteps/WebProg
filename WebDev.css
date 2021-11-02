@@ -1,0 +1,23 @@
+.div1{
+	width: 1000px;
+	height: 500px;
+	border: 5px solid red;
+	background-color: lightblue;
+	margin: auto;
+}
+
+
+.div2{
+
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 80px;
+	height: 300px;
+	border: 5px solid blue;
+	background-color: pink;
+}
+
+body{
+	background-color: yellow;
+}

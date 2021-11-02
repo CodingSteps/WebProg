@@ -10,50 +10,40 @@
 
 <body>
     
-     <button class='myBtn'> Hide / Show</button>
-   
-     <div>
-          <p class = "outputID"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          
-          <h3 class = 'output'> This is Heading3 </h3>
-     </div>
+   <p id = "myPara"> This is <b>First Paragraph</b> </p>
+   <p class = "para"> Second Paragraph </p>
+   <p class = "para"> Third Paragraph </p>
+   <p class = "output"> This is my Output.</p>
+    
+
 
  <script>   
 
-
-
      $(document).ready(function(){
 
-        let show = true;
-         
-         $('.myBtn').click(()=>{
-           
-             if(show===true)
-             {
-               $('p').hide(1000,function(){
+        let a = $('#myPara').html();
+        $('.output').html("100");
 
-                    $('.myBtn').css({'color':'red','background-color':'yellow'});
-               });
-               show=false;
-               $('.myBtn').html('Show');
-             }
-             else
-             {
-               $('p').show(1000,function(){
 
-                    $('.myBtn').css('color','blue');
-               });
-               show = true;
-               $('.myBtn').html('Hide');
-             }
+        // Dynamically create HTML elements   
+         $('.para').click(function(){
 
-             $('.myBtn').animate({width:'250px',fontSize:'25px'},1000)
+           let b = $('<div>',{id:'dynamic'});
+           let c = $('<h1>',{id:'dynamicHeading'}).html("Dynamically created heading");
+          
+           let d = b.append(c);
 
-        }) 
-       
+           $('body').append(d);
 
-     })
+           $('#dynamic').css({'background-color':'lightblue','height':'200px'});
+           $('#dynamicHeading').css({'text-align':'center','color':'red'});
+ 
+
+         });
+
+
+})
+      
      
 
 
