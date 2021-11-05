@@ -17,11 +17,13 @@
 }
 
 .card{
-	flex: 0 0 30%;
+	flex:30%;
 	margin: 10px;
 	border: 20px solid #f7f7f7;
 	border-radius: 	10px;
 }
+
+.card>img{width: 100%; height: 300px;}
 
 .card > div{
 	background-color:black;
@@ -34,14 +36,15 @@
  }
 
 
- @media (max-width: 800px) {
-  .flexContainer {
-    flex-direction: column;
-  }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
 
-  .card>img{width: 100%;}
+  .card{flex: 40%;}
+} 
+
+@media (max-width: 768px) {
+
+  .card{flex: 100%;}
 } 
 
 }   

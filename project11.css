@@ -3,9 +3,10 @@
 	width: 100%;
 	height: 400px;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: flex-start;
+	flex-direction: row;
+	justify-content: space-around; /*center, flex-start,flex-end,space-around , space-between*/
+	align-items: flex-start; /*flex-start,flex-end,center,stretch*/
+	flex-wrap: wrap;
 }
 
 
@@ -13,13 +14,12 @@
 	border: 4px solid red;
 	margin: 10px;
 	padding: 10px;
+	flex:1 1 20%;
 }
 
 
 .one{
 	align-self: stretch;
+	
 }
 
-.three{
-	align-self: center;
-}
