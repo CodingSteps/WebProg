@@ -123,6 +123,8 @@
 		        	alert(accompanied);
 		        }	
 
+		        document.getElementById("inputAge").value =" ";
+
       } 
 
 
