@@ -1,0 +1,25 @@
+h1{
+	color: orange;
+}
+
+.myDiv{
+	font-size: 30px;
+	border: 5px solid blue;
+	background-color: orange;
+	background-color: yellow;
+	padding: 10px;
+	width: 70%;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.outerDiv{
+	background-color: lightblue;
+	border: 5px solid red;
+}
+
+
+body{
+	background-color: aqua;
+}

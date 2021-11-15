@@ -7,18 +7,40 @@
 <body>
 
      <script>
+       
+        let a = 30;
+        let b= 40;
+        let c;
 
-       let myString = "MARSHMALOW";
+      /*  function sum(num1,num2)
+        {
+          let output = num1 + num2;
+          return output;
+        }
 
-       let output;
 
-       output = myString[4] + myString.slice(8);
 
-       console.log(output);
+        let sum = function(num1,num2){
+          let output = num1 + num2;
+          return output;
+        }*/
+
+         // Arrow function
+        let sum = (num1, num2) => {
+          let output = num1 + num2;
+          return output;
+        }
+
+
+         c = sum(a,b);
+
+        console.log(c);
+
+
 
      </script>	
-
-
+         
+        
 
 </body>
 </html>	
