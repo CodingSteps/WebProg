@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Paintly.com</title>
+</head>
+<body>
+
+  <label for="firstname">Enter FirstName</label>
+  <input type="text" id="firstname">
+
+  <br><br>
+
+  <label for="lastname">Enter LastName</label>
+  <input type="text" id="lastname">
+
+  <br><br>
+
+  <label for="email">Enter Email ID</label>
+  <input type="text" id="email">
+
+  <br><br>
+
+  <p>Choose your 3 favorite colors</p>
+
+  <label for ='color1'>Color Choice - 1</label>
+  <input type="color" id='color1'>
+
+  <label for ='color2'>Color Choice - 2</label>
+  <input type="color" id='color2'>
+
+  <label for ='color3'>Color Choice - 3</label>
+  <input type="color" id='color3'>
+
+  <br><br>
+
+  <button id="submit">Submit</button>
+
+  <script type="text/javascript">
+  	$(document).ready(function(){
+
+  		function users(fname,lname,email,colors){
+  			this.firstname= fname;
+  			this.lastname= lname;
+  			this.email= email;
+  			this.choices= colors;
+  			this.checker= function(over) {
+  				for(let x of this.choices){
+  					for(let y of over){
+  						if (x===y){
+  							return true;
+  						}
+  					}
+  				}	
+
+  			}
+  		}
+
+  		$("#submit").click(function(){
+
+  			let fname= $("#firstname").val();
+  			let lname= $("#lastname").val();
+  			let email= $("#email").val();
+  			let c1= $("#color1").val();
+  			let c2= $("#color2").val();
+  			let c3= $("#color3").val();
+  			let colors= [c1,c2,c3];
+  			let outofstock= ["#FF0000","#FFFFFF","#000000"];
+
+  			const user= new users(fname,lname,email,colors);
+
+  			let a = user.checker(outofstock);
+  			if(a){
+  				alert("Sorry, but that colour is over 😔.");
+  			}
+
+  			else{alert("Your order will be coming in the next few days 🎨.");
+  			}
+  		})
+  	})
+
+  </script>
+
+</body>
+</html>

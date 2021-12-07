@@ -23,7 +23,7 @@ a{color:white;
   }
 
 
-  li:hover{background-color: #f7f7f7;}
+  li:hover{background-color: grey;}
 
   .active{background-color: red;}
 

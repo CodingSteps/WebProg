@@ -54,9 +54,9 @@ body{margin: 0px;font-family: "Lato",sans-serif;}
 #grey{font-weight: 700;color: #666666;}
 
 
-/* Media Queries  phone sm - 576px, tablet md - 768px, 992px, 1200 to 1400px    */
+/* Media Queries  phone sm - 576px, tablet md - 768px, 992px, 1200 to 1400px   */
 
-@media screen and (max-width: 500px)
+@media screen and (max-width: 576px)
 {
 
 	.darktxt
@@ -69,4 +69,4 @@ body{margin: 0px;font-family: "Lato",sans-serif;}
     letter-spacing: 5px;
 	}
 
-}
+} 

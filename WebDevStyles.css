@@ -1,25 +1,15 @@
-h1{
-	color: orange;
-}
-
 .myDiv{
-	font-size: 30px;
-	border: 5px solid blue;
-	background-color: orange;
-	background-color: yellow;
+
+	font-family: 'Fruktur', cursive;
+
+}
+
+
+.link{
+	text-decoration: none;
 	padding: 10px;
-	width: 70%;
-	margin: auto;
-	margin-top: 100px;
-	margin-bottom: 100px;
-}
-
-.outerDiv{
-	background-color: lightblue;
-	border: 5px solid red;
-}
-
-
-body{
-	background-color: aqua;
+	background-color: blueviolet;
+	color: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px lightgrey;
 }

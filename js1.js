@@ -16,9 +16,9 @@
 
 		function incrementCnt(){
 			 let cnt = document.getElementsByClassName('counter');
-			 let incVal = cnt[0].innerHTML;
+			 let incVal = cnt[1].innerHTML;
 			 incVal++; //incVal=incVal+1;
-			 cnt[0].innerHTML = incVal; 
+			 cnt[1].innerHTML = incVal; 
 
 			 /*let cnt;
 			 cnt = document.getElementById('counter');
@@ -152,10 +152,6 @@
 
 
 
-
-
-
-/*
    const bookRepo = [];
    function AddBook(){
    	 debugger;
@@ -177,6 +173,10 @@
    }
 
      
+
+
+
+
      function SearchBook(){
    	 
    	 let searchVal = document.getElementById("inputBookSearch").value;
@@ -207,5 +207,5 @@
    	 {
    	 	status[1].innerHTML = "Sorry, No matches found.";
    	 }
-   }*/
+   }
  	

@@ -2,15 +2,14 @@
 <html>
 <head>
 	<title>Javascript</title>
+
 </head>
 
 <body>
 
      <script>
        
-        let a = 30;
-        let b= 40;
-        let c;
+        
 
       /*  function sum(num1,num2)
         {
@@ -23,18 +22,125 @@
         let sum = function(num1,num2){
           let output = num1 + num2;
           return output;
-        }*/
+        }
 
-         // Arrow function
-        let sum = (num1, num2) => {
-          let output = num1 + num2;
+
+         // [Awesome Cat, Awesome dog..]
+
+        let sum = (myArr) => {
+          
+          for(let i=0; i<myArr.length;i++)
+          {
+            myArr[i] = "Awesome " + myArr[i];
+          }
+            return myArr;
+        }
+
+         const animals= ["cat","dog","tiger"]
+
+         c = sum(animals);
+
+        document.write(c); 
+
+
+
+        let a = 10;
+
+        const b = function(n){
+          return n*100;
+        }
+
+        
+        const sum = function(num1,num2){
+
+          let output;
+          output = num1 + num2(20);
           return output;
         }
 
 
-         c = sum(a,b);
+        c=sum(10,(n)=>{return n*100});
 
-        console.log(c);
+        document.write(c); */
+       
+     /*
+        let a = 10;
+
+        
+        
+        const sum = (num1,num2) => {
+            let output;
+            output = num1 + num2(40);
+            console.log(output);
+        }
+
+
+        sum(a,(n)=>{return n*30})  */
+
+
+        // Map function
+      
+      /*
+        const a = [100,200,300,400]    // output [10,20,30,40]
+        let b;
+         
+        const myFunc = (n)=>{return n*30}  
+      
+        b = a.map(myFunc)
+
+        console.log(b);
+        console.log(a);  */
+     
+
+       // Find function - input -> ["red","blue","green","orange"] Red
+
+        const bookRepo = ["Harry Potter", "Magic tree house", "Just add magic", "Alice in wonderland","Magic"]
+        let inputKeyword = prompt("Enter your search keyword");
+        const searchResults = [];
+
+        bookRepo.find((s)=>{
+
+              if(inputKeyword.toUpperCase() === s.toUpperCase())
+              {
+                 searchResults.push(s);
+              }
+              else
+              {
+                  let splitArray = s.split(' ');  // ["Harry","Potter"]
+                  
+                  splitArray.find((k)=>{
+
+                        if(k.toUpperCase() === inputKeyword.toUpperCase())
+                        {
+                            searchResults.push(s);
+                        }
+
+
+                  }) 
+
+               }
+
+        })
+
+
+        if(searchResults.length>0)
+        {
+            for(let a of searchResults)  //["magic tree house","just add magic","magic"]    
+            {
+                document.writeln(a + "  ");
+            }
+        }
+        else
+        {
+             document.writeln("Sorry. No match found for the given keyword");
+        }
+
+
+
+
+
+       
+      
 
 
 

@@ -1,18 +1,20 @@
 body{margin: 0px; font-family: Abel,sans-serif;}
 
 .logo{float: left;list-style-type: none;
-  padding: 10px;}
+  padding: 10px;margin-left: 10px;}
 
 
 .menu{
-	    float: right;
+	   float: right;
     color: white;
     list-style-type: none;
-    padding: 40px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
 }
 
-uL{
-	height: 100px;
+div>a{float: left;}
+
+header{
+	height: 90px;
 	margin: 0px;
   padding-right: 30px;
   background-color: aliceblue;
@@ -21,6 +23,9 @@ uL{
 a:hover{background-color:black;text-decoration: underline; border-radius: 10px;}
 
 a{text-decoration: none; color: black; font-size: 20px;padding: 20px; color: #FCAC0C; font-weight: 600;}
+
+
+
 
 /*
 .container {

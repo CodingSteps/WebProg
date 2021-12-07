@@ -138,7 +138,7 @@ width:800px;
 transition:padding 10s, width 10s;
 }
 
-.outer{border: 10px solid #c4f5e7;width: 400px;height: 350px;}
+/*.outer{border: 10px solid #c4f5e7;width: 400px;height: 350px;}*/
 
 .animate{
   width: 100px;

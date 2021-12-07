@@ -5,16 +5,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 <style>
    
-   .dropdownContent{display: none;position: absolute; top: 85px; left: 0px; min-width: 150px;background-color: #F0F8FF;
+   .dropdownContent{display: none;position: absolute; top: 65px; left: -10px; min-width: 120px;background-color: #F0F8FF;
     color: #FBAE13;border-radius: 10px;}
 
-   .dropdown{position: relative;}
+   .dropdown{position: relative;float: left;}
 
    .dropdown:hover .dropdownContent{display: block;}
 
    .dropdownContent a:hover{background-color: black;border-radius: 0px;}
 
-   .dropdownContent a{padding: 10px; display: block;text-align: center;border-bottom: 1px solid lightgrey;}
+   .dropdownContent a{clear: both;padding: 10px; display: block;text-align: center;border-bottom: 1px solid lightgrey;min-width: 120px;}
 
 
 </style>
@@ -23,20 +23,20 @@
 <body>
       
        
-        <ul>
-            <li class="logo"><img src="images/sfi_logo.png" width=400px height=100px></li>
-            <li class="menu"><a href="#">Contact</a></li>
-            <li class="menu"><a href="#">About</a></li>
-            <li class="menu dropdown"><a href="#">Dropdown</a>
-                <div class = "dropdownContent">
-                    <a href='#'>Link 1</a>   
-                    <a href='#'>Link 2</a>
-                    <a href='#'>Link 3</a>
-                
-                </div>    
-            </li>
-            <li class="menu"><a href="#">Home</a></li>
-        </ul>   
+        <header>
+            <div class="logo"><img src="images/sfi_logo.png" width=400px height=80px></div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Contact</a>
+                <div class="dropdown"><a href="#">Dropdown</a>
+                    <div class = "dropdownContent">
+                        <a href='#'>Link 1</a>   
+                        <a href='#'>Link 2</a>
+                        <a href='#'>Link 3</a>                    
+                    </div>    
+                 </div>
+                <a href="#">About</a>
+        </header>   
 
 
 
