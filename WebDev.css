@@ -3,7 +3,7 @@
 	width: 300px;
      padding: 30px;
 	animation-name:example;
-	animation-duration:20s;
+	animation-duration:10s;
 	animation-iteration-count:infinite;
 	animation-direction:alternate;
 	animation-timing-function: linear;
@@ -21,12 +21,13 @@
 
 @keyframes example{
      
+     0%{background-color: purple;transform: translate(0px,0px);color: white}  
+     25%{background-color: blue;transform: translate(300px,0px);}
+     50%{background-color: red;transform: translate(600px,0px);}
+     100%{background-color:green;transform:translate(1200px,0px);color:white;}
 
-     0%{background-color:lightblue;transform:translate(0px,0px);}   
-	30%{background-color:pink;transform:translate(300px,0px);} 
-	60%{background-color:yellow;transform:translate(600px,0px);}
-	90%{background-color:purple;transform:translate(900px,0px);color:white}
-	100%{background-color:green;transform:translate(1200px,0px);color:white;}
+
+    
 
 
 }
