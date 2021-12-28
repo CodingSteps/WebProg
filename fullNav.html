@@ -11,14 +11,14 @@ body {
 }
 
 #overlay{
-  width: 100%;
-  height: 0px;
+  width: 0px;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0,0,0, 0.8);
   overflow: hidden;
-  transition: height 0.5s;
+  transition: width 0.5s;
 }
 
 .overlay-content {
@@ -79,17 +79,17 @@ body {
 <script>
 
 function openNav() {
- // document.getElementById("overlay").style.width = "100%";
-  document.getElementById("overlay").style.height = "100%";
+  document.getElementById("overlay").style.width = "100%";
+ // document.getElementById("overlay").style.height = "100%";
 }
 
 function closeNav() {
-  document.getElementById("overlay").style.height = "0%";
+  document.getElementById("overlay").style.width = "0%";
  
 } 
 </script>
      
-
+<!--
  <h1>Scroll down</h1>
     <br>
     <h1>Scroll down</h1>
@@ -137,6 +137,6 @@ function closeNav() {
     <h1>Scroll down</h1>
     <br>
     <h1>Scroll down</h1>
-    <br>    
+    <br>    -->
 </body>
 </html>

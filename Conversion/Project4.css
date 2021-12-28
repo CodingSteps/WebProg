@@ -1,0 +1,12 @@
+body{
+	background-color: #f6f0c9;
+}
+
+div{
+	padding: 20px;
+}
+
+#historyTxt{
+	color: red;
+	font-size: 20px;
+}

@@ -82,8 +82,10 @@ header{height:60px;background-color: black;}
     display: none;
   }
   .topnav a.icon {
-    float: right;
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .topnav{float: none;}

@@ -40,6 +40,7 @@
 
          let inputLetter = prompt("Enter a letter");
 
+
          if(inputLetter === null)
          {
             let quitGame=confirm("Do you want to QUIT?");
@@ -84,13 +85,15 @@
          let chancesLeft = (totalChances-timer);
          alert(dash.join(' ') + "\n" + "You have " + chancesLeft + " chances left to solve the puzzle." );
 
-   }
-
-   if(wordLength===0)
+         if(wordLength===0)
    {
        
         alert("Well Done! 😀😉😄😃🙂🤩");
    }
+
+   }
+
+   
 
 
 

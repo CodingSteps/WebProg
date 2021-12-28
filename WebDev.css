@@ -1,33 +1,32 @@
-.div1{
+.container{
 	background-color: pink;
-	width: 300px;
-     padding: 30px;
-	animation-name:example;
-	animation-duration:10s;
-	animation-iteration-count:infinite;
-	animation-direction:alternate;
-	animation-timing-function: linear;
-	animation-delay: 0s;
+	height: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+    flex-wrap: wrap;
 }
 
 
-.div1:hover{
-      width: 800px;
-      transform: rotate(90deg);
-      transition: width 5s, transform 5s;
-      transition-delay: 2s;
+.container > div{
+
+	padding: 10px;
+	margin: 10px;
+	border: 5px solid blue;
+	flex: 0 0 20%;
+
 }
 
 
-@keyframes example{
-     
-     0%{background-color: purple;transform: translate(0px,0px);color: white}  
-     25%{background-color: blue;transform: translate(300px,0px);}
-     50%{background-color: red;transform: translate(600px,0px);}
-     100%{background-color:green;transform:translate(1200px,0px);color:white;}
 
+.two, .four{
 
-    
+	align-self: flex-start;
+}
 
-
+.three{
+	align-self: center;
+	flex-grow: 1;
+	flex-shrink: 1;
 }

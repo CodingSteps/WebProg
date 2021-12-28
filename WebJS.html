@@ -9,139 +9,86 @@
 
      <script>
        
-        
+        // Accessors and Mutators  instead of function 
 
-      /*  function sum(num1,num2)
-        {
-          let output = num1 + num2;
-          return output;
-        }
+/*
+        let user1 = {
 
+            firstName : "David",
+            lastName : "Godman",
+            age : 40,
+            hobby : ["Listening to Music","Reading Books","Watch Movies"],
+            health : {
+                foodAllergies : ["Diary","Peanut"],
+                Diabetic : "Yes",
+                Weight : 150,
+                height : "5 feet"
+                
+            }
 
-
-        let sum = function(num1,num2){
-          let output = num1 + num2;
-          return output;
-        }
-
-
-         // [Awesome Cat, Awesome dog..]
-
-        let sum = (myArr) => {
-          
-          for(let i=0; i<myArr.length;i++)
-          {
-            myArr[i] = "Awesome " + myArr[i];
-          }
-            return myArr;
-        }
-
-         const animals= ["cat","dog","tiger"]
-
-         c = sum(animals);
-
-        document.write(c); 
+        };
 
 
+         let user2 = {
 
-        let a = 10;
-
-        const b = function(n){
-          return n*100;
-        }
+            firstName : "Deborah",
+            lastName : "Harrington",
+            age : 50,
+            hobby : ["Listening to Music","Reading Books","Watch Movies"],
+            health : {
+                foodAllergies : ["Peanut"],
+                Diabetic : "Yes",
+                Weight : 120,
+                height : "5 feet"
+                
+            }
+        };
 
         
-        const sum = function(num1,num2){
+        user1.country="United Kingdom";
 
-          let output;
-          output = num1 + num2(20);
-          return output;
-        }
+        let users = [];
 
+        users.push(user1);
+        users.push(user2);
 
-        c=sum(10,(n)=>{return n*100});
-
-        document.write(c); */
-       
-     /*
-        let a = 10;
-
-        
-        
-        const sum = (num1,num2) => {
-            let output;
-            output = num1 + num2(40);
-            console.log(output);
-        }
-
-
-        sum(a,(n)=>{return n*30})  */
-
-
-        // Map function
-      
-      /*
-        const a = [100,200,300,400]    // output [10,20,30,40]
-        let b;
-         
-        const myFunc = (n)=>{return n*30}  
-      
-        b = a.map(myFunc)
-
-        console.log(b);
-        console.log(a);  */
-     
-
-       // Find function - input -> ["red","blue","green","orange"] Red
-
-        const bookRepo = ["Harry Potter", "Magic tree house", "Just add magic", "Alice in wonderland","Magic"]
-        let inputKeyword = prompt("Enter your search keyword");
-        const searchResults = [];
-
-        bookRepo.find((s)=>{
-
-              if(inputKeyword.toUpperCase() === s.toUpperCase())
-              {
-                 searchResults.push(s);
-              }
-              else
-              {
-                  let splitArray = s.split(' ');  // ["Harry","Potter"]
-                  
-                  splitArray.find((k)=>{
-
-                        if(k.toUpperCase() === inputKeyword.toUpperCase())
-                        {
-                            searchResults.push(s);
-                        }
-
-
-                  }) 
-
-               }
-
+        Object.defineProperty(user1,"myAccessor",{
+            get:function(){return this.health.foodAllergies[1]}
+        })
+ 
+        Object.defineProperty(user2,"myAge",{
+            set:function(ageVal){this.age=ageVal;}
         })
 
+        document.write(users[0].myAccessor);
+        users[1].myAge = 30;
+        document.write(users[1].age);
 
-        if(searchResults.length>0)
+       for(let x of users)
         {
-            for(let a of searchResults)  //["magic tree house","just add magic","magic"]    
-            {
-                document.writeln(a + "  ");
-            }
-        }
-        else
-        {
-             document.writeln("Sorry. No match found for the given keyword");
-        }
-
-
-
+            document.write(x.health.foodAllergies);
+        }*/
 
 
        
+    function person(fname,lname,a,h)
+    {
+        this.firstName = fname;
+        this.lastName = lname;
+        this.age = a;
+        this.hobbies = h;
       
+    }
+        
+        
+    const user1 = new person("Deborah","Harrington",60,["crafts","Music"]);  
+    const user2 = new person("John","Harry",30,["Sports","Music","Arts"]);    
+      
+   person.prototype.myFunc=function(){
+            return this.firstName+this.lastName;
+        }  
 
+    document.writeln(user2.myFunc);
 
 
      </script>	

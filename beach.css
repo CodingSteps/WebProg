@@ -9,10 +9,10 @@ body{margin: 0px;font-family: "Helvetica Neue", Helvetica;}
 	justify-content:center;
 	align-items: center;
 	background-image: url('images/beachshowcase.jpg');
+	width: 100%;
 	height: 800px;
 	background-size: cover;
-	background-position: center;
-	width: 100%;
+	background-position: center;	
 }
 
 .sectionTxt{

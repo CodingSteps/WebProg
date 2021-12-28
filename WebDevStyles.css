@@ -1,15 +1,6 @@
-.myDiv{
+*{box-sizing: border-box;}
 
-	font-family: 'Fruktur', cursive;
-
-}
-
-
-.link{
-	text-decoration: none;
-	padding: 10px;
-	background-color: blueviolet;
+.myClass{
+	background-color: red;
 	color: white;
-	border-radius: 10px;
-	box-shadow: 5px 5px lightgrey;
 }
