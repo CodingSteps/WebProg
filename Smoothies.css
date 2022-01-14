@@ -84,7 +84,7 @@
 
 .myIconBlk{padding: 50px 50px 20px 50px; text-align: center;}
 
-.leftBlock, .rightBlock{flex:0 1 50%;padding: 20px;}
+.leftBlock, .rightBlock{flex:0 1 45%;padding: 20px;}
 
 .fun{width: 100%;background-color:#b3f820 ;}
 
