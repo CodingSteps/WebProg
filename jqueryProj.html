@@ -13,7 +13,7 @@
    <p id = "myPara"> This is <b>First Paragraph</b> </p>
    <p class = "para"> Second Paragraph </p>
    <p class = "para"> Third Paragraph </p>
-   <p class = "output"> This is my Output.</p>
+   <h1 class = "output"> This is my Output.</h1>
     
   <input type="radio" name="accAdult" value="yes" class="radio1">
       <label for="radio1">Yes</label>
@@ -23,11 +23,8 @@
  <script>   
 
      $(document).ready(function(){
-
-       
-
-        
-        let a = $('#myPara').html();
+     
+      /*  let a = $('#myPara').html();
         $('.output').html("100");
        // let selected = $('input[name=accAdult]:checked').val();
 
@@ -44,10 +41,12 @@
            $('body').append(d);
 
            $('#dynamic').css({'background-color':'lightblue','height':'200px'});
-           $('#dynamicHeading').css({'text-align':'center','color':'red'});
-         
+           $('#dynamicHeading').css({'text-align':'center','color':'red'}); */
 
-         });
+           $('.para').on('click', function(){
+                $('h1').hide();
+           })
+         
 
 
 })

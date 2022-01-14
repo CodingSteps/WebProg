@@ -2,12 +2,39 @@
 <html>
 <head>
 	<title>Javascript</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
 
+    <p id = "myPara"> This is <b>First Paragraph</b> </p>
+     <p class = "para"> Second Paragraph </p>
+    <p class = "para"> Third Paragraph </p>
+    <h1 class = "output"> This is my Output.</h1>
+
      <script>
+
+
+         $(document).ready(function(){
+
+
+          $(".para").click(function(){
+              
+              $("h1").hide(5000,function(){
+                  alert("Will be called after heading is hidden")
+              });
+          })
+
+          $("#myPara").click(function(){
+
+                $("h1").show(2000,()=>{
+                    alert("Show heading");
+                })
+          })
+            
+
+
+     })
        
         // Accessors and Mutators  instead of function 
 
@@ -67,7 +94,7 @@
        for(let x of users)
         {
             document.write(x.health.foodAllergies);
-        }*/
+        }
 
 
        
@@ -88,7 +115,149 @@
             return this.firstName+this.lastName;
         }  
 
-    document.writeln(user2.myFunc);
+    document.writeln(user2.myFunc());  */
+
+
+ /*
+    class person{
+
+        constructor(cname,cemail,carMake,carModel,carYear){
+
+            this.customerName = cname;
+            this.customerEmail = cemail;
+            this.carMake = carMake;
+            this.carModel = carModel;
+            this.carYear = carYear;
+        }
+
+        printName(){
+            console.log("Customer Name " + this.customerName)
+        }
+
+
+
+    }
+
+
+    const user1 = new person("David","DGodman@gmail.com","Ford","Focus",2004);
+    user1.printName(); */
+/*
+class User{
+    constructor(fname,lname,email)
+    {
+        this.FirstName = fname;
+        this.LastName = lname;
+        this.Email = email;
+    }
+    
+    userName(){
+        return this.FirstName + this.LastName;
+    }
+}
+
+class CarDetails extends User{
+    
+    constructor(fname,lname,email,carMake, carModel, carColor,carYear)
+    {
+        super(fname,lname,email);
+        this.CarMake = carMake;
+        this.CarModel = carModel;
+        this.CarColor = carColor;
+        this.CarYear = carYear;
+    }
+    
+     carAge(){
+        let d = new Date();
+        let currentYear = d.getFullYear();
+        
+         return currentYear - this.CarYear;
+    }
+    
+    carDetails()
+    {
+        let userName = this.userName();
+        return `Customer ${userName} has sold the car ${this.CarMake + this.CarModel} which is ${car.Age()} years old`;
+    }
+
+    
+}
+
+let user1 = new CarDetails("David","Mueller","davidm@gmail.com","Ford","Focus","green",2004);
+let user2 = new CarDetails("Deborah","Harrington","deborah@gmail.com","Toyota","Corolla","black",2008);
+console.log(user2.hello())*/
+
+/*
+class TicketMachine
+{
+
+    constructor()
+    {
+        this.price = 50;
+        this.paid = 0;
+        this.total = 0;
+    }
+    
+   
+    getTicketPrice()
+    {
+        console.log(this.price);
+    }
+
+   
+    amountInserted()
+    {
+        console.log(this.paid);
+    }
+
+ 
+    insertMoney(amount)
+    {
+        if(amount>0){
+            this.paid = amount+this.paid;
+        }
+    }
+}
+
+class busTicket extends TicketMachine{
+    
+    constructor(travels,price)
+    {
+        super();
+        this.travels = travels;
+        this.price = price;
+    }
+    
+    printTicket()
+    {
+        if(this.paid > this.price)
+        {
+            console.log("Ticket issued in " + this.travels +"Price: " + this.price);
+        }
+        else
+        {
+            console.log("Insufficient Funds. Insert Rs." + (this.price-this.paid) + "to print your ticket");
+        }
+        
+    }
+}
+
+let b = new busTicket("Conti Travels",800);
+b.insertMoney(20);
+b.amountInserted();
+b.printTicket(); */
+
+    //Call back functions
+
+  /*  function myFunc(a,b)
+    {
+        alert(a + b);
+    }
+
+    setInterval(myFunc,5000,"Hello World","second parameter") */
+
+
+    
+
 
 
      </script>	

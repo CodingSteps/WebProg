@@ -4,13 +4,13 @@ header{height:60px;background-color: black;}
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
   float: right;
 }
 
 .topnav a {
   float: left;
- /* display: block; */
+
   color: #f2f2f2;
   text-align: center;
   padding: 20px;
@@ -62,7 +62,7 @@ header{height:60px;background-color: black;}
 }
 
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #7f7f7f;
   color: white;
 }
 
@@ -94,7 +94,7 @@ header{height:60px;background-color: black;}
 
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -105,6 +105,8 @@ header{height:60px;background-color: black;}
     display: block;
     text-align: left;
   }
+
+  
   .topnav.responsive .dropdown {float: none;}
   .topnav.responsive .dropdown-content {position: relative;}
   .topnav.responsive .dropdown .dropbtn {

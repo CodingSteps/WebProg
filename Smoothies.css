@@ -74,7 +74,7 @@
    flex-wrap: wrap;
    justify-content: space-around;
    align-items: center;
-   padding: 30px;
+   padding: 10px;
 
 }
 
@@ -84,7 +84,7 @@
 
 .myIconBlk{padding: 50px 50px 20px 50px; text-align: center;}
 
-.leftBlock, .rightBlock{flex:0 1 50%;padding: 40px;}
+.leftBlock, .rightBlock{flex:0 1 50%;padding: 20px;}
 
 .fun{width: 100%;background-color:#b3f820 ;}
 
@@ -130,7 +130,7 @@ hr{width: 90%;}
 
      .blk {width: auto;}
      .blkHeading {font-size: 40px;}
-     .leftBlock, .rightBlock {padding: 5px;margin-top: 20px;}
+     .leftBlock, .rightBlock {padding: 5px;margin-top: 20px;flex: 100%;}
 
        h3 {font-size: 100%;}
 
