@@ -4,9 +4,9 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <style>
 
    
@@ -17,15 +17,21 @@
       background-position: right center;
       background-size: cover;
       background-repeat: no-repeat;
+
     }
 
 
-    .container-fluid{text-align:center;background-color: maroon;color:antiquewhite;font-family: Arial;}
+    .container-fluid{text-align:center;background-color: maroon;color:antiquewhite;font-family: Arial;letter-spacing: 1px;}
 
-    .container{margin-top:80px;}
+    .container{margin-top:40px;}
 
-    .panel-body>img{width:300px;height:300px;}
+    .card{margin-top:40px;}
+
+    .card>.card-title{background-color: #F2DEDE;color:maroon;text-align: center;}
    
+    .card-body > img{width:30%;height:280px;}
+
+    .form-inline{justify-content: center;}
    
     footer {
       background-color: #f2f2f2;
@@ -43,31 +49,31 @@
 
 
   <div class="container-fluid">
-    <h1> BLACK FRIDAY OFFER - 50% ON ALL ITEMS...BUY NOW!</h1>
+    <h2> BLACK FRIDAY OFFER - 70% ON ALL ITEMS...BUY NOW!</h2>
   </div>
 
 
 <div class="container">    
   <div class="row">
     <div class="col-sm-4">
-      <div class="panel panel-danger">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/uk/advisor/wp-content/uploads/2020/11/phones-switch-apps.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      <div class="card bg-light">
+        <div class="card-title">BLACK FRIDAY DEAL</div>
+        <div class="card-body"><img src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/uk/advisor/wp-content/uploads/2020/11/phones-switch-apps.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="card-footer">Buy 50 mobiles and get a gift card</div>
       </div>
     </div>
     <div class="col-sm-4"> 
-      <div class="panel panel-danger">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://www.asus.com/media/Odin/Websites/global/Series/25.png" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      <div class="card bg-light">
+        <div class="card-title">BLACK FRIDAY DEAL</div>
+        <div class="card-body"><img src="https://www.asus.com/media/Odin/Websites/global/Series/25.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="card-footer">Buy 50 mobiles and get a gift card</div>
       </div>
     </div>
     <div class="col-sm-4"> 
-      <div class="panel panel-danger">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://m.media-amazon.com/images/I/81jitu5rzKL.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      <div class="card bg-light">
+        <div class="card-title">BLACK FRIDAY DEAL</div>
+        <div class="card-body"><img src="https://m.media-amazon.com/images/I/81jitu5rzKL.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="card-footer">Buy 50 mobiles and get a gift card</div>
       </div>
     </div>
   </div>
@@ -76,30 +82,30 @@
 <div class="container">    
   <div class="row">
     <div class="col-sm-4">
-      <div class="panel panel-danger">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://5.imimg.com/data5/SELLER/Default/2023/4/297529466/NZ/YL/TI/68681028/55-4k-ultra-hd-android-tv.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      <div class="card bg-light">
+        <div class="card-title">BLACK FRIDAY DEAL</div>
+        <div class="card-body"><img src="https://5.imimg.com/data5/SELLER/Default/2023/4/297529466/NZ/YL/TI/68681028/55-4k-ultra-hd-android-tv.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="card-footer">Buy 50 mobiles and get a gift card</div>
       </div>
     </div>
     <div class="col-sm-4"> 
-      <div class="panel panel-danger">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://i.ebayimg.com/images/g/fHYAAOSwD1dke2zz/s-l1200.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      <div class="card bg-light">
+        <div class="card-title">BLACK FRIDAY DEAL</div>
+        <div class="card-body"><img src="https://i.ebayimg.com/images/g/fHYAAOSwD1dke2zz/s-l1200.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="card-footer">Buy 50 mobiles and get a gift card</div>
       </div>
     </div>
     <div class="col-sm-4"> 
-      <div class="panel panel-danger">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://www.mczdirect.com/49241-large_default/canon-eos-r6-mark-ii-2-canon-lp-e6nh-full-frame-mirrorless-camera.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      <div class="card bg-light">
+        <div class="card-title">BLACK FRIDAY DEAL</div>
+        <div class="card-body"><img src="https://www.mczdirect.com/49241-large_default/canon-eos-r6-mark-ii-2-canon-lp-e6nh-full-frame-mirrorless-camera.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="card-footer">Buy 50 mobiles and get a gift card</div>
       </div>
     </div>
   </div>
 </div><br><br>
 
-<footer class="container-fluid text-center">
+<footer class="container-fluid">
 
   <form class="form-inline">Get deals:
     <input type="email" class="form-control" size="50" placeholder="Email Address">
