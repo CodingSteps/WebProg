@@ -1,0 +1,7 @@
+.mybtn{display:inline-block;width:65%;margin:10px;background-color: #ff5722;padding:10px;text-align: center;border-radius: 5px;cursor: pointer;font-weight:600;}
+.stop{background-color:#a8dc39;}
+.gobtn{background-color: #f1c337;padding: 5px;border: 1px solid grey;border-radius: 5px;font-weight: 700;}
+.prog{background-color: #f1c337;display: none;}
+#upInches,#downInches{width:30px;display: none;}
+a{color:black;text-decoration: none;}
+body{background-color: #d9eaf9;margin:0px;font-family:quicksand;}

@@ -2,6 +2,10 @@
 
 .class1{background-color: lightblue;}
 
-.mynav{background-color: darkblue;}
+.mynav{background-color: cadetblue;}
 
-.carousel-control-next-icon, .carousel-control-prev-icon{width: 60px; height: 60px;}
+.carousel-control-next-icon, .carousel-control-prev-icon{width: 40px; height: 40px;}
+
+.nav-item{font-size: 20px; margin-right: 10px;}
+
+.ht{height: 600px;}

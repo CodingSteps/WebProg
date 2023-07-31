@@ -28,23 +28,25 @@ a{color:white;
   .active{background-color: red;}
 
 
-/*  .div1{position: relative;
+  .div1{position: relative;
     
-    background-color: lightblue;  
-   width: 1000px;
-    height: 800px;
+    background-color: #f2fcff;  
+   
+    
     }
 
 
     .div2{
     	position: absolute;
-    	top: 300px;
+    	top: 100px;
     	left: 100px;
     	width: 500px;
     	background-color: black;
     	color: white;
     	opacity: 0.8;
-    }*/
+    }
+
+    .tryRelative{position: relative;background-color: green;}
 
 
 .fixedPos{
@@ -61,7 +63,7 @@ a{color:white;
 .stickyPos{
     position: sticky;
     top: 0px;
-    background-color: lightblue;
+    background-color: red;
     padding: 10px;
     z-index: 1; 
 }
@@ -78,7 +80,7 @@ a{color:white;
 
 .center {
   position: absolute;
-  top:50%;
+  top:45%;
   width: 100%;
   text-align: center;
  }

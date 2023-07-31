@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Javascript Counter</title>		
+</head>
+
+<body style="text-align: center;">
+	<h1> Counter Example </h1>
+    <h2 id="counter">100</h2>
+  
+    <button class="Increment" onclick="incrementCnt()">Increment</button>
+    <button class="Reset" onclick="resetCnt()">Reset</button>
+    <button class="Decrement" onclick="decrementCnt()">Decrement</button> 
+
+ <script>
+ 	function incrementCnt(){
+            /* let cnt = document.getElementsByClassName('counter');
+             let incVal = cnt[0].innerHTML;
+             incVal++; //incVal=incVal+1;
+             cnt[0].innerHTML = incVal; */
+
+             let cnt;
+             cnt = document.getElementById('counter');
+             cnt.style.backgroundColor = "blue";
+             let incVal = cnt.innerHTML;  //incVal =100
+             incVal++; //incVal =incVal +5  incVal =105
+             cnt.innerHTML = incVal;
+        }
+
+        function resetCnt(){
+             let a;
+             a = document.getElementById('counter');
+             a.style.backgroundColor = "green";
+            
+             a.innerHTML = 0; 
+        }
+
+
+        function decrementCnt(){
+             let a;
+             a = document.getElementById('counter');
+             a.style.backgroundColor = "pink";
+             let u = a.innerHTML;  //incVal =100
+             u--; //incVal =incVal +5  incVal =105
+             a.innerHTML = u; 
+        }
+ </script>	
+    
+</body>
+</html>	

@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title> Calculate Age in Seconds</title>		
+</head>
+
+<body>
+	<h1 style="text-align:center;"> Calculate your Age in Seconds </h1> 
+    <div style="text-align: center;">
+    <label for="ageText">Enter Your Age:</label>
+    <input type="text" id="ageText" placeholder="Enter Age"> 
+
+    <button onclick="myFunction()">Calculate</button>
+     <br>
+    <h2 id="ageResult"></h2> 
+    </div>
+
+ <script>
+ 	function myFunction()
+		{
+			let inputAge = document.getElementById("ageText").value;
+
+			const secsInMin = 60;
+			const secsInHr  = secsInMin * 60;
+			const secsInADay = secsInHr * 24;
+            const secsInAYear = secsInADay * 365;
+
+            let secsInAge = inputAge * secsInAYear;
+
+            document.getElementById("ageResult").innerHTML = `Your age in seconds ${secsInAge} seconds`;
+            document.getElementById("ageResult").style.backgroundColor ="aliceblue";
+		}
+ </script>	
+    
+</body>
+</html>	

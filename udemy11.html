@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flexbox</title>
+
+	<style>
+
+		.myContainer{
+			display:flex;
+			background-color: aliceblue;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items:flex-start;
+			height:500px;
+		}
+
+		.myContainer>div{margin:10px;padding:20px;border:2px solid red;flex:0 0 200px;}
+
+
+	</style>	
+
+</head>
+<body>
+
+ <div class="myContainer">
+ 	<div>A</div>
+ 	<div style="align-self: center;">B</div>
+ 	<div>C</div> 	
+ </div>	
+
+
+ <!-- flex-direction,flex-wrap,justify-content,align-items,align-content -->
+
+ <!-- flex-direction : row/column/row-reverse/column-reverse -->
+ <!-- flex-wrap : wrap/no-wrap -->
+ <!-- justify-content : center/flex-start/flex-end/space-around/space-between -->
+ <!-- align-items : center/flex-start/flex-end/stretch/baseline -->
+
+ <!-- align-content: center/flex-start/flex-end/stretch/space-around/space-between -->
+
+ <!-- if flex-direction is row,
+ 	            justify-content -> horizontal alignment
+ 	            align-items -> vertical alignment
+
+ 	  and if flex-direction is column , then its just the opposite -->         
+
+
+<!-- order,flex-grow,flex-shrink,flex-basis,flex,align-self --> 	  
+    
+</body>
+</html>

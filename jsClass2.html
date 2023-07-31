@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript Class</title>
+</head>
+<body>
+
+	<script>
+
+/*
+       let user1 = {
+
+           fname:"David",
+           lname:"Godman",
+           age:40,
+           hobby:["singing","reading","playing"],
+           health:{       
+                isDiabetic:false,
+                height:150,
+                diet:["fruits","veggies","nuts"]
+           },
+           myFunc:function(){
+
+              return this.fname+ " " + this.lname;
+
+           }
+
+       }
+
+
+       let user2 = {
+
+           fname:"Deborah",
+           lname:"Harrington",
+           age:50,
+           hobby:["piano","dance","gardening"],
+           health:{       
+                isDiabetic:true,
+                height:140,
+                diet:["wheat","veggies","nuts"]
+           }
+
+       }
+
+
+       console.log(user1.myFunc());
+
+       let user =[];
+
+       user.push(user1);
+       user.push(user2);
+
+       
+       for(let x of user)
+       {
+           console.log(Object.entries(x));    
+
+       }*/
+         
+
+
+
+      /* let name = person.fname + person.lname;
+       console.log(name);
+       console.log(person["age"]);
+       console.log(person.hobby);
+       console.log(person["hobby"][2])
+       console.log(person.health.diet[2]);
+       }*/
+
+
+
+
+      function myObj(fname,lname,age,hobby)
+      {
+
+           this.firstname = fname;
+           this.lastname = lname;
+           this.age = age;
+           this.hobbies = hobby;
+
+      }
+
+
+      const user1 = new myObj("David","Godman",40,["music","sports"]);
+      const user2= new myObj("Deborah","Harrington",50,["reading","cooking"])
+
+      console.log(user1.firstname);
+      console.log(user2.firstname);
+
+    </script>
+
+</body>
+</html>

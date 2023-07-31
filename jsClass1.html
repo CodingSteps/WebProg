@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript Class</title>
+</head>
+<body>
+
+	<script>
+	
+
+		let a=20;
+		const sum = (n)=>{
+			return (n*10);
+		}
+
+        const myFunc = (num1,num2) => {
+
+             let total;
+             total = num1 + num2(5);
+             return total;
+        }
+
+
+       let output = myFunc(a,sum);
+       console.log(output);
+
+
+
+     let p=["cat","dog","rabbit"];
+
+     let output1;
+
+     
+     const ourFunc = (n)=>{
+     	let m = n.split("").reverse().join("");
+     	return m;
+     } 
+
+
+     output1 = p.map(ourFunc);
+
+     console.log(output1);
+
+
+     // Find function
+
+     let arr = ["Red","Blue","Green"]
+
+     let output2;
+
+     const ourFunc2 = (s)=>{
+         return (s=="Blue");
+
+     }
+
+     output2 = arr.find(ourFunc2);
+     console.log(output2);
+
+
+     //Filter function
+
+     let arr2 = [10,20,30,20,40,60]
+
+     let output3;
+
+     const ourFunc3 = (s)=>{
+         return (s>10);
+     }
+
+     output3 = arr2.filter(ourFunc3);
+     console.log(output3);
+
+
+
+
+
+
+	</script>	
+
+</body>
+</html>

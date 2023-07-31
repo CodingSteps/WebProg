@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Automated Ticket Checker</title>	
+     <style>
+      .ticket{
+         width: 80%;
+         margin: 100px auto 200px auto;
+         padding: 50px;
+         background-color: #d2fcd7;
+         font-size: 25px;
+         font-weight: 700;
+         border-radius: 10px;
+        }
+     </style>   	
+</head>
+
+<body style="text-align: center;">
+	<div class="ticket">
+
+      <h1> Automated Ticket Checker </h1>
+      <label for="inputAge">Enter your Age: </label>
+      <input type="text" id="inputAge" placeholder="Enter Age"> 
+
+      <p>Are you accompanied by an adult (age < 13 yrs): </p>  
+      <input type="radio" name="accAdult" value="yes" id="radio1">
+      <label for="radio1">Yes</label>
+      <input type="radio" name="accAdult" value="no" id="radio2">
+      <label for="radio2">No</label>
+      <br><br>
+      <button onclick="checkEntry()">Check Entry</button><br>
+      <h2 id = "entry" style="color:red;"></h2>
+</div>
+
+ <script>
+ 	 function checkEntry()
+      {                 
+                      
+                    let age = document.getElementById("inputAge").value;
+                    let accompanied;
+                    document.getElementById("entry").innerHTML=" ";
+
+
+                    if(document.getElementById("radio1").checked)
+                    {
+                        accompanied = document.getElementById("radio1").value; 
+                    }
+                    else if(document.getElementById("radio2").checked) 
+                    {
+                           accompanied = document.getElementById("radio2").value;
+                    }
+                    else
+                    {
+                      accompanied = "Are you accompained by an Adult. Please select an option";
+                    }    
+
+                
+                  if(isNaN(age) || age === '')
+                  {
+                    alert("Please enter valid input for age");
+                  }
+                  else if(age >= 13 || (age < 13 && accompanied === 'yes'))
+                  {
+                    document.getElementById("entry").style.color = "#db9c3e";
+                    document.getElementById("entry").innerHTML="You are allowed. Enjoy the Movie";
+                  } 
+                  else if(age < 13 && accompanied === 'no')
+                  {
+                    document.getElementById("entry").style.color = "red";
+                    document.getElementById("entry").innerHTML="Sorry, you are not allowed";
+                  } 
+                 
+                  else if(accompanied !== 'yes' && accompanied !== 'no')
+                  {
+                    alert(accompanied);
+                  } 
+
+      }
+ </script>	
+    
+</body>
+</html>	

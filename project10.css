@@ -2,40 +2,40 @@ body{margin: 0px; font-family: Abel,sans-serif;}
 
 ul{
 	height: 100px;
-    background-color: aliceblue;
+    background-color: #292929;
     margin: 0px;
     list-style-type: none;
 }
 
 
-.logo{float: left;}
+.logo{float: left;padding-top: 5px;}
 
-.menu{float: right; padding: 40px 10px 10px 30px;}
+.menu{float: right; padding: 35px 10px 10px 10px;}
 
-a:hover{background-color: black; color: white;text-decoration: underline;}
+a:hover{background-color: #70AD47; color: white;text-decoration: underline;}
 
-a{text-decoration: none; font-size: 20px; font-weight: 700; color:#FCAB0B; padding:15px; border-radius: 10px;}
+a{text-decoration: none; font-size: 18px; font-weight: 700; color:#FCAB0B; padding:15px; border-radius: 10px;letter-spacing:1px;}
 
 .dropdown{position: relative;}
 
-.dropdownContent{display: none; background-color: aliceblue;min-width: 160px;border-radius: 0px;}
+.dropdownContent{display: none; background-color: #292929;min-width: 160px;border-radius: 4px;text-align: center;}
 
 
 .dropdown:hover .dropdownContent{
 
 	display: block;
 	position: absolute;
-	top: 80px;
-	left: 10px;
+	top: 76px;
+	left: -14px;
 }
 
 
 .submenu{
 	display: block;
 	text-decoration: none;
-    padding: 20px;
+    padding: 10px;
     border-bottom: 1px solid lightgrey; 
-    border-radius: 0px;
+    border-radius: 2px;
 }
 
 

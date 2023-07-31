@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welldone</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+			<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+			<link href="Hangman_good.css" rel="stylesheet">
+			<link href='<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">'>
+</head>
+<body>
+	<div id="parent_div">
+		<div id="gif">
+			<img  src="images/welldone.gif">
+			<div id="back_id">
+				<button type="button" id="back">Back</button>
+			</div>
+		</div>
+	</div>
+
+	<h2 id="banner">Welldone!🏆</h2>
+	<h2 id="bottom">Good Job!😀</h2>
+	
+
+	<script type="text/javascript">
+		
+		var leftstart=0;
+		function moveBanner(){
+			$("#banner").offset({left:leftstart});
+			leftstart++;
+
+			if(leftstart>1350){
+				leftstart=0;
+			}
+		};
+
+		setInterval(moveBanner,5);
+
+		var bottomstart=0;
+		function moveBottom(){
+			$("#bottom").offset({left:bottomstart});
+			bottomstart++;
+
+			if(bottomstart>1350){
+				bottomstart=0;
+			}
+		};
+
+		setInterval(moveBottom,5);
+
+		 $("#back").click(function(){
+		 	location.replace("https://codingsteps.github.io/WebProg/Hangman Page 2.html");
+		});
+  			
+	</script>
+
+</body>
+</html>

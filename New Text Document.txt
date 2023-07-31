@@ -1,0 +1,36 @@
+Javascript ES6 & jQuery
+
+Variables and Datatypes
+
+Document Object Model
+
+Conditionals and Loops
+
+Arrays and Functions
+
+Destructuring, Spread & Rest operator
+
+Map, Find, Reduce & Filter
+
+Bitwise & Conversions
+
+Browser Object Model
+
+Arrow Functions
+
+this keyword
+
+Javascript Objects
+
+Accessors & Constructors
+
+Classses & Inheritance
+
+CallBacks & Asynchronous Functions
+
+jQuery - Functions & Events
+
+jQuery - Accessing DOM
+
+JSON, Web API and AJAX
+

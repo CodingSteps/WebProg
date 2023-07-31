@@ -1,0 +1,12 @@
+ h1{color:red;background-color:aliceblue;}
+ h1{color:green;background-color:goldenrod;}
+
+.myClass{background-color: cadetblue;}
+
+#myID{color:orange;}
+
+.newClass{text-decoration: underline;}
+
+
+.outerDiv{background-color: #ffc0c7;border:2px solid #f25076;}
+.innerDiv{background-color: #fed441;border:2px solid #366d9c;width:50%;margin:20px auto 20px auto;padding:10px 5px 7px 6px;}

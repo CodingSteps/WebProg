@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Program</title>	
+   
+	<style>
+
+		div{width:300px; height:100px;background-color: red;transition:width 4s;}
+		div:hover{width:500px;}
+
+		.animate{width:100px;height:100px;background-color: red;animation:example 4s 5s 4 alternate;}
+
+		/* animation-direction - normal, reverse, alternate, alternate-reverse */
+
+		@keyframes example{
+			0%{background-color:red;transform: translate(0px,0px)}
+			50%{background-color:green;transform: translate(0px,200px)}
+			100%{background-color:red;transform: translate(200px,200px)}
+		}
+
+
+
+	</style>	
+
+</head>
+<body>
+
+     <!--Transform - translate, rotate, scale and skew -->
+
+     <div>
+     </div>
+
+     <br><br>
+     <div class="animate">
+     </div>
+
+
+</body>
+</html>

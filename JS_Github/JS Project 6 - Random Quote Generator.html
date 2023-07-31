@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Random Quote Generator</title>     
+
+<style>
+ .generate{border-radius: 10px; font-size: 20px;font-weight: 700;padding: 10px;display: block;margin: auto;margin-top: 50px;background-color: #4a727d;color: white;cursor: pointer;}
+  
+    .div1{
+    border: 15px solid #ff6f69;
+    background-color: #96ceb4;
+    width: 1000px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+}
+
+.div2{
+    border: 10px solid #588c7e;
+    background-color: #ffeead;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 40px;
+    border-radius: 10px;
+}
+body{background-color:  #ffcc5c;margin: 0px;}
+h1{border-bottom: 4px solid #588c7e;}
+#quote{font-size: 40px;font-weight: 700; padding: 20px;}
+</style>    
+</head>
+
+<body>
+
+<!-- Random Quote Generator -->
+    <div class = "div1">
+             <button class = "generate" onclick="generateQuote()">Generate Random Quote</button>
+            <div class = "div2"> 
+                <h1 class="quote">Quote of the Day - Quote 1 </h1>
+                <div id="quote">
+                 <em>Don't wait for the perfect moment, take the moment and make it perfect.</em>
+                </div>
+            </div>  
+
+    </div> 
+
+<script>
+ function generateQuote(){
+   
+    const quoteList = ["Don't wait for the perfect moment, take the moment and make it perfect.","Stop being afraid of what could go wrong and think of what could go right.","It's not the load that breaks you down, it's the way you carry it.","Life is about accepting the challenges along the way, choosing to keep moving forward, and savoring the journey","Believe in your infinite potential. Your only limitations are those you set upon yourself."]
+    let randomQuote = Math.floor(Math.random()*quoteList.length);
+    let quoteCnt = document.querySelectorAll('h1.quote'); 
+    quoteCnt[0].innerHTML = `Quote of the Day - Quote ${randomQuote+1}`;
+    let displayQuote = document.getElementsByTagName("em");
+    displayQuote[0].innerHTML = `${quoteList[randomQuote]}`; 
+    
+</script>
+
+
+</body>
+</html>

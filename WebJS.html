@@ -11,30 +11,61 @@
      <p class = "para"> Second Paragraph </p>
     <p class = "para"> Third Paragraph </p>
     <h1 class = "output"> This is my Output.</h1>
+    <div>My initial text</div>
 
-     <script>
-
-
-         $(document).ready(function(){
+      <script>
 
 
-          $(".para").click(function(){
+        $(document).ready(function(){
+       
+
+              $("#myPara").click(function(){
+
+
+                     $(".output").slideToggle(2000,function(){
+
+                              alert("callback")
+
+
+                     });
+
+
+              })
+
+
+
+          // get data from HTML element
+         let a = $("#myPara").html();
+          
+
+          // set data into HTML element 
+          $("div").append(a);    
+
+          $("div").css({'background-color':'lightblue','color':'red'});
+
+
+          //Dynamically creating elements   
+          // <div id ="dynamic"> <h1 id="dynamicHeading"> Dynamically created heading </h1> </div>
+
+           $('.output').click(function(){
               
-              $("h1").hide(5000,function(){
-                  alert("Will be called after heading is hidden")
-              });
-          })
+               let b = $('<div>',{id:'dynamic'});
+               let c = $('<h1>',{id:'dynamicHeading'}).html("Dynamically created heading");
+              
+               let d = b.append(c);
 
-          $("#myPara").click(function(){
+               $('body').append(d);
 
-                $("h1").show(2000,()=>{
-                    alert("Show heading");
-                })
-          })
-            
+
+           })
+   
+           
+           
 
 
      })
+
+
        
         // Accessors and Mutators  instead of function 
 
@@ -118,6 +149,7 @@
     document.writeln(user2.myFunc());  */
 
 
+
  /*
     class person{
 
@@ -138,10 +170,16 @@
 
     }
 
-
     const user1 = new person("David","DGodman@gmail.com","Ford","Focus",2004);
     user1.printName(); */
-/*
+
+
+
+
+
+
+
+
 class User{
     constructor(fname,lname,email)
     {
@@ -151,7 +189,7 @@ class User{
     }
     
     userName(){
-        return this.FirstName + this.LastName;
+        return this.FirstName +" " +this.LastName;
     }
 }
 
@@ -176,7 +214,7 @@ class CarDetails extends User{
     carDetails()
     {
         let userName = this.userName();
-        return `Customer ${userName} has sold the car ${this.CarMake + this.CarModel} which is ${car.Age()} years old`;
+        return `Customer ${userName} has sold the car ${this.CarMake + this.CarModel} which is ${this.carAge()} years old`;
     }
 
     
@@ -184,29 +222,33 @@ class CarDetails extends User{
 
 let user1 = new CarDetails("David","Mueller","davidm@gmail.com","Ford","Focus","green",2004);
 let user2 = new CarDetails("Deborah","Harrington","deborah@gmail.com","Toyota","Corolla","black",2008);
-console.log(user2.hello())*/
+console.log(user2.carDetails())
 
-/*
+
+
+
+
+
+
 class TicketMachine
 {
 
     constructor()
     {
-        this.price = 50;
+        this.ticketPrice = 500;
         this.paid = 0;
-        this.total = 0;
     }
     
    
     getTicketPrice()
     {
-        console.log(this.price);
+        console.log(`Ticket Price: ${this.ticketPrice}`);
     }
 
    
     amountInserted()
     {
-        console.log(this.paid);
+        console.log(`Amount Inserted: ${this.paid}`);
     }
 
  
@@ -215,46 +257,54 @@ class TicketMachine
         if(amount>0){
             this.paid = amount+this.paid;
         }
+        this.amountInserted();
+
     }
 }
 
 class busTicket extends TicketMachine{
     
-    constructor(travels,price)
+    constructor(travels)
     {
         super();
         this.travels = travels;
-        this.price = price;
     }
     
     printTicket()
     {
-        if(this.paid > this.price)
+        if(this.paid >= this.ticketPrice)
         {
-            console.log("Ticket issued in " + this.travels +"Price: " + this.price);
+            console.log("Ticket issued in " + this.travels +"Price: " + this.ticketPrice);
         }
         else
         {
-            console.log("Insufficient Funds. Insert Rs." + (this.price-this.paid) + "to print your ticket");
+            console.log("Insufficient Funds. Insert Rs. " + (this.ticketPrice-this.paid) + " to print your ticket");
         }
         
     }
 }
 
-let b = new busTicket("Conti Travels",800);
-b.insertMoney(20);
-b.amountInserted();
-b.printTicket(); */
+let b = new busTicket("Conti Travels");
+b.getTicketPrice();
+b.insertMoney(200);
+b.insertMoney(300);
+b.printTicket(); 
+
+
+
+
+
+
 
     //Call back functions
 
-  /*  function myFunc(a,b)
+  /* function myFunc(a,b)
     {
         alert(a + b);
     }
 
-    setInterval(myFunc,5000,"Hello World","second parameter") */
-
+    setInterval(myFunc,5000,"Hello World"," second parameter") 
+*/
 
     
 

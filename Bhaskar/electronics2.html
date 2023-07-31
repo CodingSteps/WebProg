@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+    
+  <link href="quicksand.ttf" rel="stylesheet">
+	<script  src="jquery-3.6.3.min.js"></script>
+	<link href="styles.css" rel="stylesheet">
+
+		<script>
+		$(document).ready(function(){
+			$('#suser').click(function(){
+				$("#superuser").toggle();
+			})
+		})
+    function logoutButton() {
+     var xhr = new XMLHttpRequest();
+     xhr.open("GET", "/logout", true);
+     xhr.send();
+     setTimeout(function(){ window.open("/logged-out","_self"); }, 1000);
+    }
+
+    function reqsend(dir){
+      console.log("Hi I am working");
+      var xhttp = new XMLHttpRequest();
+      
+    if(dir == "UP"){
+      xhttp.open("GET", "./up?value="+document.getElementById("upInches").value, true);
+      //xhttp.open("GET", "/up", true);
+      xhttp.send();
+    }
+    else if(dir == "DOWN"){
+      xhttp.open("GET", "./down?value="+document.getElementById("downInches").value, true);
+      xhttp.send();  
+    }
+    else if(dir == "STOP"){
+      xhttp.open("GET", "./stop", true);
+      xhttp.send();  
+    }
+      
+    }
+
+	</script>	
+</head>
+<body>
+	<h3 style="text-align: center;margin-top:10px;margin-bottom:20px;text-decoration: underline;">Projector Controller</h3>
+	    <div class='blk'>
+		  
+		    <button  class="mybtn" value="UP" onclick=reqsend(this.value)>UP ▲</button>	
+				<input type="text" id="upInches" style="display:inline-block;" name="upInches">
+			    <label for="upInches" style="display:inline-block;">inches</label>
+			
+		 </div>   
+	      <button  class="mybtn" value="STOP" onclick=reqsend(this.value)>STOP</button>	
+	    <div class='blk'>
+			  <button  class="mybtn" value="DOWN" onclick=reqsend(this.value)>DOWN ▼</button>	
+        <input type="text" id="downInches" style="display:inline-block;" name="downInches">
+			  <label for="downInches" style="display:inline-block;">inches</label>
+			 </form>   
+		 </div>   
+		<br><hr><br>
+		<!--<label for="pwd">Admin Password</label> 
+		<input type="password" id="pwd"/> -->
+		<a href="/pwdGo" class="gobtn">👤ADMIN</a>
+		<hr>
+		<a href="/prog" class="mybtn prog" style="display:inline-block;">PROGRAM</a>
+        <button onclick="logoutButton()" class="logout" style="display:inline-block;">Logout</button>
+</body>
+</html>

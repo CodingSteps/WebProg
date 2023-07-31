@@ -6,44 +6,42 @@
 			const secsInHr  = secsInMin * 60;
 			const secsInADay = secsInHr * 24;
             const secsInAYear = secsInADay * 365;
-            alert(secsInAYear);
             let secsInAge = inputAge * secsInAYear;
 
-            document.getElementById("ageResult").innerHTML = `Your age in seconds ${secsInAge} seconds`;
+            document.getElementById("ageResult").innerHTML = `Your age in seconds:  ${secsInAge} seconds`;
             document.getElementById("ageResult").style.backgroundColor ="aliceblue";
 		}
 
 
 		function incrementCnt(){
-			 let cnt = document.getElementsByClassName('counter');
+			 /*let cnt = document.getElementsByClassName('counter');
 			 let incVal = cnt[1].innerHTML;
 			 incVal++; //incVal=incVal+1;
-			 cnt[1].innerHTML = incVal; 
+			 cnt[1].innerHTML = incVal; */
 
-			 /*let cnt;
+			 let cnt;
 			 cnt = document.getElementById('counter');
-			 cnt.style.backgroundColor = "blue";
 			 let incVal = cnt.innerHTML;  //incVal =100
 			 incVal++; //incVal =incVal +5  incVal =105
-			 cnt.innerHTML = incVal;*/
+			 cnt.innerHTML = incVal;
+			 cnt.style.backgroundColor = "blue";
 		}
 
 		function resetCnt(){
-			 let a;
-			 a = document.getElementsByClassName('counter');
-			 a[0].style.backgroundColor = "green";
-			
-			 a[0].innerHTML = 0; 
+			 let reset;
+			 reset = document.getElementById('counter');
+			 reset.style.backgroundColor = "green";		
+			 reset.innerHTML = 0; 
 		}
 
 
 		function decrementCnt(){
-			 let a;
-			 a = document.getElementsByClassName('counter');
-			 a[0].style.backgroundColor = "pink";
-			 let u = a[0].innerHTML;  //incVal =100
-			 u--; //incVal =incVal +5  incVal =105
-			 a[0].innerHTML = u; 
+			 let decr;
+			 decr = document.getElementById('counter');
+			 decr.style.backgroundColor = "pink";
+			 let val = decr.innerHTML;  //incVal =100
+			 val--; //incVal =incVal +5  incVal =105
+			 decr.innerHTML = val; 
 		}
 
 
@@ -87,7 +85,7 @@
 		      	let age = document.getElementById("inputAge").value;
 		      	let accompanied;
 		      	document.getElementById("entry").innerHTML=" ";
-
+		      
 
 		      	if(document.getElementById("radio1").checked)
 		      	{
@@ -103,10 +101,14 @@
 		          }	
 
 		      
-		        if(isNaN(age) || age === '')
+		        if(isNaN(age) || age == "")
 		        {
 		        	alert("Please enter valid input for age");
 		        }
+		        else if(accompanied !== 'yes' && accompanied !== 'no')
+		        {
+		        	alert(accompanied);
+		        }	
 		        else if(age >= 13 || (age < 13 && accompanied === 'yes'))
 		        {
 		        	document.getElementById("entry").style.color = "#db9c3e";
@@ -118,12 +120,9 @@
 		        	document.getElementById("entry").innerHTML="Sorry, you are not allowed";
 		        }	
 		       
-		        else if(accompanied !== 'yes' && accompanied !== 'no')
-		        {
-		        	alert(accompanied);
-		        }	
+		       
 
-		        document.getElementById("inputAge").value =" ";
+		        //document.getElementById("inputAge").value =" ";
 
       } 
 
@@ -146,7 +145,7 @@
 
    const bookRepo = [];
    function AddBook(){
-   	 debugger;
+   	
    	 let newBook = document.getElementById("inputBook").value;
    	 let status = document.getElementsByClassName("addStatus");
 
@@ -165,9 +164,6 @@
    }
 
      
-
-
-
 
      function SearchBook(){
    	 

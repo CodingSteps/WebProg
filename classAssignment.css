@@ -1,18 +1,18 @@
 
 
 .outerDiv{
-	background-color: #88a5b8;
-	border: 10px solid #d6c9d4;
+	background-color: #f5cd53;
+	border: 10px solid #de93a6;
 	width: 80%;
 	margin: auto;
 	margin-top: 70px;
-	margin-bottom: 50px;
+	
 }
 
 
 .innerDiv{
-	background-color: #d6feff;
-	border: 10px solid #ced07c;
+	background-color: #fff7c1;
+	border: 10px solid #59898e;
 	width: 70%;
 	margin-left: auto;
 	margin-right: auto;

@@ -1,6 +1,6 @@
 
 const allUsers = [];
-let outOfStock = "#fff00c";
+let outOfStock = ["#ffffff","#ff0000","#000000","#f26037","#808080"];
 
 function user(fname,lname,email,colors)
 {
@@ -10,14 +10,15 @@ function user(fname,lname,email,colors)
     this.Colors = colors;
     this.checkColors = function(OSColor){
          
+         let myArr = [];
          for(let c of this.Colors)
          {
-            if(OSColor === c)
+            if(OSColor.includes(c))
             {
-               return "Sorry, your color choice " + c + " is currently out of stock. Choose another Color";
+              myArr.push(c);           
             }
          }
-         
+         return myArr;
     }
 }
 
@@ -41,13 +42,18 @@ let response;
 response = userDetails.checkColors(outOfStock);
 
 
-if(response)
+if(response.length>0)
 {
-    alert(response);
+    for(let a of response)
+    {
+        alert("Sorry, your color choice " + a + " is currently out of stock. Choose another Color") ;
+    }
+    
 }   
 else 
 {
- allUsers.push(userDetails);   
+ allUsers.push(userDetails);  
+ alert(`User ${userDetails.FirstName}${userDetails.LastName} has been registered successfully`); 
  document.getElementById('firstname').value="";
  document.getElementById('lastname').value="";
  document.getElementById('email').value="";

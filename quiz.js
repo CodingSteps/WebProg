@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+  $( document ).ready(function() {
 
   var questions = [{
     question: "What is 2*5?",
@@ -36,7 +36,7 @@ $( document ).ready(function() {
     choose();
     
     // If no user selection, progress is stopped
-    if (isNaN(selections[questionCounter])) {
+    if (!selections[questionCounter]) {
       alert('Please make a selection!');
     } else {
       questionCounter++;
@@ -96,7 +96,7 @@ $( document ).ready(function() {
     var input = '';
     for (var i = 0; i < questions[index].choices.length; i++) {
       item = $('<li>');
-      input = `<input type="radio" name="answer" value=${i} />`; // "string1" + 500  = string1500
+      input = `<input type="radio" name="answer" value=${i} />`; 
       input += questions[index].choices[i];
       item.append(input);
       radioList.append(item);
@@ -120,10 +120,11 @@ $( document ).ready(function() {
               if(questionCounter < questions.length)
               {
                     var nextQuestion = createQuestionElement(questionCounter);
-                    quiz.append(nextQuestion).fadeIn();
+                    quiz.append(nextQuestion).fadeIn(500);
+                    console.log(selections[questionCounter]);
 
-               
-                      if (!(isNaN(selections[questionCounter]))) {
+                      //if choice selected for that question ,display that option on clicking next/prev if(!(isNaN(selections[questionCounter])))
+                      if(selections[questionCounter]!="") {
                         $('input[value='+selections[questionCounter]+']').prop('checked', true);
                       }
                 

@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>Paint Company - User Registration</title>	
+  <script src="js2.js"></script>
+</head>
+
+<body>
+
+  <label for="firstname">Enter FirstName</label>
+  <input type="text" id="firstname">
+  <br><br>
+  <label for="lastname">Enter LastName</label>
+  <input type="text" id="lastname">
+  <br><br>
+  <label for="email">Enter Email ID</label>
+  <input type="text" id="email">
+  <br><br>
+  <p>Choose your 3 favorite colors</p>
+  <label for ='color1'>Color Choice - 1</label>
+  <input type="color" id='color1' value="#ff0000">
+  <label for ='color2'>Color Choice - 2</label>
+  <input type="color" id='color2' value="#ff0000">
+  <label for ='color3'>Color Choice - 3</label>
+  <input type="color" id='color3' value="#ff0000"><br><br>
+  <button onclick = "submitDetails()">Register User</button>
+  
+<script>
+
+const allUsers = [];
+let outOfStock = "#fff00c";
+
+function user(fname,lname,email,colors)
+{
+    this.FirstName = fname;
+    this.LastName = lname;
+    this.Email = email;
+    this.Colors = colors;
+    this.checkColors = function(OSColor){
+         
+         for(let c of this.Colors)
+         {
+            if(OSColor === c)
+            {
+               return "Sorry, your color choice " + c + " is currently out of stock. Choose another Color";
+            }
+         }
+         
+    }
+}
+
+
+
+function submitDetails()
+{
+
+let userFname = document.getElementById('firstname').value;
+let userLname = document.getElementById('lastname').value;
+let userEmail = document.getElementById('email').value;
+let userChoice1 = document.getElementById('color1').value;
+let userChoice2 = document.getElementById('color2').value;
+let userChoice3 = document.getElementById('color3').value;
+
+const userDetails = new user(userFname,userLname,userEmail,[userChoice1,userChoice2,userChoice3]);
+
+let response;
+
+
+response = userDetails.checkColors(outOfStock);
+
+
+if(response)
+{
+    alert(response);
+}   
+else 
+{
+ allUsers.push(userDetails);   
+ document.getElementById('firstname').value="";
+ document.getElementById('lastname').value="";
+ document.getElementById('email').value="";
+ document.getElementById('color1').value="#ff0000";
+ document.getElementById('color2').value="#ff0000";
+ document.getElementById('color3').value="#ff0000";
+}
+ 
+}
+</script>  
+	
+</body>	
+</html>

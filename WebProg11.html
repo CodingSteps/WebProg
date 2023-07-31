@@ -7,14 +7,18 @@
 </head>
 <body>
 
-   <p id = "myPara"> This is <b>First Paragraph</b> </p>
+ <!--  <p id = "myPara"> This is <b>First Paragraph</b> </p>
    <p class = "para"> Second Paragraph </p>
    <p class = "para"> Third Paragraph </p>
-   <p class = "output"> This is my Output.</p>
+   <p class = "output"> This is my Output.</p>-->
+   <button onclick = 'drawBox("blue")'>Blue Box</button>
+    <button onclick = 'drawBox("red")'>Red Box</button>
+     <button onclick = 'drawBox("yellow")'>Yellow Box</button>
+     <div class="container"></div>
 
 <script>
 
-    let a = $('#myPara').html();  //Get Text from HTML element
+  /*  let a = $('#myPara').html();  //Get Text from HTML element
     $('.output').append(a)  //Set Text in to HTML element
 
     // Dynamically create HTML element
@@ -40,20 +44,19 @@
     let att = document.createAttribute('class');
     att.value = 'myHeadingJS';
     p.setAttributeNode(att);
-    document.getElementById("myDiv").appendChild(p);
+    document.getElementById("myDiv").appendChild(p);*/
 
 
     let drawBox = function(color){
         
         let a = $('<div>',{class:'box'});
         a.css({'width':'50px','height':'50px','background-color':color,'border-radius':'10%'})
-        $('body').append(a);
+        $('.container').html(a);
        
     }
 
-   drawBox("blue");
-   drawBox("red");
-   drawBox("yellow");
+   
+
    
    
 

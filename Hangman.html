@@ -17,7 +17,7 @@
 	
 	<script type="text/javascript">
 		
-		let hangmanArray = ["car","marshmellows","rainbow","cow","pizza","dog","microscope","pen","clock","elephant","hangman","phone","apple","book","whale","turtle","kite"];
+   let hangmanArray = ["car","marshmellows","rainbow","cow","pizza","dog","microscope","pen","clock","elephant","hangman","phone","apple","book","whale","turtle","kite"];
    let randomWord;
    let wordLength;
    let dash = [];
@@ -39,7 +39,8 @@
    {
 
          let inputLetter = prompt("Enter a letter");
-
+         
+         alert(inputLetter);
 
          if(inputLetter === null)
          {
@@ -55,9 +56,9 @@
          }
 
 
-         if(inputLetter.length > 1)
+         while(inputLetter.length > 1)
          {
-         	let inputLetter = prompt("Please enter single letter as input.");
+         	inputLetter = prompt("Please enter single letter as input.");
          }
     
         let initialLength = wordLength; 

@@ -1,0 +1,9 @@
+.mybtn{display:inline-block;width:65%;margin:10px;background-color: #ceedc7;padding:10px;text-align: center;border-radius: 5px;cursor: pointer;font-weight:600;border:none;}
+.stop{background-color:#ffd4b2;width:58%;}
+.gobtn{background-color: #FAAB79;padding: 10px;border: none;border-radius: 5px;font-weight: 700;display: block;width: 65%;text-align: center;margin: auto;
+    margin-bottom: 20px;}
+.prog{background-color: #FFDCA9;display: none;margin:auto;}
+#upInches,#downInches{width:30px;display: none;}
+a{color:black;text-decoration: none;}
+body{background-color: #E8F3D6;margin:0px;font-family:quicksand;}
+.logout{display: block;padding: 10px;margin: auto;margin-top: 80px;background-color: #c4cfa2;border: none;border-radius: 4px;}

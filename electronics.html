@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="electronics.css" rel="stylesheet">
+	
+	<script>
+		$(document).ready(function(){
+			$('#suser').click(function(){
+				$("#superuser").toggle();
+			})
+		})
+	</script>	
+</head>
+
+<body>
+	<h3 style="text-align: center;margin-top:10px;margin-bottom:20px;text-decoration: underline;">Projector Controller</h3>
+	    <div class='blk'>
+			<form action="/up" method="get" target="_blank" >       
+		        <input type="submit" value="UP ▲" class="mybtn">	
+				<input type="text" id="upInches" name="upInches">
+			    <label for="upInches" style="display:none;">inches</label>
+			 </form>   
+		 </div>   
+	    <a href="/stop" class="mybtn stop" style="width:60%;">STOP</a>
+	    <div class='blk'>
+			<form action="/down" method="get" target="_blank" >	      
+		        <input type="submit" value="DOWN ▼" class="mybtn">		
+				<input type="text" id="downInches" name="downInches">
+			    <label for="downInches" style="display:none;">inches</label>
+			 </form>   
+		 </div>   
+		<br><hr><br>
+		<form action="/pwdGo" method="get" target="_blank">
+			<label for="pwd">Admin Password</label>
+			<input type="password" id="pwd" name="pwd"/>
+			<input type="submit" value="GO" class="gobtn">
+	    </form>
+		<hr>
+		<a href="/program" class="mybtn prog">PROGRAM</a>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>Library Management</title>     
+</head>
+
+<body style="text-align: center;">
+<div style = "width:60%;margin:auto;font-size:25px;font-weight: 700;margin-top:50px;text-align: right;font-family: Arial;">
+         <h1 style="text-align: center;"> Library Management</h1>   
+        <label for="inputBook">Enter Book Title: </label>
+        <input type="text" id="inputBook" placeholder="Enter Book Title"> 
+        <button onclick="AddBook()">Add To Book Repository</button>
+        <p style="text-align: center; color:red;" class = 'addStatus'></p>
+        
+        <br><br>
+
+        <label for="inputBookSearch">Enter Book Title / Keyword to Search: </label>
+        <input type="text" id="inputBookSearch" placeholder="Enter Search Keyword"> 
+        <button onclick="SearchBook()">Search Book</button>
+        <p style="text-align: center; color:green;" class = 'addStatus'></p>
+
+</div>
+
+<script>
+ const bookRepo = [];
+   function AddBook(){
+     debugger;
+     let newBook = document.getElementById("inputBook").value;
+     let status = document.getElementsByClassName("addStatus");
+
+     if(bookRepo.includes(newBook))
+     {
+        status[0].innerHTML = "Sorry, Entered book is already available in the repository";
+        
+     }
+     else
+     {
+        bookRepo.push(newBook);
+        
+     }
+     document.getElementById("inputBook").value = "";
+
+   }
+
+     
+     function SearchBook(){
+     
+     let searchVal = document.getElementById("inputBookSearch").value;
+     let status = document.getElementsByClassName("addStatus");
+     status[0].innerHTML = " ";
+
+     const searchBookFn = (book) => {
+        searchVal = searchVal.toUpperCase();
+        book = book.toUpperCase();
+
+        if(searchVal === book)
+        {
+            return book;
+        }
+        else if(book.includes(searchVal))
+        {
+                  return book; 
+        }
+     }
+
+     let searchBook = bookRepo.filter(searchBookFn);
+
+     if(searchBook.length>0)
+     {
+        status[1].innerHTML = `Results matching your Search Keyword: <br> ${searchBook}`;
+     }
+     else
+     {
+        status[1].innerHTML = "Sorry, No matches found.";
+     }
+   }
+</script>
+
+
+</body>
+</html>

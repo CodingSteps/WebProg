@@ -1,8 +1,11 @@
 .gradientDiv{
-	background-image: linear-gradient(to right,rgba(255, 0, 0, 0.1),rgba(255, 0, 0, 0.5)),url('images/business.jpg'); 
+	background-image: linear-gradient(180deg,rgba(0, 255, 236, 0.2),rgba(255, 155, 0, 0.5)),url('https://img.freepik.com/premium-photo/suspension-bridge-travel-nature-scenery-building_1417-264.jpg'); 
+	/*background-image: url("https://img.freepik.com/premium-photo/suspension-bridge-travel-nature-scenery-building_1417-264.jpg");
+	background-image: linear-gradient(270deg,red,orange);*/
 	width: 1000px;
 	height: 600px;
-
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .myFonts{
@@ -32,3 +35,9 @@
 }
 
 .myClass{color: red; font-size: 50px;}
+
+ul li{
+	list-style-type: square;
+}
+
+h1{text-shadow: 2px 2px lightgrey;}

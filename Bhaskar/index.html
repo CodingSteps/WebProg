@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+  
+	<script  src="jquery-3.6.3.min.js"></script>
+	<link href="styles.css" rel="stylesheet">
+		
+</head>
+<body>
+	<h3 style="text-align: center;margin-top:10px;margin-bottom:20px;text-decoration: underline;">Projector Controller</h3>
+	    <div class='blk'>
+		        <button class="mybtn" value="up">UP ▲</button>	
+				<input type="text" id="upInches" style="display:inline-block;" name="upInches">
+			    <label for="upInches" style="display:inline-block;">inches</label>
+		 </div>   
+	    <a href="/stop" class="mybtn stop">STOP</a>
+	    <div class='blk'>
+			    <button class="mybtn" value="down">DOWN ▼</button>		
+				<input type="text" id="downInches" style="display:inline-block;" name="downInches">
+			    <label for="downInches" style="display:inline-block;">inches</label>		 
+		 </div>   
+		<br><hr><br>
+		<!--<label for="pwd">Admin Password</label> 
+		<input type="password" id="pwd"/> -->
+		<a href="/pwdGo" class="gobtn"><img src="userImg.png" width="20" height="20"><span style="margin-left:10px;">ADMIN</span></a>
+		<hr>
+		<a href="/prog" class="mybtn prog" style="display:block;">PROGRAM</a>
+        <button onclick="logoutButton()" class="logout">Logout</button>
+
+
+        <script>
+		$(document).ready(function(){
+
+			$('#suser').click(function(){
+				$("#superuser").toggle();
+			})
+
+			
+			$('.mybtn').click(function(){
+			  
+                btnVal = $(this).val();    
+				
+				 var ajaxReq = new XMLHttpRequest();
+
+				 if(btnVal=='up')
+				 {
+				 	ajaxReq.open("POST", "/up", true);
+
+				 	//Send the proper header information along with the request
+					ajaxReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+					ajaxReq.onreadystatechange = () => { // Call a function when the state changes.
+					  if (ajaxReq.readyState === XMLHttpRequest.DONE && ajaxReq.status === 200) {
+					    // Request finished. Do processing here.
+					     alert("UP Clicked");
+					  }
+}
+			        ajaxReq.send(btnVal);
+				 }
+				 else
+				 {
+				 	ajaxReq.open("POST", "/down", true);
+			        ajaxReq.send(btnVal);
+				 }
+			     
+			})
+
+
+		})
+		    function logoutButton() {
+		     var xhr = new XMLHttpRequest();
+		     xhr.open("GET", "/logout", true);
+		     xhr.send();
+		     setTimeout(function(){ window.open("/logged-out","_self"); }, 1000);
+		}
+			</script>	
+</body>
+</html>

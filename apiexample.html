@@ -19,7 +19,7 @@
 		
 		$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Coimbatore&appid=887b28d6cd1b24b03b92cd1dc05bf245",
 				  function(data) {
-                  
+                  	
 				    $("#cbe").html("Temperature: " + data.main.temp);
                     $("#cbe").append("<br> Weather Condition: " + data.weather[0].description);
                     $("#cbe").append("<br> Humidity: " + data.main.humidity);

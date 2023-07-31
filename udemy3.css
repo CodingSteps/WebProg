@@ -1,0 +1,5 @@
+body{background-color: lightgreen;}
+p{font-weight:900;}
+.myClass{text-decoration: underline;color:purple;}
+#myId{border:2px solid brown;}
+*{text-align: center;}

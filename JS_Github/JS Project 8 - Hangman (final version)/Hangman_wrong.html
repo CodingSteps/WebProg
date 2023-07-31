@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game Over</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+			<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+			<link href="Hangman_wrong.css" rel="stylesheet">
+			<link href='<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">'>
+</head>
+<body>
+	
+	<h2 id="banner">Game Over😡</h2>
+
+	<div id="parent_div">
+		<p id="ans">The Answer was:</p>
+		<button type="button" id="back">Back</button>
+	</div>
+	
+
+	<script type="text/javascript">
+
+		var answer=location.search;
+		var realAnswer=answer.slice(8);
+		var readyAnswer=realAnswer.toUpperCase();
+		$("#ans").html("The Answer was: "+readyAnswer);
+		
+		var leftstart=0;
+		function moveBanner(){
+			$("#banner").offset({left:leftstart});
+			leftstart++;
+
+			if(leftstart>1350){
+				leftstart=0;
+			}
+		};
+
+		setInterval(moveBanner,5);
+
+
+		 $("#back").click(function(){
+		 	location.replace("https://codingsteps.github.io/WebProg/Hangman Page 2.html");
+		});
+  			
+	</script>
+
+</body>
+</html>

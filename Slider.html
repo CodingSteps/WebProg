@@ -50,19 +50,20 @@ showSlides(slideIndex);
 function plusSlides(n) {
   slideIndex = 0;
   slideIndex = slideIndex + n;
-  showSlides(slideIndex);
+  showSlides();
 }
 
 
 function currentSlide(n) {
   slideIndex = 0;
   slideIndex = n;
-  showSlides(slideIndex);
+  showSlides();
 }
 
 setInterval(showSlides, 10000, slideIndex); // Change image every 10 seconds 
 
-function showSlides(n) {
+function showSlides() {
+  alert(slideIndex)
 
   var i;
   var slides = document.getElementsByClassName("mySlides");

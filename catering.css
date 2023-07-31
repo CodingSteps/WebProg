@@ -1,14 +1,13 @@
 *{box-sizing: border-box;}
 
-body{margin: 0px;font-family: "Abel", sans-serif;}
+body{margin: 0px;font-family: "Abel", sans-serif;background-color: #f8fcf0;}
 
 #logo{float: left; padding-left: 20px;padding-top: 20px;font-size: 30px;font-weight: 700;}
 
 #menu{float: right;list-style-type: none;}
 
 #menu li{
-	/*display: inline-block;*/
-	float: left;
+	display: inline-block;
 	padding: 10px;	
 	font-size: 20px;
 	margin-right: 20px;
@@ -48,13 +47,13 @@ li a{text-decoration: none;color: grey;}
 	margin-bottom: 80px;
 }
 
-.sectionImg{flex: 0 1 30%; height: 500px;margin: 20px;}
-.sectionTxt{flex:0 1 30%;margin: 20px;}
+.sectionImg{flex: 0 1 30%; height: 560px;margin: 20px;}
+.sectionTxt{flex:0 1 30%;margin: 20px;line-height:25px;}
 .title{text-align: center;}
 .menuItems{text-align: left;}
 
 h1,h3,h4{letter-spacing: 3px;}
-hr{width: 80%;text-align: center;border: 0;border-top: 1px solid #eee;}
+hr{width: 80%;text-align: center;border: 0;border-top: 1px solid grey;}
 
 .contact{width: 1000px;margin: auto; margin-top: 80px;margin-bottom: 80px;}
 

@@ -15,7 +15,7 @@
 <div class="wrapper">
   <h1>JavaScript pairs Game</h1>
   <h3>Click any card to begin</h3>
-  <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+
   <p id ="text"></p>
   <div id="container">
      <div class = "cardFront cardf0">
@@ -59,7 +59,7 @@ $(document).ready(function(){
    "https://img.utdstc.com/icon/579/a45/579a4513506581f23aa94af3799186fabc3f4357e049a0cba4ce4678273a152f:200",
    "https://i.pinimg.com/originals/fb/d8/a6/fbd8a69cdee83b1d147b15606a0e7ff2.jpg"
 ];
-
+console.log(images);
 let clone = images.slice(0); // duplicate array
 let cards = images.concat(clone); // merge to arrays 
 
@@ -107,8 +107,14 @@ $('.cardFront').click(function(){
         if(cardElementArray[0].image===cardElementArray[1].image)
         {
           pairs++;
+
           cardElementArray.pop();
           cardElementArray.pop();
+           if(pairs === 4)
+           {
+              alert("CONGRATS ! All Matches found");
+           }
+
         }
         else
         {
@@ -137,11 +143,6 @@ $('.cardFront').click(function(){
 
 
 })  
-
-
-
-
-
 
 
 </script>  
