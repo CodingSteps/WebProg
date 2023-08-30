@@ -14,10 +14,13 @@ Project 3 - Parallax Website
 Project 4 - Tourist Website
 Project 5 - Flex box Cards
 Project 6 - Catering Website
+Project 7 - Bootstrap Grids
+Project 8 - Smoothie website
+Project 9 - Portfolio website
 
 --------------------------------------------------------
-Assignment 1 - Convert celsius to Fahrenheit
-Assignment 2 - Counter
+Assignment 1 - Convert celsius to Fahrenheit (or) Calculate Age in secs
+Assignment 2 - Counter & string programs
 Assignment 3 - Converting String case
 Assignment 4 - Automated Ticket Counter
 Assignment 5 - Loop Programs(4)
@@ -45,6 +48,7 @@ https://codingsteps.github.io/Course-Assignments/Project%204/Project%204%20-%20T
 https://codingsteps.github.io/Course-Assignments/Project%205/Project%205%20-%20My%20Projects%20(Flexbox).html
 https://codingsteps.github.io/Course-Assignments/Project%206/Project%206%20-%20Catering%20Website.html
 https://codingsteps.github.io/WebProg/BootstrapGrid.html
+https://codingsteps.github.io/Course-Assignments/Project%207/Project%207%20-%20Smoothies%20Website.html
 
 
 
@@ -55,13 +59,13 @@ https://codingsteps.github.io/WebProg/BootstrapGrid.html
 
 
 
-
-
-
-
-
-
-
+Chinthalayashwanth143@gmail.com
+priyanshufarkare1443@gmail.com
+vikashrathor26899@gmail.com
+tanmaykhardekar121@gmail.com
+aditaysharma2001@gmail.com
+rohithramya5@gmail.com
+priyadarshinipayal02@gmail.com
 
 
 

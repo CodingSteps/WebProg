@@ -14,25 +14,20 @@
    <p class = "para"> Second Paragraph </p>
    <p class = "para"> Third Paragraph </p>
    <h1 class = "output"> This is my Output.</h1>
-    
-  <input type="radio" name="accAdult" value="yes" class="radio1">
-      <label for="radio1">Yes</label>
-      <input type="radio" name="accAdult" value="no" class="radio1">
-      <label for="radio2">No</label>
+  
 
  <script>   
 
      $(document).ready(function(){
      
-      /*  let a = $('#myPara').html();
-        $('.output').html("100");
-       // let selected = $('input[name=accAdult]:checked').val();
+       let a = $('#myPara').html();
+        $('.output').append("100");
+      
 
         // Dynamically create HTML elements   
          $('.para').click(function(){
           
-            let selected = $('.radio1:checked').val();
-              alert(selected);
+       
            let b = $('<div>',{id:'dynamic'});
            let c = $('<h1>',{id:'dynamicHeading'}).html("Dynamically created heading");
           
@@ -41,18 +36,23 @@
            $('body').append(d);
 
            $('#dynamic').css({'background-color':'lightblue','height':'200px'});
-           $('#dynamicHeading').css({'text-align':'center','color':'red'}); */
-
-           $('.para').on('click', function(){
-                $('h1').hide();
-           })
+           $('#dynamicHeading').css({'text-align':'center','color':'red'}); 
          
+         })
+          
+
+           $('.myPara').click(function(){
+                $('h1').slideToggle(4000,function(){
+
+                    alert("Callback");
+         })
+           
 
 
 })
       
      
-
+})
 
 
 

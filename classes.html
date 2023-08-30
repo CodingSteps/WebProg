@@ -5,7 +5,7 @@
 <p id="myPara"></p>
 
 <script>
-
+/*
 class User{
     constructor(fname,lname,email)
     {
@@ -13,10 +13,7 @@ class User{
         this.LastName = lname;
         this.Email = email;
     }
-    
-    set firstName(newName){
-        this.FirstName = newName;
-    }
+     
 
     userName(){
         return this.FirstName +' '+ this.LastName;
@@ -65,7 +62,7 @@ userArray.push(user2);
 for(let x of userArray)
 {
   document.getElementById("myPara").innerHTML += x.carDetails() + "<br>" ;
-} 
+} */
 
 /*
 const displayResult = (sum) => {document.getElementById("myPara").innerHTML = sum;}
@@ -76,6 +73,16 @@ const myCalculator = (a,b,myCallback) => {
 }
 
 setTimeout(myCalculator,5000,3242,5433,displayResult); 
+
+
+
+
+const myCalculator = (a,b) => {
+  let c = a+b;
+  alert(c);
+}
+
+setTimeout(myCalculator,5000,3242,5433); 
 
 let displayTime = function(){
   let d = new Date();

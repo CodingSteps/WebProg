@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+  <script>
+
+   /* let newStr = "";
+    let s = "Javascript is awesome";
+
+    let slen = s.length;
+
+    for(let i=0;i<slen;i++)
+    {
+
+        if(s.charAt(i)=='a')
+        {
+          newStr+="4";
+        }
+        else if(s.charAt(i)=='e')
+        {
+          newStr+="3";
+        }
+         else if(s.charAt(i)=='i')
+        {
+          newStr+="1";
+        }
+         else if(s.charAt(i)=='o')
+        {
+          newStr+="0";
+        }
+        else
+        {
+          newStr+=s.charAt(i);
+        }
+
+
+    }
+
+    console.log(newStr);
+
+
+    for(let i=1;i<=10;i++)
+   {
+        for(let j=1;j<=10;j++)
+        {
+            
+            document.writeln(`${i} x ${j} = ${i*j}`);
+            
+        }
+        
+        document.writeln("<br>");
+    }*/
+
+/*
+  let a=10;
+   
+
+    const b = function(n){
+
+                return (n*100);
+
+              }
+
+   
+   const sum = (num1,num2)=>{
+
+       let c;
+
+       c=num1+num2(5);
+
+       return c;
+
+   }
+
+
+   
+
+    let output=sum(a,b);
+
+    console.log(output); */
+
+
+    // Map Function
+
+    let a = ["dog","cat","tiger"];
+
+    const b = (n)=>{
+          
+          return ("Awesome " + n);
+
+    }
+
+
+    let output = a.map(b);
+
+    console.log(output);
+
+
+
+   //Find function
+
+      let colors = [10,20,50,30,40];
+
+    const findFunc = (n)=>{
+          
+          return (n>20);
+
+    }
+
+
+    let Foutput = colors.find(findFunc);
+
+    console.log(Foutput);
+
+
+
+    //Filter Function
+
+    let FilNum = [10,20,50,30,40];
+
+    const filterFunc = (n)=>{
+          
+          return (n>20);
+
+    }
+
+
+    let FillOutput = FilNum.filter(filterFunc);
+
+    console.log(FillOutput);
+
+
+
+  const calculateTriangleArea = (base, height) => {
+  return (base * height) / 2;
+};
+
+const baseLength = 6;
+const heightLength = 8;
+const calculatedArea = calculateTriangleArea(baseLength, heightLength);
+
+console.log(calculatedArea);
+
+
+
+  </script>	
+
+
+
+</body>
+</html>

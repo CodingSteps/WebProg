@@ -1,0 +1,21 @@
+Project 1 - Tribute Page
+Project 2 - Survey Form
+Project 3 - Parallax Website
+Project 4 - Tourist Website
+Project 5 - Flexbox Cards
+Project 6 - Catering Website
+Project 7 - Bootstrap Grids
+Project 8 - Smoothies Website(Final CSS Project)
+
+
+Project 1 - Automated Ticket Counter
+Project 2 - Library Management
+Project 3 - Random Quote Generator
+Project 4 - Draw Triangle(Leve1 1)
+Project 5 - Draw Triangle(Level 2)
+Project 6 - Base Converter 
+Project 7 - Hangman Game(Beginner)
+Project 8 - Hangman Game(Advanced)
+Project 9 - Register Form(Object Constructor) 
+Project 10 - Dynamic Quiz
+Project 11 - Memory Game
